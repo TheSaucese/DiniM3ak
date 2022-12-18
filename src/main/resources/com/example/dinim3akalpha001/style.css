@@ -1,0 +1,123 @@
+@font-face {
+    font-family: 'Lato';
+    src: url('Lato-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Lato Black';
+    src: url('Lato-Black.ttf');
+}
+
+@font-face {
+    font-family: 'Lato Semibold';
+    src: url('Lato-Semibold.ttf');
+}
+
+@font-face {
+    font-family: 'Lato Italic';
+    src: url('Lato-Italic.ttf');
+}
+
+@font-face {
+    font-family: 'Lato Light';
+    src: url('Lato-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Lato Bold';
+    src: url('Lato-Bold.ttf');
+}
+
+.root {
+    -fx-font-family: "Lato";
+}
+
+.button
+{
+    -fx-background-color: transparent;
+}
+
+.hyperlink {
+    -fx-border-color: transparent;
+    -fx-padding: 4 0 4 0;
+}
+
+/* Welcome Screen */
+#Welcometext {
+    -fx-font-size: 14;
+}
+
+#WelcomeTitle {
+    -fx-font-family: "Lato Semibold";
+    -fx-font-size: 24;
+}
+
+#Signup,#Login {
+    -fx-font-family: "Lato Black";
+    -fx-font-size: 20;
+}
+/* Welcome Screen */
+#email_title,#pass_title {
+    -fx-font-family: "Lato Black";
+    -fx-font-size: 20;
+}
+
+#pass_thing {
+    -fx-font-family: "Lato Italic";
+    -fx-font-size: 14;
+}
+
+#ShowPass>.box {
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-background-color: transparent;
+    -fx-pref-height: 24;
+    -fx-pref-width: 28;
+}
+
+#ShowPass:selected>.box>.mark {
+    -fx-background-color: transparent;
+    -fx-background-image: url("../../Images/dinim3akalpha001/Eye.png");
+}
+#ShowPass>.box>.mark {
+    -fx-background-image: url("../../Images/dinim3akalpha001/EyeClosed.png");
+    -fx-background-position: center;
+    -fx-background-repeat: stretch;
+    -fx-shape: none;
+}
+
+#FB {
+    -fx-background-image: url("../../Images/dinim3akalpha001/FB.png");
+    -fx-background-position: center;
+    -fx-background-repeat: stretch;
+    -fx-shape: none;
+    -fx-background-radius : 10;
+}
+
+#Google {
+    -fx-background-image: url("../../Images/dinim3akalpha001/Google.png");
+    -fx-background-position: center;
+    -fx-background-repeat: stretch;
+    -fx-shape: none;
+    -fx-background-radius : 10;
+}
+
+#Apple {
+    -fx-background-image: url("../../Images/dinim3akalpha001/Apple.png");
+    -fx-background-position: center;
+    -fx-background-repeat: stretch;
+    -fx-shape: none;
+    -fx-background-radius : 10;
+}
+
+#hyper1 {
+    -fx-font-family: "Lato Light";
+    -fx-font-size: 12;
+}
+
+#hyper2 {
+    -fx-font-family: "Lato Bold";
+    -fx-font-size: 12;
+}
+
+
