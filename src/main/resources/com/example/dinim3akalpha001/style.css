@@ -138,6 +138,44 @@
     -fx-font-size: 14;
 }
 
+/* Driver Profile */
+
+#FirstName,#firstname,#lastname,#LastName,#JoinDate {
+    -fx-font-size: 20;
+    -fx-font-family: "Lato Semibold";
+}
+
+#YourProfile {
+    -fx-font-size: 20;
+    -fx-font-family: "Lato";
+}
+
+#LatestClient,#ViewMore {
+    -fx-font-family: "Lato";
+    -fx-font-size: 12;
+}
+
+#Information {
+    -fx-font-family: "Lato Semibold";
+    -fx-font-size: 16;
+    -fx-graphic: url("../../Images/dinim3akalpha001/info.png");
+}
+
+#Notification {
+    -fx-font-family: "Lato Semibold";
+    -fx-font-size: 16;
+    -fx-graphic: url("../../Images/dinim3akalpha001/bell.png");
+}
+
+#Settings {
+    -fx-background-image: url("../../Images/dinim3akalpha001/Settings.png");
+    -fx-background-position: center;
+    -fx-background-repeat: stretch;
+    -fx-shape: none;
+    -fx-background-radius : 10;
+}
+
+
 
 
 
