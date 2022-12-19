@@ -42,6 +42,13 @@
     -fx-padding: 4 0 4 0;
 }
 
+.tab-pane {
+    -fx-tab-max-height: 0 ;
+}
+.tab-pane .tab-header-area {
+    visibility: hidden ;
+}
+
 /* Welcome Screen */
 #Welcometext {
     -fx-font-size: 14;
@@ -52,7 +59,7 @@
     -fx-font-size: 24;
 }
 
-#Signup,#Login {
+#Signup,#Login,#Confirm,#SendCode {
     -fx-font-family: "Lato Black";
     -fx-font-size: 20;
 }
@@ -119,5 +126,18 @@
     -fx-font-family: "Lato Bold";
     -fx-font-size: 12;
 }
+
+/* Verification */
+
+#VerTitle {
+    -fx-font-family: "Lato Semibold";
+    -fx-font-size: 24;
+}
+
+#VerText {
+    -fx-font-size: 14;
+}
+
+
 
 
