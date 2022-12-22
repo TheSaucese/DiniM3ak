@@ -25,13 +25,10 @@
                   <Pane prefHeight="648.0" prefWidth="319.0">
                      <children>
                         <Rectangle arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="677.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="319.0" />
-                        <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#3f3b6c" height="218.0" layoutY="460.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="319.0" />
                         <Circle fill="#1f93ff" layoutX="158.0" layoutY="151.0" radius="60.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
                         <Text fx:id="YourProfile" fill="#624f82" layoutX="-49.0" layoutY="-84.0" lineSpacing="4.0000009536743" strokeType="OUTSIDE" strokeWidth="0.0" text="YOUR  PROFILE" textAlignment="CENTER" wrappingWidth="198.0" x="109.0" y="143.0" />
                         <Button fx:id="Settings" layoutX="191.0" layoutY="178.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="31.0" />
-                        <Button fx:id="Viewmore" layoutX="11.0" layoutY="471.0" mnemonicParsing="false" text="View More" textFill="#d4d4d4" />
                         <Text fx:id="JoinDate" fill="#787878" layoutX="100.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Joined  Febuary 2021" />
-                        <Text fx:id="LatestClient" fill="#624f82" layoutX="10.0" layoutY="443.0" lineSpacing="2.4000005722046" strokeType="OUTSIDE" strokeWidth="0.0" text="L A T E S T  C L I E N T S" wrappingWidth="132.0" />
                         <Text fx:id="firstname" fill="#624f82" layoutX="95.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Placeholder" />
                      </children>
                   </Pane>

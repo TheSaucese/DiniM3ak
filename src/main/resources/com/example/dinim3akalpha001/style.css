@@ -140,14 +140,20 @@
 
 /* Driver Profile */
 
-#FirstName,#firstname,#lastname,#LastName,#JoinDate {
-    -fx-font-size: 20;
-    -fx-font-family: "Lato Semibold";
+#FirstName,#firstname,#lastname,#LastName {
+    -fx-font-size: 24;
+    -fx-font-family: "Lato Black";
+}
+
+#JoinDate {
+    -fx-font-size: 12;
+    -fx-font-family: "Lato";
 }
 
 #YourProfile {
     -fx-font-size: 20;
     -fx-font-family: "Lato";
+    -fx-spacing: 100;
 }
 
 #LatestClient,#ViewMore {
