@@ -139,26 +139,46 @@
 }
 
 /* Driver Profile */
-
-#FirstName,#firstname,#lastname,#LastName {
-    -fx-font-size: 24;
-    -fx-font-family: "Lato Black";
-}
-
-#JoinDate {
-    -fx-font-size: 12;
-    -fx-font-family: "Lato";
-}
-
 #YourProfile {
     -fx-font-size: 20;
     -fx-font-family: "Lato";
-    -fx-spacing: 100;
 }
 
-#LatestClient,#ViewMore {
+#Name {
+    -fx-font-size: 20;
+    -fx-font-family: "Lato Semibold";
+}
+
+#Stars {
+    -fx-font-size: 16;
+    -fx-font-family: "Lato";
+}
+
+#Vehicle {
+    -fx-font-size: 12;
+    -fx-font-family: "Lato Black";
+    -fx-background-color: #3F3B6C;
+    -fx-background-radius: 10;
+}
+
+#Payment {
+    -fx-font-size: 12;
+    -fx-font-family: "Lato Black";
+    -fx-background-color: #FFFFFF;
+    -fx-border-radius: 10;
+}
+
+
+
+#ViewMore {
     -fx-font-family: "Lato";
     -fx-font-size: 12;
+}
+
+#LatestClient {
+    -fx-font-family: "Lato";
+    -fx-font-size: 16;
+    -fx-text-alignment: left;
 }
 
 #Information {
@@ -179,6 +199,37 @@
     -fx-background-repeat: stretch;
     -fx-shape: none;
     -fx-background-radius : 10;
+}
+
+#Arrow {
+    -fx-background-image: url("../../Images/dinim3akalpha001/Arrow.png");
+    -fx-background-position: center;
+    -fx-background-repeat: stretch;
+    -fx-shape: none;
+}
+
+/* Payment */
+
+#Input {
+    -fx-border-radius :  10;
+    -fx-border-width : 1.5;
+    -fx-background-color :  rgba(217,217,217,1);
+    -fx-border-color :  #3f3b6c;
+    -fx-background-radius : 11;
+    -fx-font-family: "Lato Semibold";
+    -fx-font-size: 18;
+    -fx-text-fill: #3F3B6C;
+}
+
+#MainText {
+    -fx-font-family: "Lato Semibold";
+}
+
+#Apply {
+    -fx-background-color :  #3F3B6C;
+    -fx-background-radius :  10;
+    -fx-font-family: "Lato Semibold";
+    -fx-font-size: 20;
 }
 
 
