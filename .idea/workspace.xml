@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e30d0910-c7f0-4386-b485-86fa2d7c2774" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/Images/dinim3akalpha001/Arrow.png" afterDir="false" />
+    <list default="true" id="e30d0910-c7f0-4386-b485-86fa2d7c2774" name="Changes" comment="Version number ???, Done with Payment.fxml">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/Images/dinim3akalpha001/Check.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/DiniApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/DiniApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/Images/dinim3akalpha001/Settings.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/Images/dinim3akalpha001/Settings.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/ProfileDriver.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/ProfileDriver.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/ProfileDriverSettings.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/Payment.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,8 +84,16 @@
       <workItem from="1671388226970" duration="3824000" />
       <workItem from="1671403957405" duration="813000" />
       <workItem from="1671822707336" duration="3728000" />
-      <workItem from="1671886016798" duration="2181000" />
+      <workItem from="1671886016798" duration="2879000" />
     </task>
+    <task id="LOCAL-00001" summary="Version number ???, Done with Payment.fxml">
+      <created>1671890477756</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1671890477757</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,5 +112,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Version number ???, Done with Payment.fxml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version number ???, Done with Payment.fxml" />
   </component>
 </project>
