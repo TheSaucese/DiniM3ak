@@ -59,12 +59,7 @@
     -fx-font-size: 24;
 }
 
-#Signup,#Login,#Confirm,#SendCode {
-    -fx-font-family: "Lato Black";
-    -fx-font-size: 20;
-}
-/* Welcome Screen */
-#email_title,#pass_title {
+#Signup,#Login,#Confirm,#SendCode,#Driving,#Riding,#email_title,#pass_title,#Credit,#Cash {
     -fx-font-family: "Lato Black";
     -fx-font-size: 20;
 }
@@ -208,7 +203,7 @@
     -fx-shape: none;
 }
 
-/* Payment */
+/* Payment in Profile */
 
 #Input {
     -fx-border-radius :  10;
@@ -230,6 +225,52 @@
     -fx-background-radius :  10;
     -fx-font-family: "Lato Semibold";
     -fx-font-size: 20;
+}
+
+/* Payment Screen at Destination */
+
+#Apple2 {
+    -fx-background-image: url("../../Images/dinim3akalpha001/Apple2.png");
+    -fx-background-position: center;
+    -fx-background-repeat: stretch;
+    -fx-shape: none;
+    -fx-background-radius : 10;
+}
+
+#PayPal {
+    -fx-background-image: url("../../Images/dinim3akalpha001/PayPal.png");
+    -fx-background-position: center;
+    -fx-background-repeat: stretch;
+    -fx-shape: none;
+    -fx-background-radius : 10;
+}
+
+#AddCard {
+    -fx-background-color :  #3F3B6C;
+    -fx-background-radius :  10;
+    -fx-font-family: "Lato Semibold";
+    -fx-font-size: 16;
+}
+
+#Pay {
+    -fx-background-color :  #FFFFFF;
+    -fx-background-radius :  10;
+    -fx-font-family: "Lato Black";
+    -fx-font-size: 20;
+}
+
+#Saved {
+    -fx-font-family: "Lato Black";
+}
+
+/* Vehicle */
+
+#Car {
+    -fx-background-image: url("../../Images/dinim3akalpha001/Car.png");
+    -fx-background-position: center;
+    -fx-background-repeat: stretch;
+    -fx-shape: none;
+    -fx-background-radius : 10;
 }
 
 

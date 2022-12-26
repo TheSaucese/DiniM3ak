@@ -4,9 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e30d0910-c7f0-4386-b485-86fa2d7c2774" name="Changes" comment="Version number ???, Done with Payment.fxml">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/Images/dinim3akalpha001/Check.png" afterDir="false" />
+    <list default="true" id="e30d0910-c7f0-4386-b485-86fa2d7c2774" name="Changes" comment="Version number ???+1,some unversioned files pushed">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/CarController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/PaymentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/Images/dinim3akalpha001/Apple2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/Images/dinim3akalpha001/Car.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/Images/dinim3akalpha001/PayPal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/Car.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/Choice.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/DestinationReached.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/PaymentChoice.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/PaymentSee.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/DiniApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/DiniApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/DiniController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/DiniController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +28,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -42,25 +54,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/SM/IdeaProjects/DiniM3akAlpha001/src/main/resources/com/example/dinim3akalpha001&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_directory_selection": "C:/Users/SM/IdeaProjects/DiniM3akAlpha001/src/main/java/com/example/dinim3akalpha001",
+    "last_opened_file_path": "C:/Users/SM/IdeaProjects/DiniM3akAlpha001/src/main/resources/com/example/dinim3akalpha001",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\SM\IdeaProjects\DiniM3akAlpha001\src\main\resources\com\example\dinim3akalpha001" />
@@ -85,6 +99,8 @@
       <workItem from="1671403957405" duration="813000" />
       <workItem from="1671822707336" duration="3728000" />
       <workItem from="1671886016798" duration="2879000" />
+      <workItem from="1672056219220" duration="5754000" />
+      <workItem from="1672072106220" duration="9188000" />
     </task>
     <task id="LOCAL-00001" summary="Version number ???, Done with Payment.fxml">
       <created>1671890477756</created>
@@ -93,7 +109,21 @@
       <option name="project" value="LOCAL" />
       <updated>1671890477757</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Version number ???, Done with Payment.fxml">
+      <created>1672056431490</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1672056431490</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Version number ???+1,some unversioned files pushed">
+      <created>1672056461600</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1672056461600</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,6 +143,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Version number ???, Done with Payment.fxml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version number ???, Done with Payment.fxml" />
+    <MESSAGE value="Version number ???+1,some unversioned files pushed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version number ???+1,some unversioned files pushed" />
   </component>
 </project>
