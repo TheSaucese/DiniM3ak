@@ -11,7 +11,7 @@ import java.io.IOException;
 public class DiniApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(DiniApplication.class.getResource("Car.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(DiniApplication.class.getResource("Welcome.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 375, 812);
         scene.getStylesheets().add(DiniApplication.class.getResource("style.css").toExternalForm());
         stage.setTitle("DINIM3AK3000");

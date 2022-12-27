@@ -1,35 +1,18 @@
 package com.example.dinim3akalpha001;
 
-import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.ScrollPane;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.paint.Color;
-import javafx.scene.paint.Paint;
-import javafx.scene.shape.Circle;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
-import java.net.URL;
-import java.util.ResourceBundle;
+import java.io.IOException;
 
 public class DiniController {
-    @FXML
-    private TextField pass_text;
-    @FXML
-    private CheckBox ShowPass;
-    @FXML
-    private TextField pass_hidden;
-    @FXML
-    protected void togglevisiblePassword() {
-        if (ShowPass.isSelected()) {
-            pass_text.setVisible(true);
-            pass_text.setText(pass_hidden.getText());
-            pass_hidden.setVisible(false);
-            return;
-        }
-        pass_hidden.setText(pass_text.getText());
-        pass_hidden.setVisible(true);
-        pass_text.setVisible(false);
+    protected void handleScenes(String fxml, Node node) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(DiniApplication.class.getResource(fxml));
+        Scene scene = new Scene(fxmlLoader.load(), 375, 812);
+        scene.getStylesheets().add(DiniApplication.class.getResource("style.css").toExternalForm());
+        Stage stage = (Stage) node.getScene().getWindow();
+        stage.setScene(scene);
     }
 }

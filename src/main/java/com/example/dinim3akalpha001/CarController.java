@@ -8,10 +8,13 @@ import javafx.stage.FileChooser;
 
 import java.io.File;
 import java.io.FileFilter;
+import java.io.IOException;
 
 public class CarController {
     @FXML
     private Button Car;
+    @FXML
+    private Button Arrow;
 
     @FXML
     protected void Upload(){
@@ -28,5 +31,9 @@ public class CarController {
             img.fitHeightProperty().bind(Car.heightProperty());
             Car.setGraphic(img);
         }
+    }
+    @FXML
+    private void handleArrow() throws IOException {
+        new DiniController().handleScenes("ProfileDriver.fxml",Arrow);
     }
 }

@@ -17,7 +17,7 @@
          </image>
       </ImageView>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3f3b6c" height="117.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="375.0" />
-      <Button fx:id="Arrow" layoutX="41.0" layoutY="73.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="8.0" />
+      <Button fx:id="Arrow" layoutX="41.0" layoutY="73.0" mnemonicParsing="false" onAction="#handleArrow" prefHeight="25.0" prefWidth="8.0" />
       <Text fx:id="MainText" fill="#ffffff99" layoutX="102.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vehicle">
          <font>
             <Font size="20.0" />
