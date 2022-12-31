@@ -36,4 +36,8 @@ public class CarController {
     private void handleArrow() throws IOException {
         new DiniController().handleScenes("ProfileDriver.fxml",Arrow);
     }
+    @FXML
+    private void handlePayment() throws IOException {
+        new DiniController().handleScenes("Payment.fxml",Arrow);
+    }
 }

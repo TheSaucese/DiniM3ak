@@ -6,6 +6,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Rectangle?>
@@ -19,12 +20,31 @@
             <Image url="@../../Images/dinim3akalpha001/BackgroundNormal.png" />
          </image>
       </ImageView>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3f3b6c" height="117.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="375.0" />
-      <Button fx:id="Arrow" layoutX="41.0" layoutY="73.0" mnemonicParsing="false" onAction="#handleArrow" prefHeight="25.0" prefWidth="8.0" />
-      <Text fx:id="MainText" fill="#ffffff99" layoutX="102.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment">
-         <font>
-            <Font size="20.0" />
-         </font></Text>
+      <ImageView fitHeight="104.0" fitWidth="375.0" layoutY="25.0" opacity="0.87" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Images/dinim3akalpha001/menupayment.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="20.0" arcWidth="20.0" height="693.0" layoutY="128.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="375.0">
+         <fill>
+            <LinearGradient endX="0.7914691943127962" endY="1.0" startX="0.7251184834123223">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.800000011920929" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.949999988079071" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#3f3b6c" height="456.0" layoutY="370.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="375.0" />
+      <Button fx:id="Arrow" layoutX="319.0" layoutY="70.0" mnemonicParsing="false" onAction="#handleArrow" opacity="0.0" prefHeight="25.0" prefWidth="19.0" />
       <Rectangle arcHeight="15.0" arcWidth="15.0" height="158.16" layoutX="51.0" layoutY="165.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="272.54">
          <fill>
             <LinearGradient>
@@ -111,7 +131,7 @@
             <Image url="@../../Images/dinim3akalpha001/Check.png" />
          </image>
       </ImageView>
-      <Button fx:id="Apply" layoutX="48.0" layoutY="680.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="273.0" text="Apply" textFill="#ffffff99">
+      <Button fx:id="Apply" layoutX="48.0" layoutY="680.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="273.0" text="Apply" textFill="#3e3b6b">
          <font>
             <Font size="20.0" />
          </font>
@@ -121,5 +141,6 @@
             <Font size="16.0" />
          </font>
       </PasswordField>
+      <Button fx:id="Vehicle" layoutX="33.0" layoutY="70.0" mnemonicParsing="false" onAction="#handleVehicle" opacity="0.0" prefHeight="25.0" prefWidth="30.0" />
    </children>
 </Pane>

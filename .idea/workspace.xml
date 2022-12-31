@@ -4,29 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e30d0910-c7f0-4386-b485-86fa2d7c2774" name="Changes" comment="Version number 5.5467, added a lot of things, controllers, a file selector, etc...&#10;&#10;only the menu remains, and functionalities...must recheck each fxml file and start linking stuff next time.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/ChoiceController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/PaymentChoiceController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/ProfileController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/SignupController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/VerificationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/WelcomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_19_2022_7_23_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_19_2022_7_23_PM__Changes_.xml" beforeDir="false" />
+    <list default="true" id="e30d0910-c7f0-4386-b485-86fa2d7c2774" name="Changes" comment="Version number 6, added a lot of backend code, to switch between scenes and some small functions...">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_22_2022_11_59_PM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_22_2022_11_59_PM__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/CarController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/DiniApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/DiniApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/DiniController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/DiniController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/PaymentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/Images/dinim3akalpha001/Check.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/Images/dinim3akalpha001/Check.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/Car.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/Car.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/Choice.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/Choice.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/Payment.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/Payment.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/PaymentChoice.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/PaymentChoice.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/PaymentSee.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/PaymentSee.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/ProfileDriver.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/ProfileDriver.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/Signup.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/Signup.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/Verification.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/Verification.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/Welcome.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/Welcome.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -111,6 +99,8 @@
       <workItem from="1672056219220" duration="5754000" />
       <workItem from="1672072106220" duration="10666000" />
       <workItem from="1672145933164" duration="8813000" />
+      <workItem from="1672158034428" duration="155000" />
+      <workItem from="1672506420723" duration="7621000" />
     </task>
     <task id="LOCAL-00001" summary="Version number ???, Done with Payment.fxml">
       <created>1671890477756</created>
@@ -140,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672084736568</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Version number 6, added a lot of backend code, to switch between scenes and some small functions...">
+      <created>1672158173230</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1672158173230</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,6 +159,7 @@
     <MESSAGE value="Version number ???, Done with Payment.fxml" />
     <MESSAGE value="Version number ???+1,some unversioned files pushed" />
     <MESSAGE value="Version number 5.5467, added a lot of things, controllers, a file selector, etc...&#10;&#10;only the menu remains, and functionalities...must recheck each fxml file and start linking stuff next time." />
-    <option name="LAST_COMMIT_MESSAGE" value="Version number 5.5467, added a lot of things, controllers, a file selector, etc...&#10;&#10;only the menu remains, and functionalities...must recheck each fxml file and start linking stuff next time." />
+    <MESSAGE value="Version number 6, added a lot of backend code, to switch between scenes and some small functions..." />
+    <option name="LAST_COMMIT_MESSAGE" value="Version number 6, added a lot of backend code, to switch between scenes and some small functions..." />
   </component>
 </project>

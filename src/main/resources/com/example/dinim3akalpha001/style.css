@@ -35,6 +35,13 @@
 .button
 {
     -fx-background-color: transparent;
+    -fx-highlight-fill: null;
+    -fx-highlight-text-fill: null;
+}
+
+.input{
+    -fx-highlight-fill: null;
+    -fx-highlight-text-fill: null;
 }
 
 .hyperlink {
@@ -207,10 +214,10 @@
 
 #Input {
     -fx-border-radius :  10;
-    -fx-border-width : 1.5;
+    -fx-border-width : 3;
     -fx-background-color :  rgba(217,217,217,1);
-    -fx-border-color :  #3f3b6c;
-    -fx-background-radius : 11;
+    -fx-border-color :  #624F82;
+    -fx-background-radius : 15;
     -fx-font-family: "Lato Semibold";
     -fx-font-size: 18;
     -fx-text-fill: #3F3B6C;
@@ -221,10 +228,14 @@
 }
 
 #Apply {
-    -fx-background-color :  #3F3B6C;
-    -fx-background-radius :  10;
+    -fx-background-color :  #FFFFFF;
     -fx-font-family: "Lato Semibold";
     -fx-font-size: 20;
+    -fx-border-radius :  10;
+    -fx-border-width : 3;
+    -fx-border-color :  #624F82;
+    -fx-background-radius : 15;
+    -fx-text-fill: #3F3B6C;
 }
 
 /* Payment Screen at Destination */
