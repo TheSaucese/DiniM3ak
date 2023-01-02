@@ -1,6 +1,9 @@
 module com.example.dinim3akalpha001 {
     requires javafx.controls;
     requires javafx.fxml;
+    requires org.mongodb.driver.sync.client;
+    requires org.mongodb.bson;
+    requires org.mongodb.driver.core;
 
 
     opens com.example.dinim3akalpha001 to javafx.fxml;
