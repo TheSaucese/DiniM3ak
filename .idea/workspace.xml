@@ -4,12 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e30d0910-c7f0-4386-b485-86fa2d7c2774" name="Changes" comment="version 3 or whatever...">
-      <change afterPath="$PROJECT_DIR$/google-services.json" afterDir="false" />
+    <list default="true" id="e30d0910-c7f0-4386-b485-86fa2d7c2774" name="Changes" comment="Version number 6, added a lot of backend code, to switch between scenes and some small functions...">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/MongoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/Images/dinim3akalpha001/menu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/Images/dinim3akalpha001/menucar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/Images/dinim3akalpha001/menuhome.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/Images/dinim3akalpha001/menupayment.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/Images/dinim3akalpha001/menuprofile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/serviceAccountKey.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/DiniApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/DiniApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/SignupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/SignupController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/VerificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/VerificationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/ProfileDriver.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/ProfileDriver.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/Signup.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/Signup.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/Verification.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/Verification.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +41,13 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="2J0WDMaFuKHXJZ4IAKrrwRyba92" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -38,35 +56,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/main/Desktop/DiniM3ak/src/main/java/com/example/dinim3akalpha001&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_directory_selection": "C:/Users/SM/IdeaProjects/DiniM3akAlpha001/src/main/java/com/example/dinim3akalpha001",
+    "last_opened_file_path": "C:/Users/SM/Desktop/javax.mail.jar",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\main\Desktop\DiniM3ak\src\main\java\com\example\dinim3akalpha001" />
-      <recent name="C:\Users\main\Desktop\DiniM3ak\src\main\resources\com\example\dinim3akalpha001" />
       <recent name="C:\Users\SM\IdeaProjects\DiniM3akAlpha001\src\main\resources\com\example\dinim3akalpha001" />
       <recent name="C:\Users\SM\IdeaProjects\DiniM3akAlpha001\src\main\resources\com\StyleSheet\dinim3akalpha001" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\SM\IdeaProjects\DiniM3akAlpha001\src\main\resources\com\example\dinim3akalpha001" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="App" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.example.dinim3akalpha001.DiniApplication" />
+      <module name="DiniM3akAlpha001" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -81,17 +108,66 @@
       <workItem from="1671302090667" duration="10058000" />
       <workItem from="1671388226970" duration="3824000" />
       <workItem from="1671403957405" duration="813000" />
-      <workItem from="1671436027949" duration="5517000" />
-      <workItem from="1671718703258" duration="8000" />
-      <workItem from="1671722821722" duration="603000" />
-      <workItem from="1672650712343" duration="1138000" />
-      <workItem from="1672678018968" duration="3122000" />
-      <workItem from="1672681747012" duration="2592000" />
+      <workItem from="1671822707336" duration="3728000" />
+      <workItem from="1671886016798" duration="2879000" />
+      <workItem from="1672056219220" duration="5754000" />
+      <workItem from="1672072106220" duration="10666000" />
+      <workItem from="1672145933164" duration="8813000" />
+      <workItem from="1672158034428" duration="155000" />
+      <workItem from="1672506420723" duration="7621000" />
+      <workItem from="1672700379549" duration="438000" />
+      <workItem from="1672701594412" duration="504000" />
+      <workItem from="1672778279358" duration="80000" />
+      <workItem from="1672778420545" duration="384000" />
+      <workItem from="1672947079287" duration="2329000" />
+      <workItem from="1672949434176" duration="6655000" />
     </task>
+    <task id="LOCAL-00001" summary="Version number ???, Done with Payment.fxml">
+      <created>1671890477756</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1671890477757</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Version number ???, Done with Payment.fxml">
+      <created>1672056431490</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1672056431490</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Version number ???+1,some unversioned files pushed">
+      <created>1672056461600</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1672056461600</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Version number 5.5467, added a lot of things, controllers, a file selector, etc...&#10;&#10;only the menu remains, and functionalities...must recheck each fxml file and start linking stuff next time.">
+      <created>1672084736568</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1672084736568</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Version number 6, added a lot of backend code, to switch between scenes and some small functions...">
+      <created>1672158173230</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1672158173230</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:com.google.protobuf:protobuf-java" />
+    <option featureType="dependencySupport" implementationName="java:com.google.cloud:google-cloud-storage" />
+    <option featureType="dependencySupport" implementationName="java:io.grpc:grpc-api" />
+    <option featureType="dependencySupport" implementationName="java:org.openjfx:javafx-base" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -106,5 +182,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Version number ???, Done with Payment.fxml" />
+    <MESSAGE value="Version number ???+1,some unversioned files pushed" />
+    <MESSAGE value="Version number 5.5467, added a lot of things, controllers, a file selector, etc...&#10;&#10;only the menu remains, and functionalities...must recheck each fxml file and start linking stuff next time." />
+    <MESSAGE value="Version number 6, added a lot of backend code, to switch between scenes and some small functions..." />
+    <option name="LAST_COMMIT_MESSAGE" value="Version number 6, added a lot of backend code, to switch between scenes and some small functions..." />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
