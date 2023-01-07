@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="SignUpScreen" layoutX="0" layoutY="0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="812" prefWidth="375" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dinim3akalpha001.ProfileController">
+   <children>
+      <ImageView fitHeight="812.0" fitWidth="375.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Images/dinim3akalpha001/BackgroundNormal.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="119.0" fitWidth="375.0" layoutY="25.0" opacity="0.87" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Images/dinim3akalpha001/menuprofile.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="20.0" arcWidth="20.0" height="696.0" layoutY="128.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="375.0">
+         <fill>
+            <LinearGradient endX="0.7914691943127963" endY="1.0" startX="0.7772511848341233">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.800000011920929" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.949999988079071" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill></Rectangle>
+      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#3f3b6c" height="249.0" layoutY="578.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="375.0" />
+      <Circle fx:id="Photo" centerX="187.5" centerY="254.5" fill="#3f3b6c" layoutX="1.0" layoutY="19.0" radius="62.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Text fx:id="YourProfile" fill="#3f3b6c" layoutX="120.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="YOUR PROFILE" textAlignment="CENTER" />
+      <Button fx:id="Settings" layoutX="233.0" layoutY="305.0" mnemonicParsing="false" onAction="#Upload" prefHeight="31.0" prefWidth="31.0" />
+      <Button fx:id="Viewmore" layoutX="52.0" layoutY="599.0" mnemonicParsing="false" onAction="#handleMore" text="View More" textFill="#d4d4d4" />
+      <Text fx:id="LatestClient" fill="#3f3b6c" layoutX="39.0" layoutY="569.0" lineSpacing="2.4000005722046" strokeType="OUTSIDE" strokeWidth="0.0" text="LATEST CLIENTS" />
+      <Text fx:id="Stars" fill="#787878" layoutX="149.0" layoutY="436.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;N&gt; Stars" textAlignment="CENTER" wrappingWidth="70.0" />
+      <Button fx:id="Vehicle" layoutX="82.0" layoutY="448.0" mnemonicParsing="false" onAction="#handleVehicle" prefHeight="42.0" prefWidth="212.0" text="VEHICLE" textFill="WHITE" />
+      <Button layoutX="82.0" layoutY="496.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="212.0" style="-fx-border-radius: 10px; -fx-border-width: 1.5px; -fx-background-color: rgba(217,217,217,1); -fx-border-color: #3f3b6c; -fx-background-radius: 11px;" />
+      <Button fx:id="Payment" layoutX="82.0" layoutY="496.0" mnemonicParsing="false" onAction="#handlePayment" prefHeight="42.0" prefWidth="212.0" style="-fx-border-radius: 10px; -fx-border-width: 1.5px; -fx-background-color: #ffffff; -fx-border-color: #3f3b6c; -fx-background-radius: 11px;" text="PAYMENT" textFill="#3f3b6c" />
+      <TextField fx:id="Username" alignment="CENTER" layoutX="78.0" layoutY="356.0" prefHeight="42.0" prefWidth="212.0" style="-fx-text-box-border: transparent; -fx-focus-color: transparent; -fx-background-color: transparent; -fx-text-fill: #3F3B6C;" text="&lt;Your Name&gt;" />
+
+      <ImageView fx:id="StarsIcons" fitHeight="24.0" fitWidth="120.0" layoutX="-4.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" x="128.0" y="374.0">
+         <image>
+            <Image url="@../../Images/dinim3akalpha001/Stars0.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="Vehicle" layoutX="28.0" layoutY="70.0" mnemonicParsing="false" onAction="#handleVehicle" opacity="0.0" prefHeight="25.0" prefWidth="31.0" />
+      <Button fx:id="Noti" layoutX="109.0" layoutY="70.0" mnemonicParsing="false" opacity="0.0" prefHeight="25.0" prefWidth="31.0" />
+      <Button fx:id="Payment" layoutX="229.0" layoutY="70.0" mnemonicParsing="false" onAction="#handlePayment" opacity="0.0" prefHeight="25.0" prefWidth="31.0" />
+      <Button layoutX="159.0" layoutY="28.0" mnemonicParsing="false" onAction="#handleMenu" prefHeight="62.0" prefWidth="56.0" visible="false" />
+   </children>
+</Pane>
