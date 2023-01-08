@@ -56,17 +56,38 @@
     visibility: hidden ;
 }
 
+#sixteensemibold {
+    -fx-font-family: "Lato Semibold";
+    -fx-font-size: 16;
+}
+
+#sixteenregular {
+    -fx-font-family: "Lato";
+    -fx-font-size: 16;
+}
+
+#fourteenregular {
+    -fx-font-family: "Lato";
+    -fx-font-size: 14;
+}
+
+/* Splash Screen */
+
+#Initializing {
+    -fx-font-family: "Lato";
+    -fx-font-size: 16;
+}
 /* Welcome Screen */
 #Welcometext {
     -fx-font-size: 14;
 }
 
-#WelcomeTitle {
+#WelcomeTitle,#twentyfoursemibold {
     -fx-font-family: "Lato Semibold";
     -fx-font-size: 24;
 }
 
-#Signup,#Login,#Confirm,#SendCode,#Driving,#Riding,#email_title,#pass_title,#Credit,#Cash {
+#Signup,#Login,#Confirm,#SendCode,#Driving,#Riding,#email_title,#pass_title,#Credit,#Cash,#twentyblack {
     -fx-font-family: "Lato Black";
     -fx-font-size: 20;
 }

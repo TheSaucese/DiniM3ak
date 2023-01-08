@@ -1,8 +1,10 @@
 package com.example.dinim3akalpha001;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.ProgressIndicator;
 import javafx.scene.control.TextField;
 
 import javax.mail.*;
@@ -24,8 +26,36 @@ public class SignupController {
     @FXML
     private Button Signup;
     @FXML
+    private ProgressIndicator Ind;
+    @FXML
     private void handleSignup() throws IOException {
-        new DiniController().handleScenes("Verification.fxml",Signup);
+        new LoadingScreen().start();
+    }
+
+    class LoadingScreen extends Thread{
+        @Override
+        public void run() {
+            try {
+                handleVerif();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            Platform.runLater(new Runnable() {
+                @Override
+                public void run() {
+                    try {
+                        new DiniController().handleScenes("Verification.fxml",Signup);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                }
+            });
+        }
+    }
+
+    private void handleVerif() throws IOException {
+        Ind.setVisible(true);
+        Signup.setDisable(true);
         final String username = "dinim3akservicedonotreply@gmail.com";
         final String password = "kgafplabwyghaaaz";
         String randomNum = String.valueOf(ThreadLocalRandom.current().nextInt(10000, 99999 + 1));
@@ -52,7 +82,7 @@ public class SignupController {
             message.setText("""
                     Welcome to Dini M3ak :),
 
-                     Verification Code : """+" "+randomNum);
+                     Verification Code :\s"""+" "+randomNum);
             Transport.send(message);
             System.out.println("Done");
             VerificationController.setCode(randomNum);

@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e30d0910-c7f0-4386-b485-86fa2d7c2774" name="Changes" comment="Version number 6, added a lot of backend code, to switch between scenes and some small functions...">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/MongoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/Images/dinim3akalpha001/menu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/Images/dinim3akalpha001/menucar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/Images/dinim3akalpha001/menuhome.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/Images/dinim3akalpha001/menupayment.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/Images/dinim3akalpha001/menuprofile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/serviceAccountKey.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/DiniApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/DiniApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/SignupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/SignupController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/VerificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/VerificationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/ProfileDriver.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/ProfileDriver.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/Signup.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/Signup.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/Verification.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/Verification.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="e30d0910-c7f0-4386-b485-86fa2d7c2774" name="Changes" comment="Best project ever 😈" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,13 +47,13 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_directory_selection": "C:/Users/SM/IdeaProjects/DiniM3akAlpha001/src/main/java/com/example/dinim3akalpha001",
-    "last_opened_file_path": "C:/Users/SM/Desktop/javax.mail.jar",
+    "last_opened_file_path": "C:/Users/SM/Desktop/DiniM3ak-master/src/main/resources/com/example/dinim3akalpha001",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.pluginManager",
@@ -79,11 +62,15 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\SM\Desktop\DiniM3ak-master\src\main\resources\com\example\dinim3akalpha001" />
       <recent name="C:\Users\SM\IdeaProjects\DiniM3akAlpha001\src\main\resources\com\example\dinim3akalpha001" />
       <recent name="C:\Users\SM\IdeaProjects\DiniM3akAlpha001\src\main\resources\com\StyleSheet\dinim3akalpha001" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\SM\IdeaProjects\DiniM3akAlpha001\src\main\resources\com\example\dinim3akalpha001" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.dinim3akalpha001" />
     </key>
   </component>
   <component name="RunManager">
@@ -121,6 +108,7 @@
       <workItem from="1672778420545" duration="384000" />
       <workItem from="1672947079287" duration="2329000" />
       <workItem from="1672949434176" duration="6655000" />
+      <workItem from="1673196359126" duration="3281000" />
     </task>
     <task id="LOCAL-00001" summary="Version number ???, Done with Payment.fxml">
       <created>1671890477756</created>
