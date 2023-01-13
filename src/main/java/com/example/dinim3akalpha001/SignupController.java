@@ -16,9 +16,9 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class SignupController {
     @FXML
-    private TextField Email;
+    public static TextField Email;
     @FXML
-    private TextField pass_text;
+    public static TextField pass_text;
     @FXML
     private CheckBox ShowPass;
     @FXML
@@ -78,11 +78,8 @@ public class SignupController {
                     Message.RecipientType.TO,
                     InternetAddress.parse(Email.getText())
             );
-            message.setSubject("Testing Gmail SSL");
-            message.setText("""
-                    Welcome to Dini M3ak :),
-
-                     Verification Code :\s"""+" "+randomNum);
+            message.setSubject("Dini M3ak");
+            message.setText("Welcome to Dini M3ak :), Verification Code : "+randomNum);
             Transport.send(message);
             System.out.println("Done");
             VerificationController.setCode(randomNum);

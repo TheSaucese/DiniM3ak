@@ -4,158 +4,83 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e30d0910-c7f0-4386-b485-86fa2d7c2774" name="Changes" comment="Best project ever 😈" />
+    <list default="true" id="fb171782-302e-4d3e-9e0e-a075aae1d669" name="Changes" comment="Beta ??? map works I guess ? mongo might not be working...">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/ArrayTester.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/ClusteredMainApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/MainApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/MainApp2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/SignupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/SignupController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/VerificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/VerificationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/dinim3akalpha001/javascript/JavascriptFunctionLineTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/dinim3akalpha001/javascript/JavascriptObjectTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/dinim3akalpha001/javascript/JavascriptRuntimeTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/dinim3akalpha001/service/directions/DirectionsRendererTest.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="FxmlFile" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="workspaceImportEnabled" value="true" />
-      </MavenImportingSettings>
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectId" id="2J0WDMaFuKHXJZ4IAKrrwRyba92" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="2KDt4SQZU27b5BbwfjjBg73rdif" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_directory_selection": "C:/Users/SM/IdeaProjects/DiniM3akAlpha001/src/main/java/com/example/dinim3akalpha001",
-    "last_opened_file_path": "C:/Users/SM/Desktop/DiniM3ak-master/src/main/resources/com/example/dinim3akalpha001",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/main/Desktop/GMapsFX/GMapsFX/src/main/java/com/example/dinim3akalpha001&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;AndroidSdkUpdater&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\SM\Desktop\DiniM3ak-master\src\main\resources\com\example\dinim3akalpha001" />
-      <recent name="C:\Users\SM\IdeaProjects\DiniM3akAlpha001\src\main\resources\com\example\dinim3akalpha001" />
-      <recent name="C:\Users\SM\IdeaProjects\DiniM3akAlpha001\src\main\resources\com\StyleSheet\dinim3akalpha001" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\SM\IdeaProjects\DiniM3akAlpha001\src\main\resources\com\example\dinim3akalpha001" />
+      <recent name="C:\Users\main\Desktop\GMapsFX\GMapsFX\src\main\java\com\example\dinim3akalpha001" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example.dinim3akalpha001" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="App" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="com.example.dinim3akalpha001.DiniApplication" />
-      <module name="DiniM3akAlpha001" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e30d0910-c7f0-4386-b485-86fa2d7c2774" name="Changes" comment="" />
-      <created>1671215361353</created>
+      <changelist id="fb171782-302e-4d3e-9e0e-a075aae1d669" name="Changes" comment="" />
+      <created>1673520792466</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1671215361353</updated>
-      <workItem from="1671215362470" duration="1615000" />
-      <workItem from="1671217002882" duration="7479000" />
-      <workItem from="1671302090667" duration="10058000" />
-      <workItem from="1671388226970" duration="3824000" />
-      <workItem from="1671403957405" duration="813000" />
-      <workItem from="1671822707336" duration="3728000" />
-      <workItem from="1671886016798" duration="2879000" />
-      <workItem from="1672056219220" duration="5754000" />
-      <workItem from="1672072106220" duration="10666000" />
-      <workItem from="1672145933164" duration="8813000" />
-      <workItem from="1672158034428" duration="155000" />
-      <workItem from="1672506420723" duration="7621000" />
-      <workItem from="1672700379549" duration="438000" />
-      <workItem from="1672701594412" duration="504000" />
-      <workItem from="1672778279358" duration="80000" />
-      <workItem from="1672778420545" duration="384000" />
-      <workItem from="1672947079287" duration="2329000" />
-      <workItem from="1672949434176" duration="6655000" />
-      <workItem from="1673196359126" duration="3281000" />
+      <updated>1673520792466</updated>
+      <workItem from="1673520794036" duration="2850000" />
+      <workItem from="1673614942902" duration="1260000" />
     </task>
-    <task id="LOCAL-00001" summary="Version number ???, Done with Payment.fxml">
-      <created>1671890477756</created>
+    <task id="LOCAL-00001" summary="Beta ??? map works I guess ? mongo might not be working...">
+      <created>1673522878803</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1671890477757</updated>
+      <updated>1673522878803</updated>
     </task>
-    <task id="LOCAL-00002" summary="Version number ???, Done with Payment.fxml">
-      <created>1672056431490</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1672056431490</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Version number ???+1,some unversioned files pushed">
-      <created>1672056461600</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1672056461600</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Version number 5.5467, added a lot of things, controllers, a file selector, etc...&#10;&#10;only the menu remains, and functionalities...must recheck each fxml file and start linking stuff next time.">
-      <created>1672084736568</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1672084736568</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Version number 6, added a lot of backend code, to switch between scenes and some small functions...">
-      <created>1672158173230</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1672158173230</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="UnknownFeatures">
-    <option featureType="dependencySupport" implementationName="java:com.google.protobuf:protobuf-java" />
-    <option featureType="dependencySupport" implementationName="java:com.google.cloud:google-cloud-storage" />
-    <option featureType="dependencySupport" implementationName="java:io.grpc:grpc-api" />
-    <option featureType="dependencySupport" implementationName="java:org.openjfx:javafx-base" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -169,15 +94,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Version number ???, Done with Payment.fxml" />
-    <MESSAGE value="Version number ???+1,some unversioned files pushed" />
-    <MESSAGE value="Version number 5.5467, added a lot of things, controllers, a file selector, etc...&#10;&#10;only the menu remains, and functionalities...must recheck each fxml file and start linking stuff next time." />
-    <MESSAGE value="Version number 6, added a lot of backend code, to switch between scenes and some small functions..." />
-    <option name="LAST_COMMIT_MESSAGE" value="Version number 6, added a lot of backend code, to switch between scenes and some small functions..." />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
+    <MESSAGE value="Beta ??? map works I guess ? mongo might not be working..." />
+    <option name="LAST_COMMIT_MESSAGE" value="Beta ??? map works I guess ? mongo might not be working..." />
   </component>
 </project>

@@ -7,7 +7,6 @@ import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
 
 import java.io.File;
-import java.io.FileFilter;
 import java.io.IOException;
 
 public class CarController {
