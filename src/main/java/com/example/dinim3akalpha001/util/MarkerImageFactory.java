@@ -21,6 +21,7 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URL;
+import java.util.Base64;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.embed.swing.SwingFXUtils;
@@ -62,10 +63,11 @@ public class MarkerImageFactory {
             Image img = new Image(myURI);
             
             String imageMimeType = "image/" + type;
-            
+
             try {
-                dataURI = "data:" + imageMimeType + ";base64,(" + 
-                        javax.xml.bind.DatatypeConverter.printBase64Binary(getImageBytes(SwingFXUtils.fromFXImage(img, null), type)) + ")";
+                byte[] imageBytes = getImageBytes(SwingFXUtils.fromFXImage(img, null), type);
+                String base64Image = Base64.getEncoder().encodeToString(imageBytes);
+                dataURI = "data:" + imageMimeType + ";base64," + base64Image;
             } catch (IOException ioe) {
                 Logger.getLogger(MarkerImageFactory.class.getName()).log(Level.WARNING, "Cannot create marker image", ioe);
                 dataURI = null;
@@ -88,10 +90,11 @@ public class MarkerImageFactory {
                 Image img = new Image(myURLext);
                 
                 String imageMimeType = "image/" + type;
-                
+
                 try {
-                    dataURI = "data:" + imageMimeType + ";base64," +
-                            javax.xml.bind.DatatypeConverter.printBase64Binary(getImageBytes(SwingFXUtils.fromFXImage(img, null), type)) + "";
+                    byte[] imageBytes = getImageBytes(SwingFXUtils.fromFXImage(img, null), type);
+                    String base64Image = Base64.getEncoder().encodeToString(imageBytes);
+                    dataURI = "data:" + imageMimeType + ";base64," + base64Image;
                 } catch (IOException ioe) {
                     Logger.getLogger(MarkerImageFactory.class.getName()).log(Level.WARNING, "Cannot create marker image", ioe);
                     dataURI = null;

@@ -7,18 +7,19 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.ProgressIndicator;
 import javafx.scene.control.TextField;
 
+import java.util.Properties;
+import java.util.concurrent.ThreadLocalRandom;
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+
 import java.io.IOException;
-import java.util.Properties;
-import java.util.concurrent.ThreadLocalRandom;
 
 public class SignupController {
     @FXML
-    public static TextField Email;
+    private TextField Email;
     @FXML
-    public static TextField pass_text;
+    private TextField pass_text;
     @FXML
     private CheckBox ShowPass;
     @FXML
@@ -35,7 +36,7 @@ public class SignupController {
     class LoadingScreen extends Thread{
         @Override
         public void run() {
-            try {
+           try {
                 handleVerif();
             } catch (IOException e) {
                 throw new RuntimeException(e);

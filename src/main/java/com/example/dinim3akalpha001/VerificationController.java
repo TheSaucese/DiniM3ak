@@ -11,8 +11,6 @@ import org.bson.types.ObjectId;
 import java.io.IOException;
 
 import static com.example.dinim3akalpha001.MongoController.db;
-import static com.example.dinim3akalpha001.SignupController.Email;
-import static com.example.dinim3akalpha001.SignupController.pass_text;
 
 public class VerificationController {
 
@@ -26,12 +24,12 @@ public class VerificationController {
         if (code.equals(inputCode.getText())) {
             MongoCollection<Document>  collection = db.getCollection("users");
             Document user = new Document("_id", new ObjectId());
-            System.out.println(Email.getText());
+            /*System.out.println(Email.getText());
             System.out.println(pass_text.getText());
             user.append("email",Email.getText())
                     .append("password",pass_text.getText());
 
-            new DiniController().handleScenes("Choice.fxml", Confirm);
+            new DiniController().handleScenes("Choice.fxml", Confirm);*/
         }
         else {
             new Alert(Alert.AlertType.ERROR,"bruh").show();

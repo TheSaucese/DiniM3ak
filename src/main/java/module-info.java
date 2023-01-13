@@ -10,11 +10,10 @@ open module com.exampe.dinim3akalpha001 {
     requires java.logging;
     requires java.desktop;
     requires org.slf4j;
-    requires java.xml.bind;
-    requires mail;
     requires org.mongodb.driver.sync.client;
     requires org.mongodb.driver.core;
     requires org.mongodb.bson;
+    requires java.mail;
 
     exports com.example.dinim3akalpha001;
     exports com.example.dinim3akalpha001.javascript;
