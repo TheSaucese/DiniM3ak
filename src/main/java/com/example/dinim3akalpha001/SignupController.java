@@ -29,6 +29,10 @@ public class SignupController {
     @FXML
     private ProgressIndicator Ind;
     @FXML
+    private void Login() throws IOException {
+        new DiniController().handleScenes("Login.fxml",Signup);
+    }
+    @FXML
     private void handleSignup() throws IOException {
         new LoadingScreen().start();
     }
@@ -84,6 +88,8 @@ public class SignupController {
             Transport.send(message);
             System.out.println("Done");
             VerificationController.setCode(randomNum);
+            VerificationController.setuEmail(Email.getText());
+            VerificationController.setuPass(pass_hidden.getText());
         } catch (MessagingException e) {
             e.printStackTrace();
         }

@@ -16,6 +16,8 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.function.UnaryOperator;
 
+import static com.example.dinim3akalpha001.LoginController.isDriver;
+
 public class ProfileController implements Initializable {
     @FXML
     private Circle Photo;
@@ -42,7 +44,7 @@ public class ProfileController implements Initializable {
     }
     @FXML
     private void handlePayment() throws IOException {
-        new DiniController().handleScenes("Payment.fxml",Vehicle);
+        new DiniController().handleScenes("PaymentSee.fxml",Vehicle);
     }
     @FXML
     private void handleMore() throws IOException {
@@ -51,8 +53,7 @@ public class ProfileController implements Initializable {
     }
     @FXML
     private void handleMenu() throws IOException {
-        //new DiniController().handleScenes("Payment.fxml",Vehicle);
-        //UNFINISHED
+        new DiniController().handleScenes(isDriver?"HomeDriver.fxml":"HomeRider.fxml",Vehicle);
     }
     @FXML
     public void initialize(URL location, ResourceBundle resources) {

@@ -11,6 +11,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -29,14 +30,21 @@ public class HomeDriverController implements Initializable, MapComponentInitiali
     private GeocodingService geocodingService;
 
     @FXML
-    protected TextField fromTextField;
-
-    @FXML
-    protected TextField toTextField;
-
-    @FXML
     private void getCoords() {
 
+    }
+
+    @FXML
+    private void handleVehicle() throws IOException {
+        new DiniController().handleScenes("Car.fxml",mapView);
+    }
+    @FXML
+    private void handlePayment() throws IOException {
+        new DiniController().handleScenes("PaymentSee.fxml",mapView);
+    }
+    @FXML
+    private void handleProfile() throws IOException {
+        new DiniController().handleScenes("ProfileDriver.fxml",mapView);
     }
 
     @Override

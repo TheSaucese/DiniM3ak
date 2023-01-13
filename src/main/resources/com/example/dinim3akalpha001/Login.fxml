@@ -25,15 +25,15 @@
       <Button fx:id="Login" layoutX="26.0" layoutY="574.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#Login" prefHeight="63.0" prefWidth="323.0" style="-fx-background-color: #3F3B6C; -fx-background-radius: 10px;" text="Login" textFill="#ffffff99" />
       <PasswordField fx:id="pass_hidden" layoutX="26.0" layoutY="454.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="64.0" prefWidth="323.0" style="-fx-border-radius: 10px; -fx-border-width: 1.5px; -fx-background-color: rgba(217,217,217,1); -fx-border-color: #3f3b6c; -fx-background-radius: 11px;" />
       <TextField fx:id="pass_text" layoutX="26.0" layoutY="454.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="64.0" prefWidth="323.0" style="-fx-border-radius: 10px; -fx-border-width: 1.5px; -fx-background-color: rgba(217,217,217,1); -fx-border-color: #3f3b6c; -fx-background-radius: 11px;" visible="false" />
-      <TextField fx:id="Email" layoutX="27.0" layoutY="319.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="64.0" prefWidth="323.0" style="-fx-border-radius: 10px; -fx-border-width: 1.5px; -fx-background-color: rgba(217,217,217,1); -fx-border-color: #3f3b6c; -fx-background-radius: 11px;" />
+      <TextField fx:id="Email" layoutX="26.0" layoutY="313.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="64.0" prefWidth="323.0" style="-fx-border-radius: 10px; -fx-border-width: 1.5px; -fx-background-color: rgba(217,217,217,1); -fx-border-color: #3f3b6c; -fx-background-radius: 11px;" />
       <Text fx:id="email_title" fill="#ffffff99" layoutX="26.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
       <Text fx:id="pass_title" fill="#ffffff99" layoutX="26.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" y="422.0" />
       <CheckBox fx:id="ShowPass" layoutX="307.0" layoutY="476.0" mnemonicParsing="false" />
       <Button fx:id="FB" layoutX="141.0" layoutY="667.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="94.5" />
       <Button fx:id="Apple" layoutX="253.0" layoutY="667.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="94.5" />
       <Button fx:id="Google" layoutX="26.0" layoutY="667.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="94.5" />
-      <Hyperlink fx:id="hyper1" layoutX="97.0" layoutY="760.0" text="You already have an account ?" textFill="#ffffff99" underline="false" />
-      <Hyperlink fx:id="hyper2" layoutX="255.5" layoutY="760.0" text="Login" textFill="#ffffff99" underline="true" />
+      <Hyperlink fx:id="hyper2" layoutX="301.0" layoutY="551.0" onAction="#Signup" text="Signup" textFill="#ffffff99" underline="true" />
+      <Hyperlink fx:id="hyper2" layoutX="27.0" layoutY="551.0" onAction="#Forgot" text="Forgot Password" textFill="#ffffff99" underline="true" />
 
    </children>
 </Pane>

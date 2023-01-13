@@ -35,7 +35,7 @@
       <Button fx:id="Apple" layoutX="253.0" layoutY="667.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="94.5" />
       <Button fx:id="Google" layoutX="26.0" layoutY="667.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="94.5" />
       <Hyperlink fx:id="hyper1" layoutX="97.0" layoutY="760.0" text="You already have an account ?" textFill="#ffffff99" underline="false" />
-      <Hyperlink fx:id="hyper2" layoutX="255.5" layoutY="760.0" text="Login" textFill="#ffffff99" underline="true" />
+      <Hyperlink fx:id="hyper2" layoutX="255.5" layoutY="760.0" onAction="#Login" text="Login" textFill="#ffffff99" underline="true" />
       <ProgressIndicator fx:id="Ind" layoutX="95.0" layoutY="337.0" maxHeight="200.0" maxWidth="200.0" minHeight="200.0" minWidth="200.0" prefHeight="200.0" prefWidth="200.0" style="-fx-accent: #3F3B6C;" visible="false" />
 
    </children>

@@ -27,11 +27,11 @@ public class PaymentChoiceController implements Initializable {
             case 10:
                 if(ScrollPane.getHvalue()>=0.8) {
                     circle1.setFill(Color.WHITE);
-                    circle2.setFill(Color.web("#3f3b6c"));
+                    circle2.setFill(Color.web("#9F73AB"));
                 }
                 else if (ScrollPane.getHvalue()<=0.2) {
                     circle2.setFill(Color.WHITE);
-                    circle1.setFill(Color.web("#3f3b6c"));
+                    circle1.setFill(Color.web("#9F73AB"));
                 }
         }
     }

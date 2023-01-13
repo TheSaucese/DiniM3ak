@@ -21,9 +21,9 @@
       </ImageView>
       <Button fx:id="Driving" layoutX="26.0" layoutY="513.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleDriving" prefHeight="63.0" prefWidth="323.0" style="-fx-background-color: #3F3B6C; -fx-background-radius: 10px;" text="Driving" textFill="#ffffff99" />
       <TextField fx:id="pass_text" layoutX="26.0" layoutY="454.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="64.0" prefWidth="323.0" style="-fx-border-radius: 10px; -fx-border-width: 1.5px; -fx-background-color: rgba(217,217,217,1); -fx-border-color: #3f3b6c; -fx-background-radius: 11px;" visible="false" />
-      <Button fx:id="Riding" layoutX="26.0" layoutY="597.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="63.0" prefWidth="323.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 10px;" text="Riding" textFill="#3f3b6c99" />
+      <Button fx:id="Riding" layoutX="26.0" layoutY="597.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleRiding" prefHeight="63.0" prefWidth="323.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 10px;" text="Riding" textFill="#3f3b6c99" />
       <Text fx:id="VerTitle" fill="#ffffff99" layoutX="82.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Driving or Riding ?" />
-      <Text fx:id="VerText" fill="#ffffff99" layoutX="70.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You can change your choice in the settings menu if you wish to later on !" textAlignment="CENTER" wrappingWidth="245.62109375" />
+      <Text fx:id="VerText" fill="#ffffff99" layoutX="70.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You can change your choice in your profile if you wish to later on !" textAlignment="CENTER" wrappingWidth="245.62109375" />
 
    </children>
 </Pane>

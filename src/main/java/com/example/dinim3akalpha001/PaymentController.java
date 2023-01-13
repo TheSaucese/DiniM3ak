@@ -5,6 +5,8 @@ import javafx.scene.control.Button;
 
 import java.io.IOException;
 
+import static com.example.dinim3akalpha001.LoginController.isDriver;
+
 public class PaymentController {
     @FXML
     private Button Arrow;
@@ -17,5 +19,9 @@ public class PaymentController {
     @FXML
     private void handleVehicle() throws IOException {
         new DiniController().handleScenes("Car.fxml",Vehicle);
+    }
+    @FXML
+    private void handleMenu() throws IOException {
+        new DiniController().handleScenes(isDriver?"HomeDriver.fxml":"HomeRider.fxml",Vehicle);
     }
 }

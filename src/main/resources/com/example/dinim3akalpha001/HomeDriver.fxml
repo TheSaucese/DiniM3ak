@@ -22,10 +22,10 @@
          </image>
       </ImageView>
       <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#3f3b6c" height="219.0" layoutX="32.0" layoutY="162.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="319.0" />
-      <Button fx:id="Vehicle" layoutX="28.0" layoutY="70.0" mnemonicParsing="false" opacity="0.0" prefHeight="25.0" prefWidth="31.0" />
+      <Button fx:id="Vehicle" onAction="#handleVehicle" layoutX="28.0" layoutY="70.0" mnemonicParsing="false" opacity="0.0" prefHeight="25.0" prefWidth="31.0" />
       <Button fx:id="Noti" layoutX="109.0" layoutY="70.0" mnemonicParsing="false" opacity="0.0" prefHeight="25.0" prefWidth="31.0" />
-      <Button fx:id="Payment" layoutX="229.0" layoutY="70.0" mnemonicParsing="false" opacity="0.0" prefHeight="25.0" prefWidth="31.0" />
-      <Button layoutX="159.0" layoutY="28.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="56.0" visible="false" />
+      <Button fx:id="Payment" layoutX="229.0" onAction="#handlePayment" layoutY="70.0" mnemonicParsing="false" opacity="0.0" prefHeight="25.0" prefWidth="31.0" />
+      <Button fx:id="Profile" onAction="#handleProfile" layoutX="159.0" layoutY="28.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="56.0" visible="false" />
       <Text fill="#d4d4d4" layoutX="56.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clients near you" />
       <GoogleMapView fx:id="mapView" prefHeight="386.0" layoutX="32.0" layoutY="406.0" prefWidth="319.0" />
 

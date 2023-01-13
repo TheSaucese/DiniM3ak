@@ -12,4 +12,8 @@ public class WelcomeController {
     private void handleSignup() throws IOException {
         new DiniController().handleScenes("Signup.fxml",Signup);
     }
+    @FXML
+    private void handleLogin() throws IOException {
+        new DiniController().handleScenes("Login.fxml",Login);
+    }
 }

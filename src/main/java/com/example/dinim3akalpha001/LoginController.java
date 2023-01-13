@@ -8,36 +8,43 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import org.bson.Document;
 
+import java.io.IOException;
+
 import static com.example.dinim3akalpha001.MongoController.db;
+import static com.mongodb.client.model.Filters.and;
 import static com.mongodb.client.model.Filters.eq;
 
 public class LoginController {
+
+    static public boolean isDriver;
     @FXML
     private TextField Email;
     @FXML
     private PasswordField pass_hidden;
 
     @FXML
-    private void Login(ActionEvent event){
+    private void Login(ActionEvent event) throws IOException {
         String email = Email.getText();
         System.out.println(email);
         String password = pass_hidden.getText();
-        Document query = new Document("email", email).append("password", password);
         MongoCollection<Document> collection = db.getCollection("users");
-        Document user = collection.find(eq("email", email)).first();
-        System.out.println(user);
-
-        if (user != null) {
-            System.out.println("Done");
-        } else {
-            System.out.println("Not Done");
+        Document user = collection.find(and(eq("email",email),eq("password",password))).first();
+        if (user.getString("job").equals("Driver")) {
+            new DiniController().handleScenes("HomeDriver.fxml",Email);
         }
+        else {
+            new DiniController().handleScenes("HomeRider.fxml",Email);
+        }
+        isDriver =user.getString("job").equals("Driver");
+    }
+    @FXML
+    private void Signup(ActionEvent event) throws IOException {
+        new DiniController().handleScenes("Signup.fxml",Email);
+    }
 
-
-        Alert a = new Alert(Alert.AlertType.INFORMATION);
-        a.setTitle("Login Successfully");
-        a.setContentText("Login Successfully");
-        a.showAndWait();
+    @FXML
+    private void Forgot(ActionEvent event) throws IOException {
+        new DiniController().handleScenes("Signup.fxml",Email);
     }
 
 }

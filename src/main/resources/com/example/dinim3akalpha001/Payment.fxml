@@ -142,5 +142,6 @@
          </font>
       </PasswordField>
       <Button fx:id="Vehicle" layoutX="33.0" layoutY="70.0" mnemonicParsing="false" onAction="#handleVehicle" opacity="0.0" prefHeight="25.0" prefWidth="30.0" />
+      <Button fx:id="Home" layoutX="157.0" layoutY="30.0" mnemonicParsing="false" onAction="#handleMenu" opacity="0.0" prefHeight="60.0" prefWidth="64.0" />
    </children>
 </Pane>

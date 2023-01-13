@@ -23,7 +23,7 @@
       <Text fx:id="Welcometext" fill="#ffffff99" layoutX="60.0" layoutY="525.0" text="Thank you for choosing DiniM3ak, we hope you'll have a great experience with our product. Enjoy your journey !" textAlignment="CENTER" wrappingWidth="256.0">
       </Text>
       <Button fx:id="Signup" layoutX="41.0" layoutY="637.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleSignup" prefHeight="60.0" prefWidth="300.0" style="-fx-background-color: #3F3B6C; -fx-background-radius: 10px;" text="Sign up" textFill="#ffffff99" />
-      <Button fx:id="Login" layoutX="41.0" layoutY="715.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="300.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 10px;" text="Login" textFill="#3f3b6c" />
+      <Button fx:id="Login" layoutX="41.0" layoutY="715.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleLogin" prefHeight="60.0" prefWidth="300.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 10px;" text="Login" textFill="#3f3b6c" />
 
    </children>
 </Pane>

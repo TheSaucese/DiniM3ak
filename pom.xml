@@ -9,9 +9,7 @@
 
     <properties>
         <jreleaser.git.root.search>true</jreleaser.git.root.search>
-        <project.identifier>gmapsfx</project.identifier>
-        <project.github.repository>dlsc-software-consulting-gmbh/GMapsFX</project.github.repository>
-        <local.repository.path>/tmp/repository</local.repository.path>
+        <project.identifier>DiniM3ak</project.identifier>
         <java.version>11</java.version>
         <javafx.version>18.0.1</javafx.version>
         <junit.version>5.9.1</junit.version>
