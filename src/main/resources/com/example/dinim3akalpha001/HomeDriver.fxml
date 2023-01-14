@@ -8,9 +8,8 @@
 <?import javafx.scene.text.Text?>
 
 <?import com.example.dinim3akalpha001.GoogleMapView?>
-<?import javafx.scene.control.TextField?>
 <Pane fx:id="SignUpScreen" layoutX="0" layoutY="0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="812" prefWidth="375" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dinim3akalpha001.HomeDriverController">
-   <children>
+    <children>
       <ImageView fitHeight="812.0" fitWidth="375.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../Images/dinim3akalpha001/BackgroundNormal.png" />
@@ -25,8 +24,9 @@
       <Button fx:id="Vehicle" onAction="#handleVehicle" layoutX="28.0" layoutY="70.0" mnemonicParsing="false" opacity="0.0" prefHeight="25.0" prefWidth="31.0" />
       <Button fx:id="Noti" layoutX="109.0" layoutY="70.0" mnemonicParsing="false" opacity="0.0" prefHeight="25.0" prefWidth="31.0" />
       <Button fx:id="Payment" layoutX="229.0" onAction="#handlePayment" layoutY="70.0" mnemonicParsing="false" opacity="0.0" prefHeight="25.0" prefWidth="31.0" />
-      <Button fx:id="Profile" onAction="#handleProfile" layoutX="159.0" layoutY="28.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="56.0" visible="false" />
+      <Button fx:id="Profile" layoutX="159.0" layoutY="28.0" mnemonicParsing="false" opacity="0.0" prefHeight="62.0" prefWidth="56.0" />
       <Text fill="#d4d4d4" layoutX="56.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clients near you" />
+      <Button fx:id="Profile1" onAction="#handleProfile" layoutX="315.0" layoutY="69.0" mnemonicParsing="false" opacity="0.0" prefHeight="35.0" prefWidth="23.0" />
       <GoogleMapView fx:id="mapView" prefHeight="386.0" layoutX="32.0" layoutY="406.0" prefWidth="319.0" />
 
    </children>

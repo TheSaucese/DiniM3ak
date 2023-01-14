@@ -9,6 +9,8 @@ import javafx.stage.FileChooser;
 import java.io.File;
 import java.io.IOException;
 
+import static com.example.dinim3akalpha001.LoginController.isDriver;
+
 public class CarController {
     @FXML
     private Button Car;
@@ -37,6 +39,10 @@ public class CarController {
     }
     @FXML
     private void handlePayment() throws IOException {
-        new DiniController().handleScenes("Payment.fxml",Arrow);
+        new DiniController().handleScenes("PaymentSee.fxml",Arrow);
+    }
+    @FXML
+    private void handleMenu() throws IOException {
+        new DiniController().handleScenes(isDriver?"HomeDriver.fxml":"HomeRider.fxml",Arrow);
     }
 }

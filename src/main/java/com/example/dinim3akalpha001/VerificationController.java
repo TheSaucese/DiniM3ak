@@ -49,7 +49,7 @@ public class VerificationController {
             new DiniController().handleScenes("Choice.fxml", Confirm);
         }
         else {
-            new Alert(Alert.AlertType.ERROR,"bruh").show();
+            new Alert(Alert.AlertType.ERROR,"Incorrect").show();
 
         }
     }

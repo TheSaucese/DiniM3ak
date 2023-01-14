@@ -61,6 +61,6 @@
       <Button fx:id="Vehicle" layoutX="28.0" layoutY="70.0" mnemonicParsing="false" onAction="#handleVehicle" opacity="0.0" prefHeight="25.0" prefWidth="31.0" />
       <Button fx:id="Noti" layoutX="109.0" layoutY="70.0" mnemonicParsing="false" opacity="0.0" prefHeight="25.0" prefWidth="31.0" />
       <Button fx:id="Payment" layoutX="229.0" layoutY="70.0" mnemonicParsing="false" onAction="#handlePayment" opacity="0.0" prefHeight="25.0" prefWidth="31.0" />
-      <Button layoutX="159.0" layoutY="28.0" mnemonicParsing="false" onAction="#handleMenu" prefHeight="62.0" prefWidth="56.0" visible="false" />
+      <Button layoutX="159.0" layoutY="28.0" mnemonicParsing="false" onAction="#handleMenu" opacity="0.0" prefHeight="62.0" prefWidth="56.0" />
    </children>
 </Pane>

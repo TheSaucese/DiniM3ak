@@ -9,6 +9,7 @@ import java.io.IOException;
 import static com.example.dinim3akalpha001.MongoController.db;
 import static com.mongodb.client.model.Filters.and;
 import static com.mongodb.client.model.Filters.eq;
+import static com.mongodb.client.model.Updates.set;
 
 public class ChoiceController {
     @FXML
@@ -16,9 +17,11 @@ public class ChoiceController {
 
     @FXML
     private void handleDriving() throws IOException {
-        Document user = db.getCollection("users").find(eq("email",VerificationController.getuEmail())).first();
-        user.append("job","Driver");
+        //Document user = db.getCollection("users").find(eq("email",VerificationController.getuEmail())).first();
+        //user.append("job","Driver");
+        db.getCollection("users").updateOne(eq("email", VerificationController.getuEmail()), set("job","Driver"));
         new DiniController().handleScenes("HomeDriver.fxml",Driving);
+        new LoginController().isDriver=true;
     }
     @FXML
     private void handleRiding() throws IOException {

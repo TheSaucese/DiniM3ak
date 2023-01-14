@@ -43,7 +43,6 @@
             <Image url="@../../Images/dinim3akalpha001/menucar.png" />
          </image>
       </ImageView>
-      <Button fx:id="Arrow" layoutX="319.0" layoutY="73.0" mnemonicParsing="false" onAction="#handleArrow" opacity="0.0" prefHeight="25.0" prefWidth="8.0" />
       <Text fx:id="MainText" fill="#ffffff99" layoutX="48.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vehicle Name">
          <font>
             <Font size="16.0" />
@@ -81,5 +80,7 @@
       </Button>
       <Button fx:id="Car" alignment="CENTER" layoutX="41.0" layoutY="157.0" maxHeight="176.0" maxWidth="293.0" minHeight="159.16" minWidth="272.54" mnemonicParsing="false" onAction="#Upload" prefHeight="176.0" prefWidth="293.0" />
       <Button layoutX="238.0" layoutY="73.0" mnemonicParsing="false" onAction="#handlePayment" opacity="0.0" prefHeight="25.0" prefWidth="19.0" />
+      <Button layoutX="158.0" layoutY="30.0" mnemonicParsing="false" onAction="#handleMenu" opacity="0.0" prefHeight="59.0" prefWidth="57.0" />
+      <Button fx:id="Arrow" layoutX="319.0" layoutY="73.0" mnemonicParsing="false" onAction="#handleArrow" opacity="0.0" prefHeight="25.0" prefWidth="8.0" />
    </children>
 </Pane>

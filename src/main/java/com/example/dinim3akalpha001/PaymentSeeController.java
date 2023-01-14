@@ -5,10 +5,13 @@ import javafx.fxml.Initializable;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class PaymentChoiceController implements Initializable {
+import static com.example.dinim3akalpha001.LoginController.isDriver;
+
+public class PaymentSeeController implements Initializable {
     @FXML
     private javafx.scene.control.ScrollPane ScrollPane;
     @FXML
@@ -41,5 +44,22 @@ public class PaymentChoiceController implements Initializable {
         circle2.setOpacity(AnchorPane.getChildren().size()>=10?1:0.3);
         circle3.setOpacity(AnchorPane.getChildren().size()>=15?1:0.3);
         circle4.setOpacity(AnchorPane.getChildren().size()>=20?1:0.3);
+    }
+
+    @FXML
+    private void handleArrow() throws IOException {
+        new DiniController().handleScenes(isDriver?"ProfileDriver.fxml":"ProfileRider.fxml",circle1);
+    }
+    @FXML
+    private void handleVehicle() throws IOException {
+        new DiniController().handleScenes(isDriver?"Car.fxml":"Placeholder.fxl",circle1);
+    }
+    @FXML
+    private void handleMenu() throws IOException {
+        new DiniController().handleScenes(isDriver?"HomeDriver.fxml":"HomeRider.fxml",circle1);
+    }
+    @FXML
+    private void handlePayment() throws IOException {
+        new DiniController().handleScenes("PaymentAdd.fxml",circle1);
     }
 }

@@ -48,11 +48,12 @@ public class ProfileController implements Initializable {
     }
     @FXML
     private void handleMore() throws IOException {
-        //new DiniController().handleScenes("Payment.fxml",Vehicle);
+        //new DiniController().handleScenes("PaymentAdd.fxml",Vehicle);
         //UNFINISHED :(
     }
     @FXML
     private void handleMenu() throws IOException {
+        System.out.println(isDriver);
         new DiniController().handleScenes(isDriver?"HomeDriver.fxml":"HomeRider.fxml",Vehicle);
     }
     @FXML
