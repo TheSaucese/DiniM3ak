@@ -11,12 +11,11 @@ import org.bson.Document;
 import java.io.IOException;
 
 import static com.example.dinim3akalpha001.MongoController.db;
+import static com.example.dinim3akalpha001.SignupController2.*;
 import static com.mongodb.client.model.Filters.and;
 import static com.mongodb.client.model.Filters.eq;
 
 public class LoginController {
-
-    static public boolean isDriver;
     @FXML
     private TextField Email;
     @FXML
@@ -35,7 +34,9 @@ public class LoginController {
         else {
             new DiniController().handleScenes("HomeRider.fxml",Email);
         }
-        isDriver =user.getString("job").equals("Driver");
+        setuJob(user.getString("job"));
+        setuEmail(email);
+        setuPass(password);
     }
     @FXML
     private void Signup(ActionEvent event) throws IOException {

@@ -9,7 +9,7 @@ import javafx.stage.FileChooser;
 import java.io.File;
 import java.io.IOException;
 
-import static com.example.dinim3akalpha001.LoginController.isDriver;
+import static com.example.dinim3akalpha001.SignupController2.getuJob;
 
 public class CarController {
     @FXML
@@ -43,6 +43,6 @@ public class CarController {
     }
     @FXML
     private void handleMenu() throws IOException {
-        new DiniController().handleScenes(isDriver?"HomeDriver.fxml":"HomeRider.fxml",Arrow);
+        new DiniController().handleScenes(getuJob().equals("Driver")?"HomeDriver.fxml":"HomeRider.fxml",Arrow);
     }
 }

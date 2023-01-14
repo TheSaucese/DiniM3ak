@@ -1,22 +1,33 @@
 package com.example.dinim3akalpha001;
 
+import com.mongodb.client.gridfs.GridFSBucket;
+import com.mongodb.client.gridfs.GridFSBuckets;
+import com.mongodb.client.gridfs.model.GridFSDownloadOptions;
+import com.mongodb.client.gridfs.model.GridFSUploadOptions;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TextFormatter;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
+import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
+import org.bson.Document;
+import org.bson.types.ObjectId;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.function.UnaryOperator;
 
-import static com.example.dinim3akalpha001.LoginController.isDriver;
+import static com.example.dinim3akalpha001.MongoController.db;
+import static com.example.dinim3akalpha001.SignupController2.getuEmail;
+import static com.example.dinim3akalpha001.SignupController2.getuJob;
+import static com.mongodb.client.model.Filters.eq;
+import static com.mongodb.client.model.Updates.set;
 
 public class ProfileController implements Initializable {
     @FXML
@@ -26,7 +37,12 @@ public class ProfileController implements Initializable {
     @FXML
     private Button Vehicle;
     @FXML
-    private void Upload(){
+    private ImageView StarsIcons;
+    @FXML
+    private Text Stars;
+    static GridFSBucket gridBucket = GridFSBuckets.create(db);
+    @FXML
+    private void Upload() throws IOException {
         FileChooser fileChooser = new FileChooser();
 
         FileChooser.ExtensionFilter imageFilter = new FileChooser.ExtensionFilter("Image Files", "*.jpg", "*.png");
@@ -34,8 +50,11 @@ public class ProfileController implements Initializable {
         File file = fileChooser.showOpenDialog(null);
 
         if (file != null) {
-            Image image = new Image(file.toURI().toString());
-            Photo.setFill(new ImagePattern(image));
+            mongoupload(file.getPath(),file.getName());
+            //Image image = new Image(file.toURI().toString());
+            //Photo.setFill(new ImagePattern(image));
+            saveToFileSystem(file.getName());
+
         }
     }
     @FXML
@@ -53,8 +72,7 @@ public class ProfileController implements Initializable {
     }
     @FXML
     private void handleMenu() throws IOException {
-        System.out.println(isDriver);
-        new DiniController().handleScenes(isDriver?"HomeDriver.fxml":"HomeRider.fxml",Vehicle);
+        new DiniController().handleScenes(getuJob().equals("Driver")?"HomeDriver.fxml":"HomeRider.fxml",Vehicle);
     }
     @FXML
     public void initialize(URL location, ResourceBundle resources) {
@@ -62,18 +80,58 @@ public class ProfileController implements Initializable {
             if (c.isContentChange()) {
                 int newLength = c.getControlNewText().length();
                 if (newLength > 15) {
-                    // replace the input text with the last len chars
                     String tail = c.getControlNewText().substring(newLength - 15, newLength);
                     c.setText(tail);
-                    // replace the range to complete text
-                    // valid coordinates for range is in terms of old text
                     int oldLength = c.getControlText().length();
                     c.setRange(0, oldLength);
                 }
             }
             return c;
         };
+        Document user = db.getCollection("users").find(eq("email",getuEmail())).first();
         Username.setTextFormatter(new TextFormatter(modifyChange));
+        Username.setText(user.getString("fullname"));
+        switch(user.getString("stars")){
+            case "0" : StarsIcons.setImage(new Image("com/Images/dinim3akalpha001/Stars0.png"));break;
+            case "1" : StarsIcons.setImage(new Image("com/Images/dinim3akalpha001/Stars1.png"));break;
+            case "2" : StarsIcons.setImage(new Image("com/Images/dinim3akalpha001/Stars2.png"));break;
+            case "3" : StarsIcons.setImage(new Image("com/Images/dinim3akalpha001/Stars3.png"));break;
+            case "4" : StarsIcons.setImage(new Image("com/Images/dinim3akalpha001/Stars4.png"));break;
+            case "5" : StarsIcons.setImage(new Image("com/Images/dinim3akalpha001/Stars5.png"));break;
+        }
+        Stars.setText(user.getString("stars")+" Stars");
+        System.out.println(user.getString("stars"));
+        System.out.println(db.getCollection("fs.files").find(eq("_id",user.getObjectId("image"))).first().getString("filename"));
+        try {
+            saveToFileSystem(db.getCollection("fs.files").find(eq("_id",user.getObjectId("image"))).first().getString("filename"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    public ObjectId mongoupload(String filePath, String fileName) {
+        ObjectId fileId = null;
+        try {
+            InputStream inStream = new FileInputStream(new File(filePath));
+            GridFSUploadOptions uploadOptions = new GridFSUploadOptions().chunkSizeBytes(1024).metadata(new Document("type", "image").append("content_type", "image/png"));
+            fileId = gridBucket.uploadFromStream(fileName, inStream, uploadOptions);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        db.getCollection("users").updateOne(eq("email", getuEmail()), set("image",fileId));
+        return fileId;
+    }
+
+    private void saveToFileSystem(String fileName) throws IOException {
+        GridFSDownloadOptions downloadOptions = new GridFSDownloadOptions().revision(0);
+        File file = new File("c:/DiniM3ak/"+fileName);
+        file.getParentFile().mkdirs(); // Will create parent directories if not exists
+        file.createNewFile();
+        try (FileOutputStream streamToDownloadTo = new FileOutputStream(file)) {
+            gridBucket.downloadToStream(fileName, streamToDownloadTo, downloadOptions);
+            streamToDownloadTo.flush();
+        }
+        Image image = new Image(file.toURI().toString());
+        Photo.setFill(new ImagePattern(image));
     }
 
 

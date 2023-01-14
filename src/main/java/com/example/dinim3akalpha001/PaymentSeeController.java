@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import static com.example.dinim3akalpha001.LoginController.isDriver;
+import static com.example.dinim3akalpha001.SignupController2.getuJob;
 
 public class PaymentSeeController implements Initializable {
     @FXML
@@ -48,15 +48,15 @@ public class PaymentSeeController implements Initializable {
 
     @FXML
     private void handleArrow() throws IOException {
-        new DiniController().handleScenes(isDriver?"ProfileDriver.fxml":"ProfileRider.fxml",circle1);
+        new DiniController().handleScenes(getuJob().equals("Driver")?"ProfileDriver.fxml":"ProfileRider.fxml",circle1);
     }
     @FXML
     private void handleVehicle() throws IOException {
-        new DiniController().handleScenes(isDriver?"Car.fxml":"Placeholder.fxl",circle1);
+        new DiniController().handleScenes(getuJob().equals("Driver")?"Car.fxml":"Placeholder.fxl",circle1);
     }
     @FXML
     private void handleMenu() throws IOException {
-        new DiniController().handleScenes(isDriver?"HomeDriver.fxml":"HomeRider.fxml",circle1);
+        new DiniController().handleScenes(getuJob().equals("Driver")?"HomeDriver.fxml":"HomeRider.fxml",circle1);
     }
     @FXML
     private void handlePayment() throws IOException {

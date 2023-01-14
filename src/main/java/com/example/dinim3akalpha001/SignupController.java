@@ -2,19 +2,20 @@ package com.example.dinim3akalpha001;
 
 import javafx.application.Platform;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.ProgressIndicator;
+import javafx.scene.control.TextField;
 
-import java.util.Properties;
-import java.util.concurrent.ThreadLocalRandom;
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
-
 import java.io.IOException;
+import java.util.Properties;
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.regex.Pattern;
 
 import static com.example.dinim3akalpha001.MongoController.db;
-import static com.mongodb.client.model.Filters.and;
 import static com.mongodb.client.model.Filters.eq;
 
 public class SignupController {
@@ -112,8 +113,8 @@ public class SignupController {
                 Transport.send(message);
                 System.out.println("Done");
                 VerificationController.setCode(randomNum);
-                VerificationController.setuEmail(Email.getText());
-                VerificationController.setuPass(pass_hidden.getText());
+                SignupController2.setuEmail(Email.getText());
+                SignupController2.setuPass(pass_hidden.getText());
             } catch (MessagingException e) {
                 e.printStackTrace();
             }

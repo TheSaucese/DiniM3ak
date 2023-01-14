@@ -5,7 +5,7 @@ import javafx.scene.control.Button;
 
 import java.io.IOException;
 
-import static com.example.dinim3akalpha001.LoginController.isDriver;
+import static com.example.dinim3akalpha001.SignupController2.getuJob;
 
 public class PaymentController {
     @FXML
@@ -22,6 +22,6 @@ public class PaymentController {
     }
     @FXML
     private void handleMenu() throws IOException {
-        new DiniController().handleScenes(isDriver?"HomeDriver.fxml":"HomeRider.fxml",Vehicle);
+        new DiniController().handleScenes(getuJob().equals("Driver")?"HomeDriver.fxml":"HomeRider.fxml",Vehicle);
     }
 }
