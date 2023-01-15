@@ -233,7 +233,7 @@
 
 /* Payment in Profile */
 
-#Input {
+#Input,InputName,InputNumber {
     -fx-border-radius :  10;
     -fx-border-width : 3;
     -fx-background-color :  rgba(217,217,217,1);

@@ -100,8 +100,6 @@ public class ProfileController implements Initializable {
             case "5" : StarsIcons.setImage(new Image("com/Images/dinim3akalpha001/Stars5.png"));break;
         }
         Stars.setText(user.getString("stars")+" Stars");
-        System.out.println(user.getString("stars"));
-        System.out.println(db.getCollection("fs.files").find(eq("_id",user.getObjectId("image"))).first().getString("filename"));
         try {
             saveToFileSystem(db.getCollection("fs.files").find(eq("_id",user.getObjectId("image"))).first().getString("filename"));
         } catch (IOException e) {
@@ -133,6 +131,5 @@ public class ProfileController implements Initializable {
         Image image = new Image(file.toURI().toString());
         Photo.setFill(new ImagePattern(image));
     }
-
 
 }

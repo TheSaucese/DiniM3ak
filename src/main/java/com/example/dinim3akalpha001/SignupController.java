@@ -70,14 +70,11 @@ public class SignupController {
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-            Platform.runLater(new Runnable() {
-                @Override
-                public void run() {
-                    try {
-                        new DiniController().handleScenes("Verification.fxml", Signup);
-                    } catch (IOException e) {
-                        throw new RuntimeException(e);
-                    }
+            Platform.runLater(() -> {
+                try {
+                    new DiniController().handleScenes("Verification.fxml", Signup);
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
                 }
             });
         }

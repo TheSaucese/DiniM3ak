@@ -48,7 +48,7 @@
             <Font size="16.0" />
          </font>
       </Text>
-      <TextField fx:id="Input" layoutX="48.0" layoutY="408.0" prefHeight="43.0" prefWidth="245.0">
+      <TextField fx:id="InputName" layoutX="48.0" layoutY="408.0" prefHeight="43.0" prefWidth="245.0">
          <font>
             <Font size="18.0" />
          </font>
@@ -58,7 +58,7 @@
             <Font size="16.0" />
          </font>
       </Text>
-      <TextField fx:id="Input" layoutX="48.0" layoutY="503.0" prefHeight="43.0" prefWidth="245.0">
+      <TextField fx:id="InputNumber" layoutX="48.0" layoutY="503.0" prefHeight="43.0" prefWidth="245.0">
          <font>
             <Font size="18.0" />
          </font>
