@@ -304,6 +304,24 @@
     -fx-shape: none;
     -fx-background-radius : 10;
 }
+#from_input,#to_input,#amount_input,#at_input,#description_input{
+    -fx-font-family: "Lato Semibold";
+    -fx-font-size: 16;
+    -fx-border-radius :  10;
+    -fx-border-width : 1;
+    -fx-border-color :  #624F82;
+    -fx-background-radius : 10;
+}
+#description_input{
+    -fx-font-family: "Lato Semibold";
+    -fx-font-size: 12;
+    -fx-border-radius :  10;
+    -fx-border-width : 1;
+    -fx-border-color :  #624F82;
+    -fx-background-radius : 10;
+}
+
+
 
 
 
