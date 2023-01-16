@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb171782-302e-4d3e-9e0e-a075aae1d669" name="Changes" comment="idk">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/serviceAccountKey.json" afterDir="false" />
+    <list default="true" id="fb171782-302e-4d3e-9e0e-a075aae1d669" name="Changes" comment="I gi ve up">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/CarController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/ProfileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/SignupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/SignupController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/Car.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/Car.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,23 +55,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/JavaProjects/DiniM3ak1/src/main/java/com/example/dinim3akalpha001",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.5850575",
-    "settings.editor.selected.configurable": "AndroidSdkUpdater",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/JavaProjects/DiniM3ak1/src/main/java/com/example/dinim3akalpha001&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.5850575&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;AndroidSdkUpdater&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\JavaProjects\DiniM3ak1\src\main\java\com\example\dinim3akalpha001" />
@@ -121,6 +118,8 @@
       <workItem from="1673718258298" duration="11722000" />
       <workItem from="1673737665807" duration="1411000" />
       <workItem from="1673792598924" duration="6107000" />
+      <workItem from="1673816404780" duration="134000" />
+      <workItem from="1673892792179" duration="4112000" />
     </task>
     <task id="LOCAL-00001" summary="Beta ??? map works I guess ? mongo might not be working...">
       <created>1673522878803</created>
@@ -157,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673738662095</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="I gi ve up">
+      <created>1673816526592</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1673816526592</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,6 +186,7 @@
     <MESSAGE value="A lot of bug fixes, more rerouting and stuff..." />
     <MESSAGE value="Version before the break." />
     <MESSAGE value="idk" />
-    <option name="LAST_COMMIT_MESSAGE" value="idk" />
+    <MESSAGE value="I gi ve up" />
+    <option name="LAST_COMMIT_MESSAGE" value="I gi ve up" />
   </component>
 </project>

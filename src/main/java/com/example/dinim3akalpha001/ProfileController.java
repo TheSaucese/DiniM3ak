@@ -100,11 +100,13 @@ public class ProfileController implements Initializable {
             case "5" : StarsIcons.setImage(new Image("com/Images/dinim3akalpha001/Stars5.png"));break;
         }
         Stars.setText(user.getString("stars")+" Stars");
-        try {
+       /* try {
             saveToFileSystem(db.getCollection("fs.files").find(eq("_id",user.getObjectId("image"))).first().getString("filename"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
+        */
     }
     public ObjectId mongoupload(String filePath, String fileName) {
         ObjectId fileId = null;

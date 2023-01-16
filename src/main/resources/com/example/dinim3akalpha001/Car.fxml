@@ -48,7 +48,7 @@
             <Font size="16.0" />
          </font>
       </Text>
-      <TextField fx:id="InputName" layoutX="48.0" layoutY="408.0" prefHeight="43.0" prefWidth="245.0">
+      <TextField fx:id="InputName" layoutX="48.0" layoutY="408.0" onKeyTyped="#listenName" prefHeight="43.0" prefWidth="245.0">
          <font>
             <Font size="18.0" />
          </font>
@@ -58,22 +58,22 @@
             <Font size="16.0" />
          </font>
       </Text>
-      <TextField fx:id="InputNumber" layoutX="48.0" layoutY="503.0" prefHeight="43.0" prefWidth="245.0">
+      <TextField fx:id="InputNumber" layoutX="48.0" layoutY="503.0" onKeyTyped="#listenNumber" prefHeight="43.0" prefWidth="245.0">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <ImageView fitHeight="18.52" fitWidth="18.52" layoutX="308.0" layoutY="420.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="NameCheck" fitHeight="18.52" fitWidth="18.52" layoutX="308.0" layoutY="420.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@../../Images/dinim3akalpha001/Check.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="18.52" fitWidth="18.52" layoutX="308.0" layoutY="515.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="NumberCheck" fitHeight="18.52" fitWidth="18.52" layoutX="308.0" layoutY="515.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@../../Images/dinim3akalpha001/Check.png" />
          </image>
       </ImageView>
-      <Button fx:id="Apply" layoutX="48.0" layoutY="680.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="273.0" text="Apply" textFill="#3e3b6b">
+      <Button fx:id="Apply" layoutX="48.0" layoutY="680.0" mnemonicParsing="false" onAction="#Apply" prefHeight="49.0" prefWidth="273.0" text="Apply" textFill="#3e3b6b">
          <font>
             <Font size="20.0" />
          </font>

@@ -5,9 +5,9 @@ import com.mongodb.client.gridfs.model.GridFSUploadOptions;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.paint.ImagePattern;
 import javafx.stage.FileChooser;
 import org.bson.Document;
 import org.bson.types.ObjectId;
@@ -15,6 +15,8 @@ import org.bson.types.ObjectId;
 import java.io.*;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import static com.example.dinim3akalpha001.MongoController.db;
 import static com.example.dinim3akalpha001.ProfileController.gridBucket;
@@ -28,6 +30,38 @@ public class CarController implements Initializable {
     private Button Car;
     @FXML
     private Button Arrow;
+    @FXML
+    private TextField InputName;
+    @FXML
+    private TextField InputNumber;
+    @FXML
+    private ImageView NumberCheck;
+    @FXML
+    private ImageView NameCheck;
+
+
+    @FXML
+    private void Apply() {
+        db.getCollection("users").updateOne(eq("email", getuEmail()), set("carname",InputName.getText()));
+        db.getCollection("users").updateOne(eq("email", getuEmail()), set("carnumber",InputNumber.getText()));
+    }
+
+    public static boolean useRegex(final String input,String regex) {
+        // Compile regular expression
+        final Pattern pattern = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
+        // Match regex against input
+        final Matcher matcher = pattern.matcher(input);
+        // Use results...
+        return matcher.matches();
+    }
+    @FXML
+    protected void listenNumber() {
+        NumberCheck.setVisible(useRegex(InputNumber.getText(), "\\d\\d\\d\\d\\d[a-zA-Z]\\d\\d"));
+    }
+    @FXML
+    protected void listenName() {
+        NameCheck.setVisible(useRegex(InputName.getText(), "[A-Za-z0-9]{2,20}"));
+    }
 
     @FXML
     protected void Upload() throws IOException {
@@ -39,11 +73,6 @@ public class CarController implements Initializable {
 
         if (file != null) {
             mongoupload(file.getPath(),file.getName());
-            //Image image = new Image(file.toURI().toString());
-            //ImageView img = new ImageView(image);
-            //img.fitWidthProperty().bind(Car.widthProperty());
-            //img.fitHeightProperty().bind(Car.heightProperty());
-            //Car.setGraphic(img);
             saveToFileSystem(file.getName());
         }
     }
@@ -90,17 +119,17 @@ public class CarController implements Initializable {
         new DiniController().handleScenes(getuJob().equals("Driver")?"HomeDriver.fxml":"HomeRider.fxml",Arrow);
     }
     @FXML
-    private void uploadDetails() {
-
-    }
-
-    @FXML
     public void initialize(URL location, ResourceBundle resources) {
         Document user = db.getCollection("users").find(eq("email",getuEmail())).first();
-        try {
+        InputNumber.setText(user.getString("carname"));
+        InputName.setText(user.getString("carnumber"));
+        /* try {
             saveToFileSystem(db.getCollection("fs.files").find(eq("_id",user.getObjectId("carImage"))).first().getString("filename"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
+         */
     }
+
 }
