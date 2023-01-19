@@ -304,7 +304,7 @@
     -fx-shape: none;
     -fx-background-radius : 10;
 }
-#from_input,#to_input,#amount_input,#at_input,#description_input{
+#from_input,#to_input,#amount_input,#at_input,#description_input,#from_input_passenger,#to_input_passenger,#vehicule_input,#at_input_passenger{
     -fx-font-family: "Lato Semibold";
     -fx-font-size: 16;
     -fx-border-radius :  10;
@@ -312,7 +312,7 @@
     -fx-border-color :  #624F82;
     -fx-background-radius : 10;
 }
-#description_input{
+#description_input,#description_input_passenger{
     -fx-font-family: "Lato Semibold";
     -fx-font-size: 12;
     -fx-border-radius :  10;
@@ -320,6 +320,32 @@
     -fx-border-color :  #624F82;
     -fx-background-radius : 10;
 }
+
+#Apply,#Apply_passenger {
+    -fx-background-color :  #FFFFFF;
+    -fx-font-family: "Lato Semibold";
+    -fx-font-size: 20;
+    -fx-border-radius :  10;
+    -fx-border-width : 3;
+    -fx-border-color :  #624F82;
+    -fx-background-radius : 15;
+    -fx-text-fill: #FFFFFF;
+}
+
+/* Home  */
+
+#PostaRide {
+    -fx-font-family: "Lato Black";
+}
+
+#Location {
+    -fx-font-family: "Lato Bold";
+}
+
+#time,#money,#destinationname,#clientname {
+    -fx-font-family: "Lato";
+}
+
 
 
 

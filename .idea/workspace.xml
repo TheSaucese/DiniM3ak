@@ -5,10 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb171782-302e-4d3e-9e0e-a075aae1d669" name="Changes" comment="I gi ve up">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/ClientTableController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/RidesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/RidesController2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/Images/dinim3akalpha001/Home.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/Images/dinim3akalpha001/dollar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/Images/dinim3akalpha001/menunormal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/Images/dinim3akalpha001/time.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/ClientTable.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/HomeDriverWithoutMaps.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/CarController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/ProfileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/Car.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/Car.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/HomeDriverController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/HomeDriverController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/Images/dinim3akalpha001/menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/AddRide.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/AddRide.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/HomeDriver.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/HomeDriver.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/RequestRide.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/RequestRide.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +31,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -50,30 +64,35 @@
     </option>
   </component>
   <component name="ProjectId" id="2KDt4SQZU27b5BbwfjjBg73rdif" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/JavaProjects/DiniM3ak1/src/main/java/com/example/dinim3akalpha001&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.5850575&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;AndroidSdkUpdater&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_directory_selection": "C:/Users/Elfar/IdeaProjects/DiniM3ak/src/main/java/com/example/dinim3akalpha001",
+    "last_opened_file_path": "C:/Users/Elfar/IdeaProjects/DiniM3ak/src/main/java/com/example/dinim3akalpha001",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.5850575",
+    "settings.editor.selected.configurable": "preferences.JavaFX",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Elfar\IdeaProjects\DiniM3ak\src\main\resources\com\example\dinim3akalpha001" />
       <recent name="D:\JavaProjects\DiniM3ak1\src\main\java\com\example\dinim3akalpha001" />
       <recent name="C:\Users\main\Desktop\GMapsFX\GMapsFX\src\main\java\com\example\dinim3akalpha001" />
     </key>
@@ -84,18 +103,7 @@
   <component name="RunManager">
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.dinim3akalpha001.DiniApplication" />
-      <module name="GMapsFX" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <option name="filePath" />
+      <module name="DiniM3akAlpha001" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -120,6 +128,9 @@
       <workItem from="1673792598924" duration="6107000" />
       <workItem from="1673816404780" duration="134000" />
       <workItem from="1673892792179" duration="4112000" />
+      <workItem from="1674050894612" duration="760000" />
+      <workItem from="1674121112613" duration="4687000" />
+      <workItem from="1674158207674" duration="10247000" />
     </task>
     <task id="LOCAL-00001" summary="Beta ??? map works I guess ? mongo might not be working...">
       <created>1673522878803</created>
@@ -181,6 +192,10 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
     <MESSAGE value="Beta ??? map works I guess ? mongo might not be working..." />
     <MESSAGE value="Errors fixed, 5 pm, coming back after the &quot;&quot;&quot;quick&quot;&quot;&quot; break" />
     <MESSAGE value="A lot of bug fixes, more rerouting and stuff..." />
@@ -188,5 +203,9 @@
     <MESSAGE value="idk" />
     <MESSAGE value="I gi ve up" />
     <option name="LAST_COMMIT_MESSAGE" value="I gi ve up" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

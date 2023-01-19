@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane layoutX="0" layoutY="0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="812" prefWidth="375" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<Pane layoutX="0" layoutY="0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="812" prefWidth="375" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dinim3akalpha001.RidesController">
    <children>
       <ImageView fitHeight="812.0" fitWidth="375.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -69,7 +69,7 @@
             <Font size="16.0" />
          </font>
       </Text>
-      <Button fx:id="Apply" layoutX="61.0" layoutY="713.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="245.0" style="-fx-background-color: #3f3b6c;" text="Apply" textFill="#c9c9c9">
+      <Button fx:id="Apply" layoutX="61.0" layoutY="713.0" mnemonicParsing="false" onAction="#addRide" prefHeight="49.0" prefWidth="245.0" style="-fx-background-color: #3f3b6c;" text="Apply" textFill="#c9c9c9">
          <font>
             <Font size="20.0" />
          </font>
