@@ -71,6 +71,24 @@
     -fx-font-size: 14;
 }
 
+#twentyfourregular {
+    -fx-font-family: "Lato";
+    -fx-font-size: 24;
+}
+
+/* Undo Message */
+#UNDO {
+    -fx-font-family: "Lato Bold";
+    -fx-font-size: 18;
+}
+
+#CloseUndo {
+    -fx-background-image: url("../../Images/dinim3akalpha001/CloseUndo.png");
+    -fx-background-position: center;
+    -fx-background-repeat: stretch;
+    -fx-shape: none;
+}
+
 /* Splash Screen */
 
 #Initializing {
@@ -233,15 +251,20 @@
 
 /* Payment in Profile */
 
-#Input,InputName,InputNumber {
+#Input,#InputName,#InputNumber,#InputCardName,#InputCardNumber,#InputDate,#InputCVV {
     -fx-border-radius :  10;
-    -fx-border-width : 3;
     -fx-background-color :  rgba(217,217,217,1);
-    -fx-border-color :  #624F82;
     -fx-background-radius : 15;
     -fx-font-family: "Lato Semibold";
     -fx-font-size: 18;
     -fx-text-fill: #3F3B6C;
+}
+
+#GoBack {
+    -fx-background-image: url("../../Images/dinim3akalpha001/Goback.png");
+    -fx-background-position: center;
+    -fx-background-repeat: stretch;
+    -fx-shape: none;
 }
 
 #MainText {
@@ -252,10 +275,6 @@
     -fx-background-color :  #FFFFFF;
     -fx-font-family: "Lato Semibold";
     -fx-font-size: 20;
-    -fx-border-radius :  10;
-    -fx-border-width : 3;
-    -fx-border-color :  #624F82;
-    -fx-background-radius : 15;
     -fx-text-fill: #3F3B6C;
 }
 
@@ -277,7 +296,7 @@
     -fx-background-radius : 10;
 }
 
-#AddCard {
+#AddCard,#Apply_Driver,#Apply {
     -fx-background-color :  #FFFFFF;
     -fx-background-radius :  10;
     -fx-font-family: "Lato Semibold";
@@ -304,7 +323,7 @@
     -fx-shape: none;
     -fx-background-radius : 10;
 }
-#from_input,#to_input,#amount_input,#at_input,#description_input,#from_input_passenger,#to_input_passenger,#vehicule_input,#at_input_passenger{
+#from_input,#to_input,#to1_input,#from1_input,#amount_input,#at_input,#description_input,#from_input_passenger,#to_input_passenger,#vehicule_input,#at_input_passenger{
     -fx-font-family: "Lato Semibold";
     -fx-font-size: 16;
     -fx-border-radius :  10;
@@ -321,15 +340,11 @@
     -fx-background-radius : 10;
 }
 
-#Apply,#Apply_passenger {
+#Apply_Driver,#Apply_passenger {
     -fx-background-color :  #FFFFFF;
     -fx-font-family: "Lato Semibold";
     -fx-font-size: 20;
-    -fx-border-radius :  10;
-    -fx-border-width : 3;
-    -fx-border-color :  #624F82;
-    -fx-background-radius : 15;
-    -fx-text-fill: #FFFFFF;
+    -fx-text-fill: #3f3b6c;
 }
 
 /* Home  */

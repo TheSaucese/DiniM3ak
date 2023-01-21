@@ -14,6 +14,7 @@ open module com.exampe.dinim3akalpha001 {
     requires org.mongodb.driver.core;
     requires org.mongodb.bson;
     requires java.mail;
+    requires stripe.java;
 
     exports com.example.dinim3akalpha001;
     exports com.example.dinim3akalpha001.javascript;

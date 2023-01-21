@@ -91,15 +91,21 @@ public class ProfileController implements Initializable {
         Document user = db.getCollection("users").find(eq("email",getuEmail())).first();
         Username.setTextFormatter(new TextFormatter(modifyChange));
         Username.setText(user.getString("fullname"));
-        switch(user.getString("stars")){
-            case "0" : StarsIcons.setImage(new Image("com/Images/dinim3akalpha001/Stars0.png"));break;
-            case "1" : StarsIcons.setImage(new Image("com/Images/dinim3akalpha001/Stars1.png"));break;
-            case "2" : StarsIcons.setImage(new Image("com/Images/dinim3akalpha001/Stars2.png"));break;
-            case "3" : StarsIcons.setImage(new Image("com/Images/dinim3akalpha001/Stars3.png"));break;
-            case "4" : StarsIcons.setImage(new Image("com/Images/dinim3akalpha001/Stars4.png"));break;
-            case "5" : StarsIcons.setImage(new Image("com/Images/dinim3akalpha001/Stars5.png"));break;
+        Double stars = user.getDouble("stars");
+        if (stars == 0.0) {
+            StarsIcons.setImage(new Image("com/Images/dinim3akalpha001/Stars0.png"));
+        } else if (stars == 1.0) {
+            StarsIcons.setImage(new Image("com/Images/dinim3akalpha001/Stars1.png"));
+        } else if (stars == 2.0) {
+            StarsIcons.setImage(new Image("com/Images/dinim3akalpha001/Stars2.png"));
+        } else if (stars == 3.0) {
+            StarsIcons.setImage(new Image("com/Images/dinim3akalpha001/Stars3.png"));
+        } else if (stars == 4.0) {
+            StarsIcons.setImage(new Image("com/Images/dinim3akalpha001/Stars4.png"));
+        } else if (stars == 5.0) {
+            StarsIcons.setImage(new Image("com/Images/dinim3akalpha001/Stars5.png"));
         }
-        Stars.setText(user.getString("stars")+" Stars");
+        Stars.setText(user.getDouble("stars")+" Stars");
        /* try {
             saveToFileSystem(db.getCollection("fs.files").find(eq("_id",user.getObjectId("image"))).first().getString("filename"));
         } catch (IOException e) {

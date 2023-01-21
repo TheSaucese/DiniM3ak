@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="375.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#a3c7d6" height="60.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="375.0" />
+      <Text fill="WHITE" layoutX="14.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 18;" text="Changes Saved..." />
+      <Button fx:id="Undo" layoutX="284.0" layoutY="4.0" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-text-fill: #8B0000; -fx-font-size: 18;" text="UNDO" />
+   </children>
+</Pane>

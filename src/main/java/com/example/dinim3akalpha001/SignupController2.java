@@ -17,6 +17,7 @@ public class SignupController2 {
     static private String uEmail;
     static private String uPass;
     static private String uJob;
+    static private String uID;
     String regexStr = "^(1\\-)?[0-9]{3}\\-?[0-9]{3}\\-?[0-9]{4}$";
 
     public static void setuEmail(String uEmail) {
@@ -31,6 +32,8 @@ public class SignupController2 {
         SignupController2.uJob = uJob;
     }
 
+    public static void setuID(String uID) { SignupController2.uID = uID;}
+
     public static String getuEmail() {
         return uEmail;
     }
@@ -43,20 +46,12 @@ public class SignupController2 {
         return uJob;
     }
 
+    public static String getuID() { return uID;}
+
     @FXML
     private void finishRegistration() throws Exception {
-
-        System.out.println(fullName.getText());
-        System.out.println(phoneNumber.getText());
-
         MongoCollection<Document> collection = db.getCollection("users");
 
-        // Create a new document with the name and phone number
-
-        /*Document data = new Document("fullName", fullName.getText())
-                .append("phoneNumber", phoneNumber.getText());
-
-        InsertOneResult result = collection.insertOne(data);*/
         if(!phoneNumber.getText().matches(regexStr)){
 
         }
@@ -64,23 +59,18 @@ public class SignupController2 {
 
         }
         else {
-            Document user = new Document("_id", new ObjectId().toString());
+            setuID(new ObjectId().toString());
+            Document user = new Document("_id", getuID());
             user.append("email",uEmail)
                     .append("password",uPass)
                             .append("phonenumber", phoneNumber.getText())
                                     .append("fullname", fullName.getText())
                                             .append("job", uJob)
-                                                    .append("stars","0");
+                                                    .append("stars",0.0)
+                                                            .append("numcards",0);
             db.getCollection("users").insertOne(user);
             new DiniController().handleScenes(uJob.equals("Driver") ? "HomeDriver.fxml" : "HomeRider.fxml", fullName);
         }
-
-        /*if (result.getInsertedId() != null) {
-            System.out.println("Data submitted successfully!");
-            // new DiniController().handleScenes("ProfileRider.fxml",finishRegister);
-        } else {
-            System.out.println("Data submission failed.");
-        }*/
     }
     }
 

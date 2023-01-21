@@ -22,6 +22,7 @@ import static com.example.dinim3akalpha001.MongoController.db;
 import static com.example.dinim3akalpha001.ProfileController.gridBucket;
 import static com.example.dinim3akalpha001.SignupController2.getuEmail;
 import static com.example.dinim3akalpha001.SignupController2.getuJob;
+import static com.mongodb.client.model.Filters.and;
 import static com.mongodb.client.model.Filters.eq;
 import static com.mongodb.client.model.Updates.set;
 
@@ -121,8 +122,8 @@ public class CarController implements Initializable {
     @FXML
     public void initialize(URL location, ResourceBundle resources) {
         Document user = db.getCollection("users").find(eq("email",getuEmail())).first();
-        InputNumber.setText(user.getString("carname"));
-        InputName.setText(user.getString("carnumber"));
+        InputNumber.setText(user.getString("carnumber"));
+        InputName.setText(user.getString("carname"));
         /* try {
             saveToFileSystem(db.getCollection("fs.files").find(eq("_id",user.getObjectId("carImage"))).first().getString("filename"));
         } catch (IOException e) {

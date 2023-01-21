@@ -22,7 +22,7 @@
       </ImageView>
       <ImageView fitHeight="104.0" fitWidth="375.0" layoutY="25.0" opacity="0.87" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../Images/dinim3akalpha001/menupayment.png" />
+            <Image url="@../../Images/dinim3akalpha001/menuhome.png" />
          </image>
       </ImageView>
       <Rectangle arcHeight="20.0" arcWidth="20.0" height="693.0" layoutY="128.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="375.0">
@@ -43,23 +43,23 @@
             </LinearGradient>
          </fill>
       </Rectangle>
-      <Button fx:id="Arrow" layoutX="319.0" layoutY="70.0" mnemonicParsing="false" opacity="0.0" prefHeight="25.0" prefWidth="19.0" />
-      <Text fx:id="MainText" fill="#3d3b69" layoutX="63.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="From : ">
+      <Button fx:id="Arrow" layoutX="319.0" layoutY="70.0" mnemonicParsing="false" onAction="#handleProfile" opacity="0.0" prefHeight="25.0" prefWidth="19.0" />
+      <Text fx:id="MainText" fill="#3f3b6c" layoutX="63.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="From : ">
          <font>
             <Font size="16.0" />
          </font>
       </Text>
-      <TextField fx:id="from_input" layoutX="62.0" layoutY="296.0" prefHeight="50.0" prefWidth="250.0">
+      <TextField fx:id="from_input" layoutX="62.0" layoutY="296.0" prefHeight="50.0" prefWidth="142.0" promptText="Street ">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <TextField fx:id="to_input" layoutX="62.0" layoutY="383.0" prefHeight="50.0" prefWidth="250.0">
+      <TextField fx:id="to_input" layoutX="62.0" layoutY="383.0" prefHeight="50.0" prefWidth="142.0" promptText="Street">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <TextField fx:id="amount_input" layoutX="63.0" layoutY="475.0" opacity="0.8" prefHeight="50.0" prefWidth="120.0" text="300 MAD">
+      <TextField fx:id="amount_input" layoutX="63.0" layoutY="475.0" opacity="0.8" prefHeight="50.0" prefWidth="120.0" promptText="300 MAD" style="-fx-font-size: 18;">
          <font>
             <Font size="16.0" />
          </font>
@@ -69,19 +69,15 @@
             <Font size="16.0" />
          </font>
       </Text>
-      <Button fx:id="Apply" layoutX="61.0" layoutY="713.0" mnemonicParsing="false" onAction="#addRide" prefHeight="49.0" prefWidth="245.0" style="-fx-background-color: #3f3b6c;" text="Apply" textFill="#c9c9c9">
+      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#3f3b6c" height="200.0" layoutY="692.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="375.0" />
+      <Button fx:id="Apply_Driver" layoutX="61.0" layoutY="713.0" mnemonicParsing="false" onAction="#addRide" prefHeight="49.0" prefWidth="253.0" style="-fx-background-color: White;" text="Apply" textFill="#3f3b6c">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Button fx:id="Vehicle" layoutX="33.0" layoutY="70.0" mnemonicParsing="false" opacity="0.0" prefHeight="25.0" prefWidth="30.0" />
-      <Button fx:id="Home" layoutX="157.0" layoutY="30.0" mnemonicParsing="false" opacity="0.0" prefHeight="60.0" prefWidth="64.0" />
-      <ImageView fitHeight="18.52" fitWidth="18.52" layoutX="297.0" layoutY="479.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../../src/main/resources/com/Images/dinim3akalpha001/Vector%20(4).png" />
-         </image>
-      </ImageView>
-      <TextField fx:id="description_input" alignment="TOP_LEFT" layoutX="65.0" layoutY="556.0" maxHeight="113.0" maxWidth="246.0" prefHeight="113.0" prefWidth="246.0" text="Features, description, anything you want to add...">
+      <Button fx:id="Vehicle" layoutX="33.0" layoutY="70.0" mnemonicParsing="false" onAction="#handleVehicle" opacity="0.0" prefHeight="25.0" prefWidth="30.0" />
+      <Button fx:id="Home" layoutX="157.0" layoutY="30.0" mnemonicParsing="false" onAction="#HandleHomeDriver" opacity="0.0" prefHeight="60.0" prefWidth="64.0" />
+      <TextField fx:id="description_input" alignment="TOP_LEFT" layoutX="63.0" layoutY="556.0" maxHeight="113.0" maxWidth="253.0" prefHeight="113.0" prefWidth="253.0" promptText="Features, description, anything you want to add...">
          <font>
             <Font name="Gabriola" size="14.0" />
          </font>
@@ -94,37 +90,32 @@
             <Font name="System Italic" size="12.0" />
          </font>
       </Text>
-      <Text fx:id="MainText2" fill="#292287d4" layoutX="146.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Ride">
+      <Text fx:id="MainText2" fill="#3f3b6c" layoutX="146.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Ride">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Text>
-      <Text fx:id="MainText3" fill="#3d3b69" layoutX="62.0" layoutY="368.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To :">
+      <Text fx:id="MainText3" fill="#3f3b6c" layoutX="62.0" layoutY="368.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To :">
          <font>
             <Font size="16.0" />
          </font>
       </Text>
-      <Text fx:id="MainText31" fill="#3d3b69" layoutX="65.0" layoutY="460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Amount :">
+      <Text fx:id="MainText31" fill="#3f3b6c" layoutX="65.0" layoutY="460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Amount :">
          <font>
             <Font size="16.0" />
          </font>
       </Text>
-      <Text fx:id="MainText311" fill="#3d3b69" layoutX="221.0" layoutY="460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="At :">
+      <Text fx:id="MainText311" fill="#3f3b6c" layoutX="221.0" layoutY="460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="At :">
          <font>
             <Font size="16.0" />
          </font>
       </Text>
-      <ImageView fitHeight="18.52" fitWidth="18.52" layoutX="189.0" layoutY="494.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../../src/main/resources/com/Images/dinim3akalpha001/Vector%20(2).png" />
-         </image>
-      </ImageView>
       <Text fx:id="MainText4" fill="#77747b" layoutX="47.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="you can add a trip so that it appears in the list of available trips for passengers." textAlignment="CENTER" wrappingWidth="283.1438293457031">
          <font>
             <Font name="System Italic" size="14.0" />
          </font>
       </Text>
-      <TextField fx:id="at_input" layoutX="216.0" layoutY="475.0" opacity="0.8" prefHeight="50.0" prefWidth="74.0" text="12:30">
+      <TextField fx:id="at_input" layoutX="213.0" layoutY="475.0" opacity="0.8" prefHeight="50.0" prefWidth="74.0" promptText="12:30" style="-fx-font-size: 18;">
          <font>
             <Font size="16.0" />
          </font>
@@ -134,13 +125,21 @@
             <Font name="System Italic" size="12.0" />
          </font>
       </Text>
-      <ImageView fitHeight="18.52" fitWidth="18.52" layoutX="297.0" layoutY="507.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../../src/main/resources/com/Images/dinim3akalpha001/Vector%20(2).png" />
-         </image>
-      </ImageView>
-      <Button layoutX="186.0" layoutY="487.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="26.0" style="-fx-background-color: transparent;" />
-      <Button layoutX="293.0" layoutY="475.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="26.0" style="-fx-background-color: transparent;" />
-      <Button layoutX="293.0" layoutY="500.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="26.0" style="-fx-background-color: transparent;" />
+      <Button layoutX="188.0" layoutY="505.0" maxHeight="7.0" maxWidth="12.0" minHeight="7.0" minWidth="12.0" mnemonicParsing="false" prefHeight="7.0" prefWidth="12.0" />
+      <TextField fx:id="from1_input" layoutX="213.0" layoutY="296.0" prefHeight="50.0" prefWidth="104.0" promptText="City">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="to1_input" layoutX="213.0" layoutY="383.0" prefHeight="50.0" prefWidth="104.0" promptText="City">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Button layoutX="188.0" layoutY="486.0" maxHeight="7.0" maxWidth="12.0" minHeight="7.0" minWidth="12.0" mnemonicParsing="false" prefHeight="7.0" prefWidth="12.0" />
+      <Button layoutX="294.0" layoutY="505.0" maxHeight="7.0" maxWidth="12.0" minHeight="7.0" minWidth="12.0" mnemonicParsing="false" prefHeight="7.0" prefWidth="12.0" />
+      <Button layoutX="294.0" layoutY="486.0" maxHeight="7.0" maxWidth="12.0" minHeight="7.0" minWidth="12.0" mnemonicParsing="false" prefHeight="7.0" prefWidth="12.0" />
+      <Button fx:id="Arrow1" layoutX="235.0" layoutY="70.0" mnemonicParsing="false" onAction="#handlePayment" opacity="0.0" prefHeight="25.0" prefWidth="19.0" />
+      <Button fx:id="Arrow11" layoutX="120.0" layoutY="70.0" mnemonicParsing="false" onAction="#handlePayment" opacity="0.0" prefHeight="25.0" prefWidth="19.0" />
    </children>
 </Pane>

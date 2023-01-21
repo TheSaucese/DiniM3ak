@@ -2,6 +2,7 @@ package com.example.dinim3akalpha001;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -65,6 +66,22 @@ public class ClientTableController implements Initializable {
         time.setPreserveRatio(true);
         time.setImage(new Image(ClientTableController.class.getResourceAsStream("/com/Images/dinim3akalpha001/time.png")));
 
+        Button btn = new Button();
+        btn.setLayoutX(230.0);
+        btn.setLayoutY(12.0);
+        btn.setMaxHeight(71.0);
+        btn.setMaxWidth(70.0);
+        btn.setMinHeight(71.0);
+        btn.setMinWidth(70.0);
+        btn.setMnemonicParsing(false);
+        btn.setPrefHeight(71.0);
+        btn.setPrefWidth(70.0);
+        Image img = new Image("/com/Images/dinim3akalpha001/ArrowWhite.png");
+        ImageView view = new ImageView(img);
+        view.setFitHeight(71);
+        view.setPreserveRatio(true);
+        btn.setGraphic(view);
+
         Rectangle rect = new Rectangle();
         rect.setArcHeight(5);
         rect.setArcWidth(5);
@@ -93,7 +110,7 @@ public class ClientTableController implements Initializable {
         moneyValue.setStrokeWidth(0);
         moneyValue.setText("300 Dh");
 
-        pane.getChildren().addAll(location,client,dest,dollar, time, timeValue, moneyValue);
+        pane.getChildren().addAll(location,client,dest,dollar, time, timeValue, moneyValue,btn);
         if(!seconditem){
             pane.getChildren().add(rect);
         }

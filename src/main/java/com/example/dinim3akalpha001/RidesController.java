@@ -32,6 +32,23 @@ public class RidesController {
         @FXML
         private Button Apply;
         @FXML
+        private void HandleHomeDriver() throws IOException {
+                new DiniController().handleScenes("HomeDriver.fxml",at_input);
+        }
+
+        @FXML
+        private void handleVehicle() throws IOException {
+                new DiniController().handleScenes("Car.fxml",at_input);
+        }
+        @FXML
+        private void handlePayment() throws IOException {
+                new DiniController().handleScenes("PaymentSee.fxml",at_input);
+        }
+        @FXML
+        private void handleProfile() throws IOException {
+                new DiniController().handleScenes("ProfileDriver.fxml",at_input);
+        }
+        @FXML
         private void addRide(ActionEvent event){
                 System.out.println(from_input.getText());
                 System.out.println(to_input.getText());

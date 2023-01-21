@@ -37,6 +37,7 @@ public class LoginController {
         setuJob(user.getString("job"));
         setuEmail(email);
         setuPass(password);
+        setuID(user.getString("_id"));
     }
     @FXML
     private void Signup(ActionEvent event) throws IOException {
