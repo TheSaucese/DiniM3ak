@@ -4,24 +4,21 @@ import javafx.animation.FadeTransition;
 import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TextFormatter;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.Border;
 import javafx.scene.layout.Pane;
 import javafx.util.Duration;
-import javafx.util.StringConverter;
-import javafx.util.converter.LocalDateStringConverter;
 import org.bson.Document;
 import org.bson.types.ObjectId;
 
+import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -40,14 +37,17 @@ public class PaymentController implements Initializable {
     private TextField InputCardNumber,InputDate,InputCardName,InputCVV;
     @FXML
     private Pane ChangesSaved;
+    @FXML
+    private Label MainTextCard;
     private TranslateTransition translateTransition;
     private FadeTransition fadeTransition;
-
     private String ID;
     String NumberRegex = "[0-9]{16}";
     String CVVRegex ="[0-9]{3}";
     String DateRegex = "^(0[1-9]|1[0-2])\\/?([0-9]{2})$";
     String NameRegex = "[a-zA-Z]{3,30}";
+
+    int memoryindex=0;
     @FXML
     private void handleArrow() throws IOException {
         new DiniController().handleScenes("ProfileDriver.fxml",Arrow);
@@ -90,7 +90,6 @@ public class PaymentController implements Initializable {
     @FXML
     private void addCard() {
         if (!removeLetters(InputCardNumber.getText()).matches(NumberRegex)) {
-            System.out.println("no");
 
         } else if (InputCardName.getText().length() < 6) {
 
@@ -120,8 +119,43 @@ public class PaymentController implements Initializable {
             InputDate.setText(InputDate.getText().substring(0, 2) + "/" + InputDate.getText().substring(2));
         }
     }
+    private static String removeDashesAndSpaces(String input) {
+        return input.replaceAll("[-\\s]", "");
+    }
+    public static String addDashes(String input) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < input.length(); i++) {
+            sb.append(input.charAt(i));
+            if ((i + 1) % 4 == 0 && i != input.length() - 1) {
+                sb.append(" - ");
+            }
+        }
+        return sb.toString();
+    }
+    private void formatCardNumber(String cardNumber) {
+        String text = removeDashesAndSpaces(MainTextCard.getText());
+        StringBuilder sb = new StringBuilder(text);
+            if (cardNumber.equals("\b")) {
+                if (memoryindex!=-1) {
+                    sb.replace(memoryindex, memoryindex + 1, "X");
+                    memoryindex--;
+                }
+            }
+            else {
+                for (int i = 0; i < text.length(); i++) {
+                    if (text.charAt(i) == 'X') {
+                        memoryindex = i;
+                        sb.replace(memoryindex, memoryindex+1, cardNumber);
+                        break;
+                    }
+                }
+            }
+        MainTextCard.setText(addDashes(sb.toString()));
+    }
+
     @FXML
     private void handleNumberErrors(KeyEvent event) {
+        formatCardNumber(event.getCharacter());
         CardNumC.setVisible(removeLetters(InputCardNumber.getText()).matches(NumberRegex));
     }
     @FXML

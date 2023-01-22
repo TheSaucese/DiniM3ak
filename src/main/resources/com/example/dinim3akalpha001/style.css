@@ -77,7 +77,7 @@
 }
 
 /* Undo Message */
-#UNDO {
+#UNDO,#Save,#Cancel {
     -fx-font-family: "Lato Bold";
     -fx-font-size: 18;
 }
@@ -267,7 +267,7 @@
     -fx-shape: none;
 }
 
-#MainText {
+#MainText,#MainTextName,#MainTextCard {
     -fx-font-family: "Lato Semibold";
 }
 

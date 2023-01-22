@@ -4,6 +4,8 @@ import com.mongodb.client.gridfs.GridFSBucket;
 import com.mongodb.client.gridfs.GridFSBuckets;
 import com.mongodb.client.gridfs.model.GridFSDownloadOptions;
 import com.mongodb.client.gridfs.model.GridFSUploadOptions;
+import javafx.animation.FadeTransition;
+import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -11,10 +13,12 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.TextFormatter;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.Pane;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
+import javafx.util.Duration;
 import org.bson.Document;
 import org.bson.types.ObjectId;
 
@@ -41,6 +45,12 @@ public class ProfileController implements Initializable {
     @FXML
     private Text Stars;
     static GridFSBucket gridBucket = GridFSBuckets.create(db);
+    private TranslateTransition translateTransition;
+    private FadeTransition fadeTransition;
+    private String oldUsername;
+    @FXML
+    private Pane ChangesSaved,SaveChanges;
+    private boolean hasTransitioned=false;
     @FXML
     private void Upload() throws IOException {
         FileChooser fileChooser = new FileChooser();
@@ -51,8 +61,6 @@ public class ProfileController implements Initializable {
 
         if (file != null) {
             mongoupload(file.getPath(),file.getName());
-            //Image image = new Image(file.toURI().toString());
-            //Photo.setFill(new ImagePattern(image));
             saveToFileSystem(file.getName());
 
         }
@@ -69,6 +77,66 @@ public class ProfileController implements Initializable {
     private void handleMore() throws IOException {
         //new DiniController().handleScenes("PaymentAdd.fxml",Vehicle);
         //UNFINISHED :(
+    }
+    @FXML
+    private void changename() {
+        SaveChanges.setVisible(true);
+        fadeTransition = new FadeTransition(Duration.seconds(0.0001), SaveChanges);
+        fadeTransition.setFromValue(0);
+        fadeTransition.setToValue(1);
+        fadeTransition.play();
+        translateTransition = new TranslateTransition(Duration.seconds(0.5), SaveChanges);
+        translateTransition.setByY(hasTransitioned?0:-60);
+        translateTransition.play();
+        hasTransitioned=true;
+    }
+    @FXML
+    private void SaveChanges() {
+        fadeTransition = new FadeTransition(Duration.seconds(0.25), SaveChanges);
+        fadeTransition.setFromValue(1.0);
+        fadeTransition.setToValue(0.0);
+        fadeTransition.setAutoReverse(false);
+        fadeTransition.play();
+        fadeTransition = new FadeTransition(Duration.seconds(0.0001), ChangesSaved);
+        fadeTransition.setFromValue(0);
+        fadeTransition.setToValue(1);
+        fadeTransition.setAutoReverse(false);
+        fadeTransition.play();
+        translateTransition = new TranslateTransition(Duration.seconds(0.5), ChangesSaved);
+        translateTransition.setByY(-60);
+        translateTransition.play();
+        oldUsername=db.getCollection("users").find(eq("email", getuEmail())).first().getString("fullname");
+        db.getCollection("users").updateOne(eq("email", getuEmail()), set("fullname",Username.getText()));
+        SaveChanges.setVisible(false);
+    }
+    @FXML
+    private void CancelChanges() {
+        fadeTransition = new FadeTransition(Duration.seconds(1), SaveChanges);
+        fadeTransition.setFromValue(1.0);
+        fadeTransition.setToValue(0.0);
+        fadeTransition.play();
+        translateTransition = new TranslateTransition(Duration.seconds(0.5), SaveChanges);
+        translateTransition.setByY(60);
+        translateTransition.play();
+        hasTransitioned=false;
+    }
+    @FXML
+    private void CloseUndo() {
+        SaveChanges.setVisible(false);
+        fadeTransition = new FadeTransition(Duration.seconds(1), ChangesSaved);
+        fadeTransition.setFromValue(1.0);
+        fadeTransition.setToValue(0.0);
+        fadeTransition.setAutoReverse(false);
+        fadeTransition.play();
+        translateTransition = new TranslateTransition(Duration.seconds(0.5), ChangesSaved);
+        translateTransition.setByY(60);
+        translateTransition.play();
+    }
+    @FXML
+    private void Undo() {
+        db.getCollection("users").updateOne(eq("email", getuEmail()), set("fullname",oldUsername));
+        Username.setText(oldUsername);
+        CloseUndo();
     }
     @FXML
     private void handleMenu() throws IOException {
@@ -106,13 +174,14 @@ public class ProfileController implements Initializable {
             StarsIcons.setImage(new Image("com/Images/dinim3akalpha001/Stars5.png"));
         }
         Stars.setText(user.getDouble("stars")+" Stars");
-       /* try {
-            saveToFileSystem(db.getCollection("fs.files").find(eq("_id",user.getObjectId("image"))).first().getString("filename"));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+        if (db.getCollection("fs.files").find(eq("_id",user.getObjectId("image"))).first()!=null){
+            try {
+                saveToFileSystem(db.getCollection("fs.files").find(eq("_id",user.getObjectId("image"))).first().getString("filename"));
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         }
 
-        */
     }
     public ObjectId mongoupload(String filePath, String fileName) {
         ObjectId fileId = null;

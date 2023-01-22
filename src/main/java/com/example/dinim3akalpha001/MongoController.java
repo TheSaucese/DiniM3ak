@@ -4,6 +4,8 @@ import com.mongodb.*;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoDatabase;
+import org.slf4j.LoggerFactory;
+import org.slf4j.event.Level;
 
 public class MongoController {
     static MongoDatabase db;

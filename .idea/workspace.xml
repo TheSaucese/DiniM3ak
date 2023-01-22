@@ -4,35 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb171782-302e-4d3e-9e0e-a075aae1d669" name="Changes" comment=".">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/ChangesSavedController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/ChangesSavedView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/Images/dinim3akalpha001/ArrowWhite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/Images/dinim3akalpha001/CloseUndo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/Images/dinim3akalpha001/Down.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/Images/dinim3akalpha001/Goback.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/Images/dinim3akalpha001/Up.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/Images/dinim3akalpha001/menuhomedriver.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/ErrorBox.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/PaymentSee1.fxml" afterDir="false" />
+    <list default="true" id="fb171782-302e-4d3e-9e0e-a075aae1d669" name="Changes" comment="zdna bzaaaaaf I forgot what I changed">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/CarController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/ClientTableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/ClientTableController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/DiniApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/DiniApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/MongoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/MongoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/PaymentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/PaymentSeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/PaymentSeeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/ProfileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/RidesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/RidesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/SignupController2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/SignupController2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/Images/dinim3akalpha001/Vector (2).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/Images/dinim3akalpha001/Vector (4).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/AddRide.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/AddRide.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/ClientTable.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/ClientTable.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/HomeDriver.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/HomeDriver.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/ErrorBox.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/ErrorBox.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/PaymentAdd.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/PaymentAdd.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/PaymentSee.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/PaymentSee.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/ProfileDriver.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/ProfileDriver.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -148,7 +130,8 @@
       <workItem from="1674121112613" duration="4687000" />
       <workItem from="1674158207674" duration="10326000" />
       <workItem from="1674220743124" duration="8762000" />
-      <workItem from="1674298292997" duration="22392000" />
+      <workItem from="1674298292997" duration="23034000" />
+      <workItem from="1674392787523" duration="14018000" />
     </task>
     <task id="LOCAL-00001" summary="Beta ??? map works I guess ? mongo might not be working...">
       <created>1673522878803</created>
@@ -199,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674172641752</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="zdna bzaaaaaf I forgot what I changed">
+      <created>1674325885471</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1674325885471</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,7 +218,8 @@
     <MESSAGE value="idk" />
     <MESSAGE value="I gi ve up" />
     <MESSAGE value="." />
-    <option name="LAST_COMMIT_MESSAGE" value="." />
+    <MESSAGE value="zdna bzaaaaaf I forgot what I changed" />
+    <option name="LAST_COMMIT_MESSAGE" value="zdna bzaaaaaf I forgot what I changed" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
