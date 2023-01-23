@@ -119,6 +119,7 @@ public class ProfileController implements Initializable {
         translateTransition.setByY(60);
         translateTransition.play();
         hasTransitioned=false;
+        Username.setText(db.getCollection("users").find(eq("email", getuEmail())).first().getString("fullname"));
     }
     @FXML
     private void CloseUndo() {

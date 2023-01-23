@@ -90,10 +90,13 @@ public class PaymentController implements Initializable {
     @FXML
     private void addCard() {
         if (!removeLetters(InputCardNumber.getText()).matches(NumberRegex)) {
-
+            // Fake card
         } else if (InputCardName.getText().length() < 6) {
-
-        } else {
+            // Smol cardname
+        }
+        else if (db.getCollection("users").find(eq("email",getuEmail())).first().getInteger("numcards")==4) {
+            //Cannot add more
+        }else {
             ID = new ObjectId().toString();
             Document card = new Document("_id",ID);
             card.append("number", removeLetters(InputCardNumber.getText()))
@@ -109,7 +112,7 @@ public class PaymentController implements Initializable {
             InputDate.setText("");
             InputCardNumber.setText("");
             translateTransition = new TranslateTransition(Duration.seconds(0.5), ChangesSaved);
-            translateTransition.setByY(-42);
+            translateTransition.setByY(-60);
             translateTransition.play();
         }
     }

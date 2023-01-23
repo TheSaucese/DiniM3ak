@@ -9,11 +9,8 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import org.bson.Document;
@@ -23,7 +20,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import static com.example.dinim3akalpha001.MongoController.db;
-import static com.example.dinim3akalpha001.SignupController2.getuEmail;
 import static com.mongodb.client.model.Filters.eq;
 
 public class HomeDriverController implements Initializable, MapComponentInitializedListener {
@@ -80,7 +76,7 @@ public class HomeDriverController implements Initializable, MapComponentInitiali
         while (cursor.hasNext()) {
             Document doc = cursor.next();
             //String locationText,String ClientText,String DestinationText
-            vbox.getChildren().add(ClientTableController.createPane(doc.getString("source"),doc.getString("clientname"),doc.getString("destination"),seconditem));
+            vbox.getChildren().add(ClientTableView.createPane(doc.getString("source"),doc.getString("clientname"),doc.getString("destination"),seconditem));
             // Use the data from the document to create a JavaFX component
             // and add it to the FXML file/JavaFX scene
             seconditem = true;

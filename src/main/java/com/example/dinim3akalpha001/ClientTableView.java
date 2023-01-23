@@ -6,17 +6,15 @@ import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.StrokeType;
 import javafx.scene.text.Text;
 
 import java.net.URL;
-import java.util.Objects;
 import java.util.ResourceBundle;
 
-public class ClientTableController implements Initializable {
+public class ClientTableView {
     @FXML
     private AnchorPane Pane;
 
@@ -55,7 +53,7 @@ public class ClientTableController implements Initializable {
         dollar.setLayoutY(60);
         dollar.setPickOnBounds(true);
         dollar.setPreserveRatio(true);
-        dollar.setImage(new Image(ClientTableController.class.getResourceAsStream("/com/Images/dinim3akalpha001/dollar.png")));
+        dollar.setImage(new Image(ClientTableView.class.getResourceAsStream("/com/Images/dinim3akalpha001/dollar.png")));
 
         ImageView time = new ImageView();
         time.setFitHeight(12.7);
@@ -64,7 +62,7 @@ public class ClientTableController implements Initializable {
         time.setLayoutY(43);
         time.setPickOnBounds(true);
         time.setPreserveRatio(true);
-        time.setImage(new Image(ClientTableController.class.getResourceAsStream("/com/Images/dinim3akalpha001/time.png")));
+        time.setImage(new Image(ClientTableView.class.getResourceAsStream("/com/Images/dinim3akalpha001/time.png")));
 
         Button btn = new Button();
         btn.setLayoutX(230.0);
@@ -118,10 +116,5 @@ public class ClientTableController implements Initializable {
         pane.getStylesheets().add(DiniApplication.class.getResource("style.css").toExternalForm());
 
         return pane;
-    }
-
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-
     }
 }
