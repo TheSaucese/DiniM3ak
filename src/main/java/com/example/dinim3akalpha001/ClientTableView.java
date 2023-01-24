@@ -1,15 +1,20 @@
 package com.example.dinim3akalpha001;
 
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
+import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.StrokeType;
 import javafx.scene.text.Text;
+import javafx.scene.text.TextAlignment;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -108,7 +113,78 @@ public class ClientTableView {
         moneyValue.setStrokeWidth(0);
         moneyValue.setText("300 Dh");
 
-        pane.getChildren().addAll(location,client,dest,dollar, time, timeValue, moneyValue,btn);
+        Button notifyButton = new Button();
+        notifyButton.setId("notify");
+        notifyButton.setLayoutX(240);
+        notifyButton.setLayoutY(18);
+        notifyButton.setMnemonicParsing(false);
+        notifyButton.setStyle("-fx-background-color: transparent;");
+        notifyButton.setText("Notify");
+        notifyButton.setTextFill(Color.web("#3f3b6c"));
+        notifyButton.setVisible(false);
+
+        Button callButton = new Button();
+        callButton.setId("call");
+        callButton.setLayoutX(240);
+        callButton.setLayoutY(40);
+        callButton.setMnemonicParsing(false);
+        callButton.setPrefHeight(25);
+        callButton.setPrefWidth(49);
+        callButton.setStyle("-fx-background-color: transparent;");
+        callButton.setText("Call");
+        callButton.setTextAlignment(TextAlignment.CENTER);
+        callButton.setTextFill(Color.web("#3F3B6C"));
+        callButton.setVisible(false);
+
+        Circle circle = new Circle();
+        circle.setLayoutX(265);
+        circle.setLayoutY(40);
+        circle.setRadius(25);
+        circle.setFill(Color.WHITE);
+        circle.setVisible(false);
+
+        Rectangle line = new Rectangle();
+        line.setLayoutX(242);
+        line.setLayoutY(39);
+        line.setFill(Color.web("#3f3b6c"));
+        line.setHeight(2);
+        line.setWidth(46);
+        line.setVisible(false);
+
+        Button note = new Button();
+        note.setId("note");
+        note.setLayoutX(30);
+        note.setLayoutY(3);
+        note.setMnemonicParsing(false);
+        note.setPrefHeight(25);
+        note.setPrefWidth(200);
+        note.setStyle("-fx-background-color: transparent;");
+        note.setText("(Notes included, click here to read)");
+        note.setTextAlignment(TextAlignment.CENTER);
+        note.setTextFill(Color.WHITE);
+        note.setVisible(true);
+
+        btn.setOnAction(event -> {
+            // Set the visibility of the buttons to true
+            notifyButton.setVisible(true);
+            callButton.setVisible(true);
+            circle.setVisible(true);
+            line.setVisible(true);
+            btn.setVisible(false);
+        });
+
+        pane.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle( MouseEvent event) {
+                notifyButton.setVisible(false);
+                callButton.setVisible(false);
+                circle.setVisible(false);
+                btn.setVisible(true);
+                line.setVisible(false);
+            }
+        });
+
+        pane.getChildren().addAll(location,client,dest,dollar, time,note, timeValue, moneyValue,btn,circle,line,callButton,notifyButton);
         if(!seconditem){
             pane.getChildren().add(rect);
         }

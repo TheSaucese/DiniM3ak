@@ -4,16 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb171782-302e-4d3e-9e0e-a075aae1d669" name="Changes" comment="lizanimassione">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/CreditCardView.java" afterDir="false" />
+    <list default="true" id="fb171782-302e-4d3e-9e0e-a075aae1d669" name="Changes" comment="lizanimassione++">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/ChangesSavedController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/ClientTableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/ClientTableView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/ClientTableView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/ClientTableView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/DiniApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/DiniApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/HomeDriverController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/HomeDriverController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/PaymentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/PaymentSeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/PaymentSeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/ProfileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/PaymentSee.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/PaymentSee.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/Images/dinim3akalpha001/ArrowWhite.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/Images/dinim3akalpha001/ArrowWhite.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/ClientTable.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/ClientTable.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/HomeDriver.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/HomeDriver.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -130,7 +129,8 @@
       <workItem from="1674220743124" duration="8762000" />
       <workItem from="1674298292997" duration="23034000" />
       <workItem from="1674392787523" duration="14696000" />
-      <workItem from="1674478428562" duration="6572000" />
+      <workItem from="1674478428562" duration="6718000" />
+      <workItem from="1674553308760" duration="11959000" />
     </task>
     <task id="LOCAL-00001" summary="Beta ??? map works I guess ? mongo might not be working...">
       <created>1673522878803</created>
@@ -195,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674409370320</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="lizanimassione++">
+      <created>1674485139863</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1674485139863</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,7 +233,8 @@
     <MESSAGE value="." />
     <MESSAGE value="zdna bzaaaaaf I forgot what I changed" />
     <MESSAGE value="lizanimassione" />
-    <option name="LAST_COMMIT_MESSAGE" value="lizanimassione" />
+    <MESSAGE value="lizanimassione++" />
+    <option name="LAST_COMMIT_MESSAGE" value="lizanimassione++" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

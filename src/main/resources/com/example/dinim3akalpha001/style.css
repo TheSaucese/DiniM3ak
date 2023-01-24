@@ -357,7 +357,7 @@
     -fx-font-family: "Lato Bold";
 }
 
-#time,#money,#destinationname,#clientname {
+#time,#money,#destinationname,#clientname,#reg,#viewmore,#call,#notify {
     -fx-font-family: "Lato";
 }
 
