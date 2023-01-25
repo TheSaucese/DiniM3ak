@@ -361,7 +361,34 @@
     -fx-font-family: "Lato";
 }
 
+.text-area {
+    -fx-background-color: rgba(53,89,119,0.4);
+    -fx-font-family: "Lato";
+}
 
+.text-area .scroll-pane {
+    -fx-background-color: transparent;
+    -fx-font-family: "Lato";
+}
+
+.text-area .scroll-pane .viewport{
+    -fx-background-color: transparent;
+    -fx-font-family: "Lato";
+}
+
+
+.text-area .scroll-pane .content{
+    -fx-background-color: transparent;
+    -fx-font-family: "Lato";
+}
+
+#CloseNotes{
+    -fx-background-image: url("../../Images/dinim3akalpha001/close.png");
+}
+
+#ClientNoti,#NotiText,#acceptreq,#declinereq {
+    -fx-font-family: "Lato";
+}
 
 
 

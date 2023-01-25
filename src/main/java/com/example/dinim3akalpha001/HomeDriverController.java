@@ -2,20 +2,22 @@ package com.example.dinim3akalpha001;
 
 
 import com.example.dinim3akalpha001.javascript.object.*;
-import com.example.dinim3akalpha001.service.directions.*;
+import com.example.dinim3akalpha001.service.directions.DirectionsRenderer;
+import com.example.dinim3akalpha001.service.directions.DirectionsService;
 import com.example.dinim3akalpha001.service.geocoding.GeocodingService;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
-import javafx.animation.*;
 import javafx.animation.Animation;
+import javafx.animation.Timeline;
+import javafx.animation.TranslateTransition;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.input.MouseEvent;
+import javafx.scene.control.TextArea;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
@@ -26,8 +28,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import static com.example.dinim3akalpha001.ClientTableView.ReturnDesc;
 import static com.example.dinim3akalpha001.MongoController.db;
-import static com.mongodb.client.model.Filters.eq;
 
 public class HomeDriverController implements Initializable, MapComponentInitializedListener {
 
@@ -55,14 +57,19 @@ public class HomeDriverController implements Initializable, MapComponentInitiali
     private Text ClientName,DestinationName;
 
     @FXML
-    private Button PostaRide,viewmore;
-    private boolean hasTimelined =false;
+    private Pane NotePane;
 
     @FXML
-    private void getCoords() {
+    private Button PostaRide,viewmore;
 
+    @FXML
+    private TextArea textarea;
+
+    @FXML
+    private void closeNotes() {
+        ReturnDesc.set("");
+        NotePane.setVisible(false);
     }
-
 
     @FXML
     private void handleSmores() {
@@ -79,7 +86,6 @@ public class HomeDriverController implements Initializable, MapComponentInitiali
             MongoCollection<Document> rides = db.getCollection("rides");
             FindIterable<Document> iterable = rides.find();
             if (viewmore.getText().equals("Show More")){
-                System.out.println("hwuifhwefuwehi");
                 iterable.limit(2);}
             IterateClients(iterable);
         }
@@ -89,7 +95,7 @@ public class HomeDriverController implements Initializable, MapComponentInitiali
         MongoCursor<Document> cursor = iterable.iterator();
         while (cursor.hasNext()) {
             Document doc = cursor.next();
-            vbox.getChildren().add(ClientTableView.createPane(doc.getString("source"),doc.getString("clientname"),doc.getString("destination"),!cursor.hasNext()));
+            vbox.getChildren().add(new ClientTableView(doc.getString("source"),doc.getString("clientname"),doc.getString("destination"),!cursor.hasNext(),doc.getString("ride description")));
         }
     }
 
@@ -110,6 +116,11 @@ public class HomeDriverController implements Initializable, MapComponentInitiali
     private void handleProfile() throws IOException {
         new DiniController().handleScenes("ProfileDriver.fxml",mapView);
     }
+    @FXML
+    private void handleNoti() throws IOException {
+        new DiniController().handleScenes("NotiDriver.fxml",mapView);
+    }
+
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -117,6 +128,10 @@ public class HomeDriverController implements Initializable, MapComponentInitiali
         MongoCollection<Document> rides = db.getCollection("rides");
         FindIterable<Document> iterable = rides.find().limit(2);
         IterateClients(iterable);
+        ReturnDesc.addListener((observable, oldValue, newValue) -> {
+            NotePane.setVisible(true);
+            textarea.setText(newValue);
+        });
     }
 
     @Override

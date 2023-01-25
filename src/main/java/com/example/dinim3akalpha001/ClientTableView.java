@@ -1,34 +1,30 @@
 package com.example.dinim3akalpha001;
 
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
-import javafx.scene.paint.Paint;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.StrokeType;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 
-import java.net.URL;
-import java.util.ResourceBundle;
+public class ClientTableView extends Pane {
+    public static StringProperty ReturnDesc = new SimpleStringProperty();
 
-public class ClientTableView {
-    @FXML
-    private AnchorPane Pane;
+    public ClientTableView(String locationText, String ClientText, String DestinationText, boolean seconditem, String notes) {
 
-
-    public static javafx.scene.layout.Pane createPane(String locationText,String ClientText,String DestinationText,boolean seconditem) {
-        javafx.scene.layout.Pane pane = new javafx.scene.layout.Pane();
-        pane.setPrefHeight(87);
-        pane.setPrefWidth(276);
-        pane.setStyle("-fx-background-color: #3F3B6C;");
+        setPrefHeight(87);
+        setPrefWidth(276);
+        setStyle("-fx-background-color: #3F3B6C;");
 
         Text location = new Text("<Location here>");
         location.setFill(Color.WHITE);
@@ -153,16 +149,19 @@ public class ClientTableView {
 
         Button note = new Button();
         note.setId("note");
-        note.setLayoutX(30);
-        note.setLayoutY(3);
+        note.setLayoutX(190.0);
+        note.setLayoutY(20);
         note.setMnemonicParsing(false);
-        note.setPrefHeight(25);
-        note.setPrefWidth(200);
-        note.setStyle("-fx-background-color: transparent;");
-        note.setText("(Notes included, click here to read)");
-        note.setTextAlignment(TextAlignment.CENTER);
-        note.setTextFill(Color.WHITE);
-        note.setVisible(true);
+        note.setPrefHeight(38);
+        note.setPrefWidth(38);
+        Image img1 = new Image("/com/Images/dinim3akalpha001/NotesIncluded.png");
+        ImageView view1 = new ImageView(img1);
+        note.setGraphic(view1);
+        note.setVisible(notes.length()==0?false:true);
+
+        note.setOnAction(event -> {
+            ReturnDesc.set(notes);
+        });
 
         btn.setOnAction(event -> {
             // Set the visibility of the buttons to true
@@ -173,7 +172,7 @@ public class ClientTableView {
             btn.setVisible(false);
         });
 
-        pane.setOnMouseClicked(new EventHandler<MouseEvent>() {
+        setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle( MouseEvent event) {
                 notifyButton.setVisible(false);
@@ -184,13 +183,11 @@ public class ClientTableView {
             }
         });
 
-        pane.getChildren().addAll(location,client,dest,dollar, time,note, timeValue, moneyValue,btn,circle,line,callButton,notifyButton);
+        getChildren().addAll(location,client,dest,dollar, time,note, timeValue, moneyValue,btn,circle,line,callButton,notifyButton);
         if(!seconditem){
-            pane.getChildren().add(rect);
+            getChildren().add(rect);
         }
 
-        pane.getStylesheets().add(DiniApplication.class.getResource("style.css").toExternalForm());
-
-        return pane;
+        getStylesheets().add(DiniApplication.class.getResource("style.css").toExternalForm());
     }
 }
