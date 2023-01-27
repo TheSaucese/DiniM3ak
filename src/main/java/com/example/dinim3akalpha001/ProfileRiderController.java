@@ -32,17 +32,11 @@ import static com.example.dinim3akalpha001.SignupController2.*;
 import static com.mongodb.client.model.Filters.eq;
 import static com.mongodb.client.model.Updates.set;
 
-public class ProfileController implements Initializable {
+public class ProfileRiderController implements Initializable {
     @FXML
     private Circle Photo;
     @FXML
     private TextField Username;
-    @FXML
-    private Button Vehicle;
-    @FXML
-    private ImageView StarsIcons;
-    @FXML
-    private Text Stars;
     static GridFSBucket gridBucket = GridFSBuckets.create(db);
     private TranslateTransition translateTransition;
     private FadeTransition fadeTransition;
@@ -66,15 +60,15 @@ public class ProfileController implements Initializable {
     }
     @FXML
     private void handleVehicle() throws IOException {
-        new DiniController().handleScenes("Car.fxml",Vehicle);
+        new DiniController().handleScenes("Car.fxml",Username);
     }
     @FXML
     private void handlePayment() throws IOException {
-        new DiniController().handleScenes("PaymentSee.fxml",Vehicle);
+        new DiniController().handleScenes("PaymentSee.fxml",Username);
     }
     @FXML
     private void handleMore() throws IOException {
-        //new DiniController().handleScenes("PaymentAdd.fxml",Vehicle);
+        //new DiniController().handleScenes("PaymentAdd.fxml",Username);
         //UNFINISHED :(
     }
     @FXML
@@ -140,13 +134,13 @@ public class ProfileController implements Initializable {
     }
     @FXML
     private void handleMenu() throws IOException {
-        new DiniController().handleScenes(getuJob().equals("Driver")?"HomeDriver.fxml":"HomeRider.fxml",Vehicle);
+        new DiniController().handleScenes(getuJob().equals("Driver")?"HomeDriver.fxml":"HomeRider.fxml",Username);
     }
     @FXML
     private void handleSwitch() throws IOException {
-        setuJob("Rider");
+        setuJob("Driver");
         db.getCollection("users").updateOne(eq("email", getuEmail()), set("job","Rider"));
-        new DiniController().handleScenes("ProfileRider.fxml",Username);
+        new DiniController().handleScenes("ProfileDriver.fxml",Username);
 
     }
     @FXML
@@ -166,21 +160,6 @@ public class ProfileController implements Initializable {
         Document user = db.getCollection("users").find(eq("email",getuEmail())).first();
         Username.setTextFormatter(new TextFormatter(modifyChange));
         Username.setText(user.getString("fullname"));
-        Double stars = user.getDouble("stars");
-        if (stars == 0.0) {
-            StarsIcons.setImage(new Image("com/Images/dinim3akalpha001/Stars0.png"));
-        } else if (stars == 1.0) {
-            StarsIcons.setImage(new Image("com/Images/dinim3akalpha001/Stars1.png"));
-        } else if (stars == 2.0) {
-            StarsIcons.setImage(new Image("com/Images/dinim3akalpha001/Stars2.png"));
-        } else if (stars == 3.0) {
-            StarsIcons.setImage(new Image("com/Images/dinim3akalpha001/Stars3.png"));
-        } else if (stars == 4.0) {
-            StarsIcons.setImage(new Image("com/Images/dinim3akalpha001/Stars4.png"));
-        } else if (stars == 5.0) {
-            StarsIcons.setImage(new Image("com/Images/dinim3akalpha001/Stars5.png"));
-        }
-        Stars.setText(user.getDouble("stars")+" Stars");
         if (db.getCollection("fs.files").find(eq("_id",user.getObjectId("image"))).first()!=null){
             try {
                 saveToFileSystem(db.getCollection("fs.files").find(eq("_id",user.getObjectId("image"))).first().getString("filename"));

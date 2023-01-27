@@ -1,6 +1,5 @@
 package com.example.dinim3akalpha001;
 
-
 import com.example.dinim3akalpha001.javascript.object.*;
 import com.example.dinim3akalpha001.service.directions.DirectionsRenderer;
 import com.example.dinim3akalpha001.service.directions.DirectionsService;
@@ -31,8 +30,7 @@ import java.util.ResourceBundle;
 import static com.example.dinim3akalpha001.ClientTableView.ReturnDesc;
 import static com.example.dinim3akalpha001.MongoController.db;
 
-public class HomeDriverController implements Initializable, MapComponentInitializedListener {
-
+public class HomeRiderController implements Initializable, MapComponentInitializedListener {
     protected DirectionsService directionsService;
     protected DirectionsPane directionsPane;
 
@@ -83,8 +81,8 @@ public class HomeDriverController implements Initializable, MapComponentInitiali
             translate.play();
             viewmore.setText(viewmore.getText().equals("Show Less") ? "Show More" : "Show Less");
             vbox.getChildren().clear();
-            MongoCollection<Document> requests = db.getCollection("requests");
-            FindIterable<Document> iterable = requests.find();
+            MongoCollection<Document> rides = db.getCollection("rides");
+            FindIterable<Document> iterable = rides.find();
             if (viewmore.getText().equals("Show More")){
                 iterable.limit(2);}
             IterateClients(iterable);
@@ -103,18 +101,13 @@ public class HomeDriverController implements Initializable, MapComponentInitiali
     private void HandlePostRide() throws IOException {
         new DiniController().handleScenes("AddRide.fxml",mapView);
     }
-
-    @FXML
-    private void handleVehicle() throws IOException {
-        new DiniController().handleScenes("Car.fxml",mapView);
-    }
     @FXML
     private void handlePayment() throws IOException {
         new DiniController().handleScenes("PaymentSee.fxml",mapView);
     }
     @FXML
     private void handleProfile() throws IOException {
-        new DiniController().handleScenes("ProfileDriver.fxml",mapView);
+        new DiniController().handleScenes("ProfileRider.fxml",mapView);
     }
     @FXML
     private void handleNoti() throws IOException {
@@ -125,8 +118,8 @@ public class HomeDriverController implements Initializable, MapComponentInitiali
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         mapView.addMapInitializedListener(this);
-        MongoCollection<Document> requests = db.getCollection("requests");
-        FindIterable<Document> iterable = requests.find().limit(2);
+        MongoCollection<Document> rides = db.getCollection("rides");
+        FindIterable<Document> iterable = rides.find().limit(2);
         IterateClients(iterable);
         ReturnDesc.addListener((observable, oldValue, newValue) -> {
             NotePane.setVisible(true);
@@ -148,5 +141,4 @@ public class HomeDriverController implements Initializable, MapComponentInitiali
         directionsService = new DirectionsService();
         directionsPane = mapView.getDirec();
     }
-
 }

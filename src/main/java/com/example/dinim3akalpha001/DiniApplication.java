@@ -11,7 +11,7 @@ public class DiniApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         new MongoController();
-        FXMLLoader fxmlLoader = new FXMLLoader(DiniApplication.class.getResource("HomeDriver.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(DiniApplication.class.getResource("Login.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 375, 812);
         scene.getStylesheets().add(DiniApplication.class.getResource("style.css").toExternalForm());
         stage.setTitle("DINIM3AK3000");

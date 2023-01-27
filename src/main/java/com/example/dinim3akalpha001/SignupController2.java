@@ -50,12 +50,11 @@ public class SignupController2 {
 
     @FXML
     private void finishRegistration() throws Exception {
-        MongoCollection<Document> collection = db.getCollection("users");
 
         if(!phoneNumber.getText().matches(regexStr)){
 
         }
-        else if(fullName.getText().length()<6) {
+        else if(fullName.getText().length()<3) {
 
         }
         else {

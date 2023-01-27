@@ -2,22 +2,18 @@ package com.example.dinim3akalpha001;
 
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.result.InsertOneResult;
-import javafx.beans.Observable;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import org.bson.Document;
-import org.bson.types.ObjectId;
 
 import java.io.IOException;
 
 import static com.example.dinim3akalpha001.MongoController.db;
+import static com.example.dinim3akalpha001.SignupController2.getuJob;
 
-public class RidesController {
+public class RidesandrequestsController {
         // Add ride
         @FXML
         private TextField from_input;
@@ -58,7 +54,7 @@ public class RidesController {
 
 
 
-                MongoCollection<Document> collection = db.getCollection("rides");
+                MongoCollection<Document> collection = db.getCollection(getuJob()=="Driver"?"rides":"requests");
                 Document data = new Document("source", from_input.getText())
                         .append("destination", to_input.getText())
                         .append("ride price", amount_input.getText())
