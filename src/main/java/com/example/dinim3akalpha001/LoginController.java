@@ -4,8 +4,10 @@ import com.mongodb.client.MongoCollection;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import org.bson.Document;
 
 import java.io.IOException;
@@ -20,6 +22,10 @@ public class LoginController {
     private TextField Email;
     @FXML
     private PasswordField pass_hidden;
+    @FXML
+    private ImageView wrong_email_icon;
+    @FXML
+    private Label wrong_email;
 
     @FXML
     private void Login(ActionEvent event) throws IOException {
@@ -28,16 +34,22 @@ public class LoginController {
         String password = pass_hidden.getText();
         MongoCollection<Document> collection = db.getCollection("users");
         Document user = collection.find(and(eq("email",email),eq("password",password))).first();
-        if (user.getString("job").equals("Driver")) {
-            new DiniController().handleScenes("HomeDriver.fxml",Email);
+        if(user != null) {
+            if (user.getString("job").equals("Driver")) {
+                new DiniController().handleScenes("HomeDriver.fxml", Email);
+            } else {
+                new DiniController().handleScenes("HomeRider.fxml", Email);
+            }
         }
-        else {
-            new DiniController().handleScenes("HomeRider.fxml",Email);
+        else{
+        wrong_email_icon.setVisible(true);
+        wrong_email.setVisible(true);
         }
         setuJob(user.getString("job"));
         setuEmail(email);
         setuPass(password);
         setuID(user.getString("_id"));
+        setuName(user.getString("fullname"));
     }
     @FXML
     private void Signup(ActionEvent event) throws IOException {

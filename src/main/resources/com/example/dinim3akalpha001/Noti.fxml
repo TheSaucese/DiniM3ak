@@ -7,16 +7,16 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Rectangle?>
 
-<Pane fx:id="SignUpScreen" layoutX="0" layoutY="0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="812" prefWidth="375" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dinim3akalpha001.NotiDriverController">
+<Pane fx:id="SignUpScreen" layoutX="0" layoutY="0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="812" prefWidth="375" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dinim3akalpha001.NotiController">
     <children>
-      <ImageView fx:id="imgrider" fitHeight="812.0" fitWidth="375.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="812.0" fitWidth="375.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../Images/dinim3akalpha001/BackgroundNormal.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="119.0" fitWidth="375.0" layoutY="25.0" opacity="0.87" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imgrider" fitHeight="119.0" fitWidth="375.0" layoutY="25.0" opacity="0.87" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../Images/dinim3akalpha001/menuhomedriver.png" />
+            <Image url="@../../Images/dinim3akalpha001/noti.png" />
          </image>
       </ImageView>
       <Rectangle fx:id="ClientRectangle" arcHeight="20.0" arcWidth="20.0" fill="#3f3b6c" height="640.0" layoutX="32.0" layoutY="154.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="319.0" />

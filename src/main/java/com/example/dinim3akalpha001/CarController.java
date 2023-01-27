@@ -130,13 +130,13 @@ public class CarController implements Initializable {
         Document user = db.getCollection("users").find(eq("email",getuEmail())).first();
         InputNumber.setText(user.getString("carnumber"));
         InputName.setText(user.getString("carname"));
-        /* try {
+        try {
             saveToFileSystem(db.getCollection("fs.files").find(eq("_id",user.getObjectId("carImage"))).first().getString("filename"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
 
-         */
+
     }
 
 }

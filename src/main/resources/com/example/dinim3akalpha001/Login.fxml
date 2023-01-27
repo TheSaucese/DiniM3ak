@@ -3,11 +3,13 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <Pane fx:id="SignUpScreen" layoutX="0" layoutY="0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="812" prefWidth="375" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dinim3akalpha001.LoginController">
@@ -34,6 +36,16 @@
       <Button fx:id="Google" layoutX="26.0" layoutY="667.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="94.5" />
       <Hyperlink fx:id="hyper2" layoutX="301.0" layoutY="551.0" onAction="#Signup" text="Signup" textFill="#ffffff99" underline="true" />
       <Hyperlink fx:id="hyper2" layoutX="27.0" layoutY="551.0" onAction="#Forgot" text="Forgot Password" textFill="#ffffff99" underline="true" />
+      <ImageView fx:id="wrong_email_icon" fitHeight="32.0" fitWidth="38.0" layoutX="34.0" layoutY="518.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../Images/dinim3akalpha001/warn.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="wrong_email" layoutX="64.0" layoutY="526.0" text="Wrong Email or Password , Please try again" textFill="RED" visible="false">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
 
    </children>
 </Pane>

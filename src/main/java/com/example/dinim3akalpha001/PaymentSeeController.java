@@ -6,15 +6,23 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Point2D;
 import javafx.scene.control.Button;
+import javafx.scene.control.Control;
+import javafx.scene.control.Tooltip;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 
+import static com.example.dinim3akalpha001.DiniController.showTooltip;
 import static com.example.dinim3akalpha001.SignupController2.getuID;
 import static com.mongodb.client.model.Filters.eq;
+
+import javafx.stage.Stage;
 import org.bson.Document;
 
 import java.io.IOException;
@@ -38,7 +46,9 @@ public class PaymentSeeController implements Initializable {
     @FXML
     private Circle circle4;
     @FXML
-    private Button Delete;
+    private Button Delete,Arrow12;
+    @FXML
+    private ImageView paymentimage;
     private Pane n;
     private Rectangle oldrectangle;
     private Rectangle newrectangle;
@@ -121,6 +131,7 @@ public class PaymentSeeController implements Initializable {
     }
     @FXML
     public void initialize(URL location, ResourceBundle resources) {
+        paymentimage.setImage(new Image(getuJob()=="Driver"?"com/Images/dinim3akalpha001/menupayment.png":"com/Images/dinim3akalpha001/menupaymentrider.png"));
         MongoCollection<Document> rides = db.getCollection("cards");
         FindIterable<Document> iterable = rides.find(eq("userid",getuID()));
         MongoCursor<Document> cursor = iterable.iterator();
@@ -140,7 +151,13 @@ public class PaymentSeeController implements Initializable {
     }
     @FXML
     private void handleVehicle() throws IOException {
-        new DiniController().handleScenes(getuJob().equals("Driver")?"Car.fxml":"Placeholder.fxl",circle1);
+        if (getuJob().equals("Driver")) {
+            new DiniController().handleScenes("Car.fxml", circle1);
+        }
+        else {
+            Arrow12.setTooltip(new Tooltip("Switch to Driver to access this feature."));
+            showTooltip((Stage) Arrow12.getScene().getWindow(),Arrow12,"Switch to Driver to access this feature.",null);
+        }
     }
     @FXML
     private void handleMenu() throws IOException {

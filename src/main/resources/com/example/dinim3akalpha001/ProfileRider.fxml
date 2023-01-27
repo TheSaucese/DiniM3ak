@@ -21,7 +21,7 @@
       </ImageView>
       <ImageView fitHeight="119.0" fitWidth="375.0" layoutY="25.0" opacity="0.87" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../Images/dinim3akalpha001/menuprofile.png" />
+            <Image url="@../../Images/dinim3akalpha001/menuprofileRider.png" />
          </image>
       </ImageView>
       <Rectangle arcHeight="20.0" arcWidth="20.0" height="696.0" layoutY="128.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="375.0">
@@ -70,5 +70,6 @@
             <Button fx:id="Cancel" layoutX="280.0" layoutY="5.0" maxHeight="39.0" maxWidth="86.0" minHeight="19.0" minWidth="19.0" mnemonicParsing="false" onAction="#CancelChanges" prefHeight="39.0" prefWidth="78.0" style="-fx-background-color: transparent; -fx-font-size: 18; -fx-text-fill: #F44336;" text="Cancel" />
          </children>
       </Pane>
+      <Button fx:id="Vehicle" layoutX="39.0" layoutY="70.0" mnemonicParsing="false" onAction="#handleVehicle" opacity="0.0" prefHeight="25.0" prefWidth="31.0" />
    </children>
 </Pane>

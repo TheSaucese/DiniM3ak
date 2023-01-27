@@ -1,26 +1,31 @@
 package com.example.dinim3akalpha001;
 
+import com.mongodb.client.model.Updates;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-import javafx.event.EventHandler;
-import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.Background;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.StrokeType;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
+import org.bson.types.ObjectId;
+
+import static com.example.dinim3akalpha001.MongoController.db;
+import static com.example.dinim3akalpha001.SignupController2.*;
+import static com.mongodb.client.model.Filters.eq;
 
 public class ClientTableView extends Pane {
     public static StringProperty ReturnDesc = new SimpleStringProperty();
 
-    public ClientTableView(String locationText, String ClientText, String DestinationText, boolean seconditem, String notes) {
+    public static StringProperty Child = new SimpleStringProperty();
+
+    public ClientTableView(String locationText, String ClientText, String DestinationText, boolean seconditem, String notes, String price, String timetext, ObjectId id, VBox vbox, String userid) {
 
         setPrefHeight(87);
         setPrefWidth(276);
@@ -91,14 +96,14 @@ public class ClientTableView extends Pane {
         rect.setStrokeType(StrokeType.INSIDE);
         rect.setWidth(269);
 
-        Text timeValue = new Text("12:30");
+        Text timeValue = new Text(timetext);
         timeValue.setId("time");
         timeValue.setFill(Color.WHITE);
         timeValue.setLayoutX(25);
         timeValue.setLayoutY(54);
         timeValue.setStrokeType(StrokeType.OUTSIDE);
         timeValue.setStrokeWidth(0);
-        timeValue.setText("12:30");
+        timeValue.setText(timetext);
 
         Text moneyValue = new Text("300 Dh");
         moneyValue.setId("money");
@@ -107,7 +112,7 @@ public class ClientTableView extends Pane {
         moneyValue.setLayoutY(71);
         moneyValue.setStrokeType(StrokeType.OUTSIDE);
         moneyValue.setStrokeWidth(0);
-        moneyValue.setText("300 Dh");
+        moneyValue.setText(price);
 
         Button notifyButton = new Button();
         notifyButton.setId("notify");
@@ -172,15 +177,26 @@ public class ClientTableView extends Pane {
             btn.setVisible(false);
         });
 
-        setOnMouseClicked(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle( MouseEvent event) {
-                notifyButton.setVisible(false);
-                callButton.setVisible(false);
-                circle.setVisible(false);
-                btn.setVisible(true);
-                line.setVisible(false);
-            }
+        notifyButton.setOnAction(e -> {
+            db.getCollection("users").updateOne(eq("_id", userid), Updates.push("notification",getuName()));
+            db.getCollection(getuJob()=="Driver"?"requests":"rides").deleteOne(eq("_id",id));
+            vbox.getChildren().remove(this);
+        });
+
+        vbox.setOnMouseClicked(event -> {
+            notifyButton.setVisible(false);
+            callButton.setVisible(false);
+            circle.setVisible(false);
+            btn.setVisible(true);
+            line.setVisible(false);
+        });
+
+        setOnMouseClicked(event -> {
+            notifyButton.setVisible(false);
+            callButton.setVisible(false);
+            circle.setVisible(false);
+            btn.setVisible(true);
+            line.setVisible(false);
         });
 
         getChildren().addAll(location,client,dest,dollar, time,note, timeValue, moneyValue,btn,circle,line,callButton,notifyButton);

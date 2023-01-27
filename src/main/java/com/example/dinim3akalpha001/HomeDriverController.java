@@ -95,7 +95,7 @@ public class HomeDriverController implements Initializable, MapComponentInitiali
         MongoCursor<Document> cursor = iterable.iterator();
         while (cursor.hasNext()) {
             Document doc = cursor.next();
-            vbox.getChildren().add(new ClientTableView(doc.getString("source"),doc.getString("clientname"),doc.getString("destination"),!cursor.hasNext(),doc.getString("ride description")));
+            vbox.getChildren().add(new ClientTableView(doc.getString("source"),doc.getString("user"),doc.getString("destination"),!cursor.hasNext(),doc.getString("description"),doc.getString("price"),doc.getString("time"), doc.getObjectId("_id"), vbox, doc.getString("userid")));
         }
     }
 

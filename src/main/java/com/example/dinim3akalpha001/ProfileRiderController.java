@@ -8,9 +8,8 @@ import javafx.animation.FadeTransition;
 import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
-import javafx.scene.control.TextFormatter;
+import javafx.geometry.Point2D;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
@@ -18,6 +17,7 @@ import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 import org.bson.Document;
 import org.bson.types.ObjectId;
@@ -27,6 +27,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.function.UnaryOperator;
 
+import static com.example.dinim3akalpha001.DiniController.showTooltip;
 import static com.example.dinim3akalpha001.MongoController.db;
 import static com.example.dinim3akalpha001.SignupController2.*;
 import static com.mongodb.client.model.Filters.eq;
@@ -43,6 +44,8 @@ public class ProfileRiderController implements Initializable {
     private String oldUsername;
     @FXML
     private Pane ChangesSaved,SaveChanges;
+    @FXML
+    private Button Vehicle;
     private boolean hasTransitioned=false;
     @FXML
     private void Upload() throws IOException {
@@ -60,8 +63,10 @@ public class ProfileRiderController implements Initializable {
     }
     @FXML
     private void handleVehicle() throws IOException {
-        new DiniController().handleScenes("Car.fxml",Username);
+        Vehicle.setTooltip(new Tooltip("Switch to Driver to access this feature."));
+        showTooltip((Stage) Vehicle.getScene().getWindow(),Vehicle,"Switch to Driver to access this feature.",null);
     }
+
     @FXML
     private void handlePayment() throws IOException {
         new DiniController().handleScenes("PaymentSee.fxml",Username);
@@ -139,7 +144,7 @@ public class ProfileRiderController implements Initializable {
     @FXML
     private void handleSwitch() throws IOException {
         setuJob("Driver");
-        db.getCollection("users").updateOne(eq("email", getuEmail()), set("job","Rider"));
+        db.getCollection("users").updateOne(eq("email", getuEmail()), set("job","Driver"));
         new DiniController().handleScenes("ProfileDriver.fxml",Username);
     }
     @FXML

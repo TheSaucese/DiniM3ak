@@ -59,7 +59,7 @@
       <Circle fx:id="circle2" fill="WHITE" layoutX="173.0" layoutY="404.0" opacity="0.3" radius="4.5" stroke="#3f3b6c" strokeType="INSIDE" strokeWidth="0.0" />
       <Circle fx:id="circle3" fill="#f2f2f2" layoutX="194.0" layoutY="404.0" opacity="0.3" radius="4.5" stroke="#3f3b6c" strokeType="INSIDE" strokeWidth="0.0" />
       <Circle fx:id="circle4" fill="WHITE" layoutX="215.0" layoutY="404.0" opacity="0.3" radius="4.5" stroke="#3f3b6c" strokeType="INSIDE" strokeWidth="0.0" />
-      <ImageView fitHeight="134.0" fitWidth="375.0" layoutY="25.0" opacity="0.87" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="paymentimage" fitHeight="134.0" fitWidth="375.0" layoutY="25.0" opacity="0.87" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../Images/dinim3akalpha001/menupayment.png" />
          </image>

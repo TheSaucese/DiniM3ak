@@ -14,12 +14,18 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Point2D;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.control.Control;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.Tooltip;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 import org.bson.Document;
 
@@ -27,8 +33,11 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import static com.example.dinim3akalpha001.ClientTableView.Child;
 import static com.example.dinim3akalpha001.ClientTableView.ReturnDesc;
+import static com.example.dinim3akalpha001.DiniController.showTooltip;
 import static com.example.dinim3akalpha001.MongoController.db;
+import static com.example.dinim3akalpha001.SignupController2.getuID;
 
 public class HomeRiderController implements Initializable, MapComponentInitializedListener {
     protected DirectionsService directionsService;
@@ -58,7 +67,7 @@ public class HomeRiderController implements Initializable, MapComponentInitializ
     private Pane NotePane;
 
     @FXML
-    private Button PostaRide,viewmore;
+    private Button PostaRide,viewmore,Vehicle;
 
     @FXML
     private TextArea textarea;
@@ -93,13 +102,20 @@ public class HomeRiderController implements Initializable, MapComponentInitializ
         MongoCursor<Document> cursor = iterable.iterator();
         while (cursor.hasNext()) {
             Document doc = cursor.next();
-            vbox.getChildren().add(new ClientTableView(doc.getString("source"),doc.getString("clientname"),doc.getString("destination"),!cursor.hasNext(),doc.getString("ride description")));
+            if(!doc.getString("userid").equals(getuID())) {
+                vbox.getChildren().add(new ClientTableView(doc.getString("source"), doc.getString("user"), doc.getString("destination"), !cursor.hasNext(), doc.getString("description"), doc.getString("price"), doc.getString("time"), doc.getObjectId("_id"), vbox, doc.getString("userid")));
+            }
         }
     }
 
     @FXML
     private void HandlePostRide() throws IOException {
         new DiniController().handleScenes("AddRide.fxml",mapView);
+    }
+    @FXML
+    private void handleVehicle() throws IOException {
+        Vehicle.setTooltip(new Tooltip("Switch to Driver to access this feature."));
+        showTooltip((Stage) Vehicle.getScene().getWindow(),Vehicle,"Switch to Driver to access this feature.",null);
     }
     @FXML
     private void handlePayment() throws IOException {

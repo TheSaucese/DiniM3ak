@@ -4,14 +4,17 @@ import javafx.animation.FadeTransition;
 import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Point2D;
+import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.control.TextFormatter;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Border;
 import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 import org.bson.Document;
 import org.bson.types.ObjectId;
@@ -23,6 +26,7 @@ import java.util.ResourceBundle;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import static com.example.dinim3akalpha001.DiniController.showTooltip;
 import static com.example.dinim3akalpha001.MongoController.db;
 import static com.example.dinim3akalpha001.SignupController2.*;
 import static com.mongodb.client.model.Filters.eq;
@@ -39,6 +43,8 @@ public class PaymentController implements Initializable {
     private Pane ChangesSaved;
     @FXML
     private Label MainTextCard;
+    @FXML
+    private ImageView paymentimage;
     private TranslateTransition translateTransition;
     private FadeTransition fadeTransition;
     private String ID;
@@ -54,7 +60,13 @@ public class PaymentController implements Initializable {
     }
     @FXML
     private void handleVehicle() throws IOException {
-        new DiniController().handleScenes("Car.fxml",Vehicle);
+        if (getuJob().equals("Driver")) {
+            new DiniController().handleScenes("Car.fxml", Arrow);
+        }
+        else {
+            Vehicle.setTooltip(new Tooltip("Switch to Driver to access this feature."));
+            showTooltip((Stage) Vehicle.getScene().getWindow(),Vehicle,"Switch to Driver to access this feature.",null);
+        }
     }
     @FXML
     private void handleMenu() throws IOException {
@@ -183,6 +195,7 @@ public class PaymentController implements Initializable {
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        paymentimage.setImage(new Image(getuJob()=="Driver"?"com/Images/dinim3akalpha001/menupayment.png":"com/Images/dinim3akalpha001/menupaymentrider.png"));
         TextFormatter(InputCVV,3);
         TextFormatter(InputDate,4);
         TextFormatter(InputCardName,30);
