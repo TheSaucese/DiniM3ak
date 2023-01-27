@@ -178,7 +178,7 @@ public class ClientTableView extends Pane {
         });
 
         notifyButton.setOnAction(e -> {
-            db.getCollection("users").updateOne(eq("_id", userid), Updates.push("notification",getuName()));
+            db.getCollection("users").updateOne(eq("_id", userid), Updates.push("notification",getuID()));
             db.getCollection(getuJob()=="Driver"?"requests":"rides").deleteOne(eq("_id",id));
             vbox.getChildren().remove(this);
         });

@@ -67,8 +67,7 @@ public class ProfileController implements Initializable {
     }
     @FXML
     private void handleVehicle() throws IOException {
-        Vehicle.setTooltip(new Tooltip("Switch to Driver to access this feature."));
-        showTooltip((Stage) Vehicle.getScene().getWindow(),Vehicle,"Switch to Driver to access this feature.",null);
+        new DiniController().handleScenes("Car.fxml",Vehicle);
     }
     @FXML
     private void handlePayment() throws IOException {

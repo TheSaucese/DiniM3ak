@@ -30,6 +30,7 @@ import java.util.ResourceBundle;
 
 import static com.example.dinim3akalpha001.ClientTableView.ReturnDesc;
 import static com.example.dinim3akalpha001.MongoController.db;
+import static com.example.dinim3akalpha001.SignupController2.getuID;
 
 public class HomeDriverController implements Initializable, MapComponentInitializedListener {
 
@@ -95,8 +96,10 @@ public class HomeDriverController implements Initializable, MapComponentInitiali
         MongoCursor<Document> cursor = iterable.iterator();
         while (cursor.hasNext()) {
             Document doc = cursor.next();
-            vbox.getChildren().add(new ClientTableView(doc.getString("source"),doc.getString("user"),doc.getString("destination"),!cursor.hasNext(),doc.getString("description"),doc.getString("price"),doc.getString("time"), doc.getObjectId("_id"), vbox, doc.getString("userid")));
-        }
+            if(!doc.getString("userid").equals(getuID())) {
+                vbox.getChildren().add(new ClientTableView(doc.getString("source"), doc.getString("user"), doc.getString("destination"), !cursor.hasNext(), doc.getString("description"), doc.getString("price"), doc.getString("time"), doc.getObjectId("_id"), vbox, doc.getString("userid")));
+            }
+            }
     }
 
     @FXML

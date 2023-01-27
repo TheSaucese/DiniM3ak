@@ -80,7 +80,8 @@ public class SignupController2 {
                                             .append("job", uJob)
                                                     .append("stars",0.0)
                                                             .append("numcards",0)
-                                                                    .append("notification",stringList);
+                                                                    .append("notification",stringList)
+                                                                            .append("history",stringList);
             db.getCollection("users").insertOne(user);
             new DiniController().handleScenes(uJob.equals("Driver") ? "HomeDriver.fxml" : "HomeRider.fxml", fullName);
         }

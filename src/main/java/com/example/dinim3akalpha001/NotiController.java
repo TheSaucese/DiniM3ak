@@ -56,7 +56,7 @@ public class NotiController implements Initializable {
     }
     private void IterateNoti(ArrayList<String> notification) {
         for (String i : notification) {
-            vboxnoti.getChildren().add(new NotiView(i));
+            vboxnoti.getChildren().add(new NotiView(db.getCollection("users").find(eq("_id",i)).first().getString("fullname"),i,vboxnoti));
         }
     }
 
