@@ -138,6 +138,7 @@
          </font>
       </PasswordField>
       <Button fx:id="Vehicle" layoutX="33.0" layoutY="70.0" mnemonicParsing="false" onAction="#handleVehicle" opacity="0.0" prefHeight="25.0" prefWidth="30.0" />
+      <Button fx:id="Noti" layoutX="109.0" layoutY="70.0" mnemonicParsing="false" onAction="#handleNoti" opacity="0.0" prefHeight="25.0" prefWidth="31.0" />
       <Button fx:id="Home" layoutX="157.0" layoutY="30.0" mnemonicParsing="false" onAction="#handleMenu" opacity="0.0" prefHeight="60.0" prefWidth="64.0" />
       <Button fx:id="GoBack" layoutX="14.0" layoutY="134.0" maxHeight="24.0" maxWidth="72.0" minHeight="24.0" minWidth="72.0" mnemonicParsing="false" onAction="#handlePayment" prefHeight="24.0" prefWidth="72.0" />
       <Pane fx:id="ChangesSaved" layoutY="812.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="375.0" style="-fx-background-color: transparent;">

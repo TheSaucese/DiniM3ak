@@ -150,4 +150,8 @@ public class PaymentSeeController implements Initializable {
     private void handlePayment() throws IOException {
         new DiniController().handleScenes("PaymentAdd.fxml",circle1);
     }
+    @FXML
+    private void handleNoti() throws IOException {
+        new DiniController().handleScenes("Noti.fxml",circle1);
+    }
 }

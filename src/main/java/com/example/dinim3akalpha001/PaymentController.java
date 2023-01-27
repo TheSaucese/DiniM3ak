@@ -61,6 +61,10 @@ public class PaymentController implements Initializable {
         new DiniController().handleScenes(getuJob().equals("Driver")?"HomeDriver.fxml":"HomeRider.fxml",Vehicle);
     }
     @FXML
+    private void handleNoti() throws IOException {
+        new DiniController().handleScenes("Noti.fxml",Vehicle);
+    }
+    @FXML
     private void handlePayment() throws IOException {
         new DiniController().handleScenes("PaymentSee.fxml",Vehicle);
     }

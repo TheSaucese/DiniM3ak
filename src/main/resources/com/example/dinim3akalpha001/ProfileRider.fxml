@@ -51,7 +51,7 @@
       <Button layoutX="82.0" layoutY="496.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="212.0" style="-fx-border-radius: 10px; -fx-border-width: 1.5px; -fx-background-color: rgba(217,217,217,1); -fx-border-color: #3f3b6c; -fx-background-radius: 11px;" />
       <Button fx:id="Payment" layoutX="82.0" layoutY="496.0" mnemonicParsing="false" onAction="#handlePayment" prefHeight="42.0" prefWidth="212.0" style="-fx-border-radius: 10px; -fx-border-width: 1.5px; -fx-background-color: #ffffff; -fx-border-color: #3f3b6c; -fx-background-radius: 11px;" text="PAYMENT" textFill="#3f3b6c" />
       <TextField fx:id="Username" alignment="CENTER" layoutX="78.0" layoutY="356.0" onKeyTyped="#changename" prefHeight="42.0" prefWidth="212.0" style="-fx-text-box-border: transparent; -fx-focus-color: transparent; -fx-background-color: transparent; -fx-text-fill: #3F3B6C;" text="&lt;Your Name&gt;" />
-      <Button fx:id="Noti" layoutX="109.0" layoutY="70.0" mnemonicParsing="false" opacity="0.0" prefHeight="25.0" prefWidth="31.0" />
+      <Button fx:id="Noti" layoutX="109.0" layoutY="70.0" mnemonicParsing="false" onAction="#handleNoti" opacity="0.0" prefHeight="25.0" prefWidth="31.0" />
       <Button fx:id="Payment" layoutX="229.0" layoutY="70.0" mnemonicParsing="false" onAction="#handlePayment" opacity="0.0" prefHeight="25.0" prefWidth="31.0" />
       <Button layoutX="159.0" layoutY="28.0" mnemonicParsing="false" onAction="#handleMenu" opacity="0.0" prefHeight="62.0" prefWidth="56.0" />
       <Pane fx:id="ChangesSaved" layoutY="822.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="375.0" style="-fx-background-color: transparent;">

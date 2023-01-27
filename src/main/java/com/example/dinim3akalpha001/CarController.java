@@ -45,6 +45,8 @@ public class CarController implements Initializable {
     private void Apply() {
         db.getCollection("users").updateOne(eq("email", getuEmail()), set("carname",InputName.getText()));
         db.getCollection("users").updateOne(eq("email", getuEmail()), set("carnumber",InputNumber.getText()));
+        InputName.setText("");
+        InputNumber.setText("");
     }
 
     public static boolean useRegex(final String input,String regex) {
@@ -110,6 +112,10 @@ public class CarController implements Initializable {
     @FXML
     private void handleArrow() throws IOException {
         new DiniController().handleScenes("ProfileDriver.fxml",Arrow);
+    }
+    @FXML
+    private void handleNoti() throws IOException {
+        new DiniController().handleScenes("Noti.fxml",Arrow);
     }
     @FXML
     private void handlePayment() throws IOException {

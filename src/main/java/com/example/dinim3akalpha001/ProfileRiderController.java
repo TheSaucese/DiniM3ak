@@ -141,7 +141,10 @@ public class ProfileRiderController implements Initializable {
         setuJob("Driver");
         db.getCollection("users").updateOne(eq("email", getuEmail()), set("job","Rider"));
         new DiniController().handleScenes("ProfileDriver.fxml",Username);
-
+    }
+    @FXML
+    private void handleNoti() throws IOException {
+        new DiniController().handleScenes("Noti.fxml",Username);
     }
     @FXML
     public void initialize(URL location, ResourceBundle resources) {

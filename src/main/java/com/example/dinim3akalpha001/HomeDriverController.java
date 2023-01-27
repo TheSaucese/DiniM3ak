@@ -118,7 +118,7 @@ public class HomeDriverController implements Initializable, MapComponentInitiali
     }
     @FXML
     private void handleNoti() throws IOException {
-        new DiniController().handleScenes("NotiDriver.fxml",mapView);
+        new DiniController().handleScenes("Noti.fxml",mapView);
     }
 
 

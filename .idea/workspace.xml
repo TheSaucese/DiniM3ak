@@ -4,19 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb171782-302e-4d3e-9e0e-a075aae1d669" name="Changes" comment="noti gang !!!!">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/HomeRiderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/ProfileRiderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/Images/dinim3akalpha001/menuhomedriver - Copy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/Images/dinim3akalpha001/menuhomerider.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/HomeRider.fxml" afterDir="false" />
+    <list default="true" id="fb171782-302e-4d3e-9e0e-a075aae1d669" name="Changes" comment="spid rapid&#10;&#10;I gotta fix ride/requests and delete card option">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/Images/dinim3akalpha001/Group 320.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/Images/dinim3akalpha001/menucarrider.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/Images/dinim3akalpha001/menupaymentrider.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/Images/dinim3akalpha001/menuprofilerider.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/DiniApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/DiniApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/CarController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/HomeDriverController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/HomeDriverController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/HomeRiderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/HomeRiderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/NotiDriverController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/NotiDriverController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/PaymentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/PaymentSeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/PaymentSeeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/ProfileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/RidesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/RidesandrequestsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/SignupController2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/SignupController2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/AddRide.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/AddRide.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/ProfileRiderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/ProfileRiderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/RidesandrequestsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/RidesandrequestsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/Images/dinim3akalpha001/menuhomedriver - Copy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/Images/dinim3akalpha001/menuhomerider.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/Images/dinim3akalpha001/menuhomerider.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/Images/dinim3akalpha001/menuprofile.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/Images/dinim3akalpha001/menuprofile.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/Car.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/Car.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/HomeRider.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/HomeRider.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/NotiDriver.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/Noti.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/PaymentAdd.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/PaymentAdd.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/PaymentSee.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/PaymentSee.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/ProfileDriver.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/ProfileDriver.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/ProfileRider.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dinim3akalpha001/ProfileRider.fxml" afterDir="false" />
     </list>
@@ -140,7 +150,8 @@
       <workItem from="1674598651448" duration="7112000" />
       <workItem from="1674646245559" duration="10503000" />
       <workItem from="1674738985594" duration="136000" />
-      <workItem from="1674774813830" duration="3538000" />
+      <workItem from="1674774813830" duration="3757000" />
+      <workItem from="1674825597937" duration="3668000" />
     </task>
     <task id="LOCAL-00001" summary="Beta ??? map works I guess ? mongo might not be working...">
       <created>1673522878803</created>
@@ -226,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674656103810</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="spid rapid&#10;&#10;I gotta fix ride/requests and delete card option">
+      <created>1674778568189</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1674778568189</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,7 +278,8 @@
     <MESSAGE value="lizanimassione++" />
     <MESSAGE value="lizanimassione++++" />
     <MESSAGE value="noti gang !!!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="noti gang !!!!" />
+    <MESSAGE value="spid rapid&#10;&#10;I gotta fix ride/requests and delete card option" />
+    <option name="LAST_COMMIT_MESSAGE" value="spid rapid&#10;&#10;I gotta fix ride/requests and delete card option" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

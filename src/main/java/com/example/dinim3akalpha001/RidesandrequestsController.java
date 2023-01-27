@@ -45,6 +45,10 @@ public class RidesandrequestsController {
                 new DiniController().handleScenes("ProfileDriver.fxml",at_input);
         }
         @FXML
+        private void handleNoti() throws IOException {
+                new DiniController().handleScenes("Noti.fxml",at_input);
+        }
+        @FXML
         private void addRide(ActionEvent event){
                 System.out.println(from_input.getText());
                 System.out.println(to_input.getText());
@@ -57,9 +61,9 @@ public class RidesandrequestsController {
                 MongoCollection<Document> collection = db.getCollection(getuJob()=="Driver"?"rides":"requests");
                 Document data = new Document("source", from_input.getText())
                         .append("destination", to_input.getText())
-                        .append("ride price", amount_input.getText())
-                        .append("ride time", at_input.getText())
-                        .append("ride description", description_input.getText());
+                        .append("price", amount_input.getText())
+                        .append("time", at_input.getText())
+                        .append("description", description_input.getText());
 
                 InsertOneResult result = collection.insertOne(data);
 
@@ -69,5 +73,10 @@ public class RidesandrequestsController {
                 } else {
                         System.out.println("Data submission failed.");
                 }
+                from_input.setText("");
+                to_input.setText("");
+                amount_input.setText("");
+                at_input.setText("");
+                description_input.setText("");
         }
 }
