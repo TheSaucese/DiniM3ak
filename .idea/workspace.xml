@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb171782-302e-4d3e-9e0e-a075aae1d669" name="Changes" comment="ඞ">
+    <list default="true" id="fb171782-302e-4d3e-9e0e-a075aae1d669" name="Changes" comment="ඞ we">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/HistoryView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/ClientTableView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/ClientTableView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/HomeDriverController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/HomeDriverController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/NotiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/NotiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/HomeRiderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/HomeRiderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/NotiView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/NotiView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/ProfileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/SignupController2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dinim3akalpha001/SignupController2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,26 +60,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_directory_selection": "C:/Users/Elfar/IdeaProjects/DiniM3ak/src/main/java/com/example/dinim3akalpha001",
-    "last_opened_file_path": "C:/Users/Elfar/IdeaProjects/DiniM3ak/src/main/resources/com/example/dinim3akalpha001",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.5850575",
-    "settings.editor.selected.configurable": "preferences.JavaFX",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/Elfar/IdeaProjects/DiniM3ak/src/main/java/com/example/dinim3akalpha001&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Elfar/IdeaProjects/DiniM3ak/src/main/resources/com/example/dinim3akalpha001&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.5850575&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Elfar\IdeaProjects\DiniM3ak\src\main\resources\com\example\dinim3akalpha001" />
@@ -136,7 +135,8 @@
       <workItem from="1674738985594" duration="136000" />
       <workItem from="1674774813830" duration="3757000" />
       <workItem from="1674825597937" duration="3715000" />
-      <workItem from="1674835641706" duration="13440000" />
+      <workItem from="1674835641706" duration="13469000" />
+      <workItem from="1674900109444" duration="1988000" />
     </task>
     <task id="LOCAL-00001" summary="Beta ??? map works I guess ? mongo might not be working...">
       <created>1673522878803</created>
@@ -243,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674846873157</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="ඞ we">
+      <created>1674852055323</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1674852055323</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,7 +287,8 @@
     <MESSAGE value="spid rapid&#10;&#10;I gotta fix ride/requests and delete card option" />
     <MESSAGE value="ඞඞඞඞඞඞඞඞඞඞඞඞඞඞඞඞඞ amogus" />
     <MESSAGE value="ඞ" />
-    <option name="LAST_COMMIT_MESSAGE" value="ඞ" />
+    <MESSAGE value="ඞ we" />
+    <option name="LAST_COMMIT_MESSAGE" value="ඞ we" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

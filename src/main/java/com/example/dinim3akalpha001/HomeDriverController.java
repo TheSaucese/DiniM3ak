@@ -32,6 +32,19 @@ import static com.example.dinim3akalpha001.ClientTableView.ReturnDesc;
 import static com.example.dinim3akalpha001.MongoController.db;
 import static com.example.dinim3akalpha001.SignupController2.getuID;
 
+/**
+ * The HomeDriverController class is responsible for handling the home driver scene.
+ * It includes methods for displaying a map, displaying client information,
+ * handling 'post a ride' button and more.
+ * It implements Initializable and MapComponentInitializedListener interfaces.
+ * It uses GoogleMapView, TranslateTransition, Timeline, GeocodingService, MongoCollection and MongoCursor classes.
+ * It uses FXML annotations to handle the UI elements.
+ * It has several methods which handle the UI elements actions, like closeNotes,handleSmores and HandlePostRide.
+ * It has a method IterateClients which is used to iterate over the clients data in MongoDB.
+ *
+ * @author Dinim3akalpha001
+ * @version 1.0
+ */
 public class HomeDriverController implements Initializable, MapComponentInitializedListener {
 
     protected DirectionsService directionsService;
@@ -72,6 +85,11 @@ public class HomeDriverController implements Initializable, MapComponentInitiali
         NotePane.setVisible(false);
     }
 
+    /**
+     * handleSmores is a method to display more ride requests , in case of 'Show less' it shows only
+     * 2 ride requests and in case 'show more' it displays more ride requests , in parallel it hides
+     * googleMap rectangle and also the button of 'Post a ride'
+     */
     @FXML
     private void handleSmores() {
         if (translate==null||!translate.getStatus().equals(Animation.Status.RUNNING)) {
@@ -92,6 +110,10 @@ public class HomeDriverController implements Initializable, MapComponentInitiali
         }
     }
 
+    /**
+     Iterates through the clients in the MongoDB collection and adds them to the UI table.
+     @param iterable The MongoDB collection to iterate through.
+     */
     private void IterateClients(FindIterable<Document> iterable) {
         MongoCursor<Document> cursor = iterable.iterator();
         while (cursor.hasNext()) {
@@ -124,6 +146,15 @@ public class HomeDriverController implements Initializable, MapComponentInitiali
         new DiniController().handleScenes("Noti.fxml",mapView);
     }
 
+    /**
+     * Initializes the controller class. This method is called automatically when the FXML file is loaded.
+     * It sets up the map view, retrieves a limited number of rides from the "rides" collection in MongoDB,
+     * and calls the IterateClients() method to iterate through the retrieved documents. It also adds a listener
+     * to the ReturnDesc property, which makes the NotePane visible and sets the text of the textarea to the newValue
+     * of the property when the property changes.
+     * @param url The location used to resolve relative paths for the root object, or null if the location is not known.
+     * @param rb The resources used to localize the root object, or null if the root object was not localized.
+     */
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -137,6 +168,10 @@ public class HomeDriverController implements Initializable, MapComponentInitiali
         });
     }
 
+    /**
+     * This method initializes the Google Map on the GUI. It sets the map's center location, zoom level, and map type.
+     * It also creates a new instance of the GeocodingService and DirectionsService. The directionsPane variable is also initialized.
+     */
     @Override
     public void mapInitialized() {
         MapOptions options = new MapOptions();

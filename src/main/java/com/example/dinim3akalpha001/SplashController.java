@@ -11,6 +11,11 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/**
+ * The SplashController class is responsible for handling the initial loading screen when the application is launched.
+ * It displays a progress bar and a text indicating the percentage of initialization.
+ */
+
 public class SplashController implements Initializable {
     @FXML
     private AnchorPane rootPane;
@@ -19,11 +24,20 @@ public class SplashController implements Initializable {
     @FXML
     private Text Initializing;
 
+    /**
+     * The initialize method is called when the controller is created. It is responsible for starting the SplashScreen thread.
+     * @param url The location used to resolve relative paths for the root object, or null if the location is not known.
+     * @param rb The resources used to localize the root object, or null if the root object was not localized.
+     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         new SplashScreen().start();
     }
 
+    /**
+     * The runningPBar method is used to simulate the loading process by updating
+     * the progress bar and the initialization text.
+     */
     public void runningPBar() throws InterruptedException {
         double i=0;
 
@@ -42,6 +56,10 @@ public class SplashController implements Initializable {
         Thread.sleep(500);
     }
 
+    /**
+     * The SplashScreen class is a nested class that extends the Thread class.
+     * It is used to run the Splash Screen in a separate thread.
+     */
     class SplashScreen extends Thread{
         @Override
         public void run() {

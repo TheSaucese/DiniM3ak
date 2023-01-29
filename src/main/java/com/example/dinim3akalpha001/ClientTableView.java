@@ -20,11 +20,28 @@ import static com.example.dinim3akalpha001.MongoController.db;
 import static com.example.dinim3akalpha001.SignupController2.*;
 import static com.mongodb.client.model.Filters.eq;
 
+/**
+ * This class creates a client table view, displaying the location, client name, destination, and other relevant information for a client.
+ */
 public class ClientTableView extends Pane {
     public static StringProperty ReturnDesc = new SimpleStringProperty();
 
     public static StringProperty Child = new SimpleStringProperty();
 
+    /**
+     * Creates a new client table view with the given location, client name, destination, and other information.
+     *
+     * @param locationText the location of the client
+     * @param ClientText the name of the client
+     * @param DestinationText the destination of the client
+     * @param seconditem additional information about the client
+     * @param notes notes about the client
+     * @param price the price for the client's service
+     * @param timetext the time of the client's service
+     * @param id the unique id of the client
+     * @param vbox the layout container for the client table view
+     * @param userid the user id of the client
+     */
     public ClientTableView(String locationText, String ClientText, String DestinationText, boolean seconditem, String notes, String price, String timetext, ObjectId id, VBox vbox, String userid) {
 
         setPrefHeight(87);

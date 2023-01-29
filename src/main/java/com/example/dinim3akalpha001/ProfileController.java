@@ -32,6 +32,11 @@ import static com.example.dinim3akalpha001.MongoController.db;
 import static com.example.dinim3akalpha001.SignupController2.*;
 import static com.mongodb.client.model.Filters.eq;
 import static com.mongodb.client.model.Updates.set;
+/**
+ * The ProfileController class handles the logic and actions for the profile page.
+ * It implements the Initializable interface to handle the initialization of the page.
+ * It also uses FXML annotations to bind the class to the corresponding FXML file.
+ */
 
 public class ProfileController implements Initializable {
     @FXML
@@ -51,6 +56,12 @@ public class ProfileController implements Initializable {
     @FXML
     private Pane ChangesSaved,SaveChanges;
     private boolean hasTransitioned=false;
+    /**
+     * The Upload method is used to open a file chooser and allow the user to select
+     * a profile picture to upload. It then calls the mongoupload and saveToFileSystem
+     * methods to handle the uploading and saving of the image.
+     * @throws IOException if there is an error with the file input/output.
+     */
     @FXML
     private void Upload() throws IOException {
         FileChooser fileChooser = new FileChooser();
@@ -78,6 +89,13 @@ public class ProfileController implements Initializable {
         //new DiniController().handleScenes("PaymentAdd.fxml",Vehicle);
         //UNFINISHED :(
     }
+    /**
+     * This method is used to change the name of a user.
+     * It sets the SaveChanges button to be visible, and plays
+     * a fade and translate transition on the button. The variable
+     * hasTransitioned is used to determine the direction of the
+     * translate transition.
+     */
     @FXML
     private void changename() {
         SaveChanges.setVisible(true);
@@ -90,6 +108,9 @@ public class ProfileController implements Initializable {
         translateTransition.play();
         hasTransitioned=true;
     }
+    /**
+     * The method SaveChanges() is used to save changes made to the user's name.
+     */
     @FXML
     private void SaveChanges() {
         fadeTransition = new FadeTransition(Duration.seconds(0.25), SaveChanges);
@@ -109,6 +130,11 @@ public class ProfileController implements Initializable {
         db.getCollection("users").updateOne(eq("email", getuEmail()), set("fullname",Username.getText()));
         SaveChanges.setVisible(false);
     }
+    /**
+     * This method is used to cancel the changes made to the user's name.
+     * It animates the SaveChanges button by fading it out and moving it up,
+     * then sets the text of the username field to the old value stored in the database.
+     */
     @FXML
     private void CancelChanges() {
         fadeTransition = new FadeTransition(Duration.seconds(1), SaveChanges);
@@ -121,6 +147,12 @@ public class ProfileController implements Initializable {
         hasTransitioned=false;
         Username.setText(db.getCollection("users").find(eq("email", getuEmail())).first().getString("fullname"));
     }
+    /**
+     * The CloseUndo method is used to close the changes saved notification and hide it from the user's view.
+     * This method sets the visibility of the SaveChanges element to false and applies both a fade and a translate transition to the ChangesSaved element.
+     * The fade transition makes the ChangesSaved element become invisible over the course of 1 second, and the translate transition moves the element up by 60 units.
+     */
+
     @FXML
     private void CloseUndo() {
         SaveChanges.setVisible(false);
@@ -133,26 +165,55 @@ public class ProfileController implements Initializable {
         translateTransition.setByY(60);
         translateTransition.play();
     }
+    /**
+     * The Undo method is used to undo the changes made to the user's name and update the name in the database to the previous name.
+     * The changes made to the UI are also undone by setting the text of the Username field to the previous name and calling the CloseUndo method.
+     */
     @FXML
     private void Undo() {
         db.getCollection("users").updateOne(eq("email", getuEmail()), set("fullname",oldUsername));
         Username.setText(oldUsername);
         CloseUndo();
     }
+    /**
+     * Handle the menu button action.
+     * This method is called when the user clicks on the menu button.
+     * It navigates to the appropriate home page based on the user's job.
+     * @throws IOException if there is an error loading the FXML file
+     */
     @FXML
     private void handleMenu() throws IOException {
         new DiniController().handleScenes(getuJob().equals("Driver")?"HomeDriver.fxml":"HomeRider.fxml",Vehicle);
     }
+    /**
+     * Handle the switch button action.
+     * This method is called when the user clicks on the switch button.
+     * It changes the user's job in the database and navigates to the profile page for drivers.
+     * @throws IOException if there is an error loading the FXML file
+     */
     @FXML
     private void handleSwitch() throws IOException {
         setuJob("Rider");
         db.getCollection("users").updateOne(eq("email", getuEmail()), set("job","Rider"));
         new DiniController().handleScenes("ProfileRider.fxml",Username);
     }
+    /**
+     * Handle the notifications button action.
+     * This method is called when the user clicks on the notifications button.
+     * It navigates to the notifications page.
+     * @throws IOException if there is an error loading the FXML file
+     */
     @FXML
     private void handleNoti() throws IOException {
         new DiniController().handleScenes("Noti.fxml",Username);
     }
+    /**
+     * Initializes the user's information on the GUI.
+     * @param location The location of the file.
+     * @param resources The resources used for the initialization.
+     * @throws RuntimeException If there is an IOException when saving the user's image to the file system.
+     */
+
     @FXML
     public void initialize(URL location, ResourceBundle resources) {
         UnaryOperator<TextFormatter.Change> modifyChange = c -> {
@@ -194,6 +255,12 @@ public class ProfileController implements Initializable {
         }
 
     }
+    /**
+     * This method is used to upload a file to MongoDB using the GridFS bucket.
+     * @param filePath The file path of the file to be uploaded.
+     * @param fileName The name to be used for the file in MongoDB.
+     * @return The ObjectId of the uploaded file, or null if an error occurred.
+     */
     public ObjectId mongoupload(String filePath, String fileName) {
         ObjectId fileId = null;
         try {
@@ -207,6 +274,11 @@ public class ProfileController implements Initializable {
         return fileId;
     }
 
+    /**
+     * The method saveToFileSystem is used to save a file to the file system using the GridFS API.
+     * @param fileName the name of the file to be saved
+     * @throws IOException if there is an error creating the file or writing to it
+     */
     private void saveToFileSystem(String fileName) throws IOException {
         GridFSDownloadOptions downloadOptions = new GridFSDownloadOptions().revision(0);
         File file = new File("c:/DiniM3ak/"+fileName);

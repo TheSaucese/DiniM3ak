@@ -18,6 +18,12 @@ import java.util.regex.Pattern;
 import static com.example.dinim3akalpha001.MongoController.db;
 import static com.mongodb.client.model.Filters.eq;
 
+/**
+ * SignupController is responsible for handling the signup process for the DiniM3ak application.
+ * It includes methods for validating user input, sending a verification email, and navigating to the
+ * appropriate scenes.
+ */
+
 public class SignupController {
     @FXML
     private TextField Email;
@@ -31,10 +37,21 @@ public class SignupController {
     private Button Signup;
     @FXML
     private ProgressIndicator Ind;
+
+    /**
+     * Login() is responsible for handling the login button click event. It navigates the user to the
+     * login scene.
+     */
     @FXML
     private void Login() throws IOException {
         new DiniController().handleScenes("Login.fxml",Signup);
     }
+
+    /**
+     * handleSignup() is responsible for handling the signup button click event. It checks if the email
+     * and password entered by the user are valid and if the email is already in use. If all input is
+     * valid, it sends a verification email and navigates to the verification scene.
+     */
     @FXML
     private void handleSignup() throws IOException {
         if(db.getCollection("users").find(eq("email",Email.getText())).first()!=null) {
@@ -52,6 +69,12 @@ public class SignupController {
 
     }
 
+    /**
+     * isValid() is a static method that takes in a string email as input and returns a boolean indicating
+     * if the email is in a valid format.
+     * @param email is a string email
+     * @return a boolean indicating if the email is in a valid format.
+     */
     public static boolean isValid(String email) {
         String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\." +
                 "[a-zA-Z0-9_+&*-]+)*@" +
@@ -62,7 +85,18 @@ public class SignupController {
             return false;
         return pat.matcher(email).matches();
     }
+
+    /**
+     * LoadingScreen class is a thread class that extends the Thread class and overrides the run method.
+     * The run method is responsible for handling the verification process and displaying the verification scene.
+     */
     class LoadingScreen extends Thread{
+        /**
+         * This method is the entry point for the thread. It calls the handleVerif method to handle the verification process.
+         * If an IOException is caught, it throws a new RuntimeException with the caught exception as its parameter.
+         * After the verification process is done, it uses the Platform.runLater method to run the handleScenes method on the FX Application Thread,
+         * to change the scene to the verification scene.
+         */
         @Override
         public void run() {
            try {
@@ -80,6 +114,11 @@ public class SignupController {
         }
     }
 
+    /**
+     * This method is used to handle the verification process.
+     * It sends a verification code to the user's email, and stores the user's email and password in the SignupController2 class.
+     * @throws IOException if there is an issue with sending the email.
+     */
     private void handleVerif() throws IOException {
             Ind.setVisible(true);
             Signup.setDisable(true);
@@ -116,6 +155,10 @@ public class SignupController {
                 e.printStackTrace();
             }
         }
+
+    /**
+     * toggleVisiblePassword() toggles the visibility of the password field if the button is clicked .
+     */
     @FXML
     protected void toggleVisiblePassword() {
         if (ShowPass.isSelected()) {

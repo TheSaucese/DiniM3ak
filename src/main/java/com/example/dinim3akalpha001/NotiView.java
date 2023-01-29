@@ -21,7 +21,11 @@ import static com.example.dinim3akalpha001.MongoController.db;
 import static com.example.dinim3akalpha001.ProfileController.gridBucket;
 import static com.example.dinim3akalpha001.SignupController2.getuID;
 import static com.mongodb.client.model.Filters.eq;
-
+/**
+ * Class that creates a notification view for a ride request.
+ * It contains the username of the client who sent the request,
+ * an accept button, and a decline button.
+ */
 public class NotiView extends Pane {
     NotiView(String username, String id, VBox vboxnoti) {
         setId("Pane");

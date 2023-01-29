@@ -32,6 +32,13 @@ import java.util.ResourceBundle;
 import static com.example.dinim3akalpha001.MongoController.db;
 import static com.example.dinim3akalpha001.SignupController2.getuJob;
 
+/**
+ * This class handles the user interface for the payment see feature.
+ * It implements the Initializable interface and uses FXML to create the UI.
+ * The class contains methods and fields related to the scrolling animation,
+ * deletion of payment, and displaying payment images.
+ */
+
 public class PaymentSeeController implements Initializable {
     @FXML
     private javafx.scene.control.ScrollPane ScrollPane;
@@ -52,6 +59,11 @@ public class PaymentSeeController implements Initializable {
     private Pane n;
     private Rectangle oldrectangle;
     private Rectangle newrectangle;
+
+    /**
+     * This method animates the scrolling of the payment images and updates
+     * the color of the navigation circles to indicate the current image.
+     */
     @FXML
     protected void ScrollAnimate() {
         switch(AnchorPane.getChildren().size()) {
@@ -110,6 +122,12 @@ public class PaymentSeeController implements Initializable {
                 break;
         }
     }
+    /**
+     * This method is called when the user clicks on a specific element on the user interface.
+     * It sets the stroke width of the rectangle to 4, indicating that it has been selected, and disables the delete button.
+     * If another rectangle had previously been selected, its stroke width is set back to 0.
+     * @param e the MouseEvent that triggers the method
+     */
     @FXML
     private void DeleteOption(MouseEvent e) {
         Delete.setDisable(!Delete.isDisabled());
@@ -121,6 +139,10 @@ public class PaymentSeeController implements Initializable {
         }
         oldrectangle=newrectangle;
     }
+    /**
+     * This method is called when the user clicks on the delete button.
+     * It sets the visibility of the selected rectangle to false and disables the delete button.
+     */
     @FXML
     private void handleDelete() {
         n.setVisible(false);
@@ -129,16 +151,25 @@ public class PaymentSeeController implements Initializable {
     @FXML
     private void testAdd() {
     }
+    /**
+     * Initializes the PaymentController class with the necessary resources.
+     * @param location The location of the FXML file that this controller is associated with.
+     * @param resources The resources used to initialize the controller.
+     */
     @FXML
     public void initialize(URL location, ResourceBundle resources) {
+        // sets the payment image based on the user's job
         paymentimage.setImage(new Image(getuJob()=="Driver"?"com/Images/dinim3akalpha001/menupayment.png":"com/Images/dinim3akalpha001/menupaymentrider.png"));
+        // gets the collection of cards from the MongoDB database
         MongoCollection<Document> rides = db.getCollection("cards");
         FindIterable<Document> iterable = rides.find(eq("userid",getuID()));
         MongoCursor<Document> cursor = iterable.iterator();
+        // iterates through the cards and adds them to the AnchorPane
         while (cursor.hasNext()) {
             Document doc = cursor.next();
             AnchorPane.getChildren().add(new CreditCardView(doc.getString("name"),doc.getString("number")));
         }
+        // sets the opacity of the circles based on the number of card
         circle1.setOpacity(AnchorPane.getChildren().size()>=1?1:0.3);
         circle2.setOpacity(AnchorPane.getChildren().size()>=2?1:0.3);
         circle3.setOpacity(AnchorPane.getChildren().size()>=3?1:0.3);

@@ -13,8 +13,17 @@ import org.bson.Document;
 
 import static com.example.dinim3akalpha001.MongoController.db;
 
+/**
+ * The RidesController2 class is responsible for handling the request ride feature in the application.
+ * It allows the user to input information such as the source, destination, desired vehicle type,
+ * ride time, and a description for the ride. The user can then submit the ride request, which is stored in
+ * the "requestedRides" collection in the MongoDB database.
+ */
+
 public class RidesController2 {
-        // Request Ride
+        /**
+         * A list of vehicle types that are available for the user to select from.
+         */
         ObservableList<String> vehiculeList = FXCollections
                 .observableArrayList("Van","Universal","Suv","Pickup","Campervan");
         @FXML
@@ -30,12 +39,19 @@ public class RidesController2 {
         @FXML
         private Button Apply_passenger;
 
-        // add list of vehicle type in the combobox
+        /**
+         * Initializes the combo box with the list of vehicle types.
+         */
         @FXML
         private void initialize(){
                 vehicule_input.setValue("Van");
                 vehicule_input.setItems(vehiculeList);
         }
+        /**
+         * Handles the event of the user clicking the submit button. The inputted information
+         * is stored in the "requestedRides" collection in the MongoDB database.
+         * @param event The ActionEvent object for the submit button being clicked.
+         */
         @FXML
         private void requestRide(ActionEvent event) {
                 /*try {

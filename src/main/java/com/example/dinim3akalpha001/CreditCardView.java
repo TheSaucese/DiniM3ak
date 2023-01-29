@@ -13,11 +13,24 @@ import javafx.scene.text.Text;
 
 import static com.example.dinim3akalpha001.PaymentController.addDashes;
 
+/**
+ * CreditCardView is a class that extends Pane and creates a visual representation of a credit card.
+ * It takes a name and a number as arguments and displays them on the credit card.
+ @author Youssef & Sami
+ */
 public class CreditCardView extends Pane {
+    /**
+     * Constructs a new CreditCardView with the given name and number.
+     * @param name the name to be displayed on the credit card
+     * @param number the number to be displayed on the credit card
+     */
     CreditCardView(String name, String number) {
         setPrefHeight(158.16);
         setPrefWidth(272.54);
 
+        /**
+         * The rectangle representing the credit card
+         */
         Rectangle rectangle = new Rectangle(272.54, 158.16);
         rectangle.setArcHeight(15);
         rectangle.setArcWidth(15);

@@ -20,6 +20,10 @@ import static com.example.dinim3akalpha001.MongoController.db;
 import static com.example.dinim3akalpha001.SignupController2.getuEmail;
 import static com.example.dinim3akalpha001.SignupController2.getuJob;
 import static com.mongodb.client.model.Filters.*;
+/**
+ * The NotiController class handles the functionality of the Notification feature .
+ * It allows the user to navigate to different scenes, view notifications and handle them.
+*/
 
 public class NotiController implements Initializable {
     @FXML
@@ -28,6 +32,11 @@ public class NotiController implements Initializable {
     private ImageView imgrider;
     @FXML
     private VBox vboxnoti;
+    /**
+     * The handleVehicle method is used to handle the functionality of the Vehicle button.
+     * If the user's job is "Driver", it navigates to the Car.fxml scene.
+     * If not, it displays a tooltip with a message "Switch to Driver to access this feature."
+     */
     @FXML
     private void handleVehicle() throws IOException {
         if (getuJob().equals("Driver")) {

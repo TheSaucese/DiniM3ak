@@ -9,6 +9,11 @@ import com.example.dinim3akalpha001.javascript.object.MapOptions;
  * Date: 1/9/2015
  * Time: 11:51
  */
+
+/**
+ * ClusteredGoogleMapView is a class that extends the GoogleMapView class and
+ * provides functionality for creating and managing a clustered Google map.
+ */
 public class ClusteredGoogleMapView extends GoogleMapView {
 
     public ClusteredGoogleMapView() {

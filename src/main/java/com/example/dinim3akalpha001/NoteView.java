@@ -7,6 +7,12 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.StrokeType;
 
+/**
+ * This class represents the NoteView pane that displays notes to the user.
+ * It creates a Rectangle, TextArea, and a Button and adds them to the Pane.
+ * The TextArea displays the notes passed to the constructor as a parameter.
+ * The Button is used to close the notes.
+ */
 public class NoteView extends Pane {
     NoteView(String notes) {
         setId("NotePane");

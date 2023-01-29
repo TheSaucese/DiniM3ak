@@ -39,10 +39,28 @@ import static com.example.dinim3akalpha001.DiniController.showTooltip;
 import static com.example.dinim3akalpha001.MongoController.db;
 import static com.example.dinim3akalpha001.SignupController2.getuID;
 
+/**
+ * The HomeRiderController class is responsible for controlling the logic and functionality of the home page for the rider user.
+ * It implements the Initializable and MapComponentInitializedListener interfaces to handle the initialization of the page and the map.
+ * The class contains several instance variables and FXML elements such as a GoogleMapView, a DirectionsService, a DirectionsPane, and various buttons and text fields.
+ * It also contains several methods such as handleSmores(), IterateClients(), HandlePostRide(), handleVehicle(), handlePayment(), handleProfile(), and handleNoti()
+ * that handle the functionality of the buttons and other elements on the page.
+ * The initialize() method is responsible for setting up the page and map upon initialization and the mapInitialized() method is called when the map is successfully loaded.
+ * /
+ */
 public class HomeRiderController implements Initializable, MapComponentInitializedListener {
+    /**
+     * DirectionsService is a class that allows you to call the Google Directions API to obtain routing information.
+     */
     protected DirectionsService directionsService;
+    /**
+     * DirectionsPane is a class that allows you to display route information on a map.
+     */
     protected DirectionsPane directionsPane;
 
+    /**
+     * A property that stores the origin location of the route.
+     */
     protected StringProperty from = new SimpleStringProperty();
     protected StringProperty to = new SimpleStringProperty();
     protected DirectionsRenderer directionsRenderer = null;
@@ -72,12 +90,20 @@ public class HomeRiderController implements Initializable, MapComponentInitializ
     @FXML
     private TextArea textarea;
 
+ /**
+ * A method that is used to close the notes
+ */
     @FXML
     private void closeNotes() {
         ReturnDesc.set("");
         NotePane.setVisible(false);
     }
 
+    /**
+     * handleSmores is a method to display more ride requests , in case of 'Show less' it shows only
+     * 2 ride requests and in case 'show more' it displays more ride requests , in parallel it hides
+     * googleMap rectangle and also the button of 'Post a ride'
+     */
     @FXML
     private void handleSmores() {
         if (translate==null||!translate.getStatus().equals(Animation.Status.RUNNING)) {
@@ -98,6 +124,10 @@ public class HomeRiderController implements Initializable, MapComponentInitializ
         }
     }
 
+    /**
+     Iterates through the clients in the MongoDB collection and adds them to the UI table.
+     @param iterable The MongoDB collection to iterate through.
+     */
     private void IterateClients(FindIterable<Document> iterable) {
         MongoCursor<Document> cursor = iterable.iterator();
         while (cursor.hasNext()) {
@@ -131,6 +161,16 @@ public class HomeRiderController implements Initializable, MapComponentInitializ
     }
 
 
+    /**
+     * Initializes the controller class. This method is called automatically when the FXML file is loaded.
+     * It sets up the map view, retrieves a limited number of rides from the "rides" collection in MongoDB,
+     * and calls the IterateClients() method to iterate through the retrieved documents. It also adds a listener
+     * to the ReturnDesc property, which makes the NotePane visible and sets the text of the textarea to the newValue
+     * of the property when the property changes.
+     * @param url The location used to resolve relative paths for the root object, or null if the location is not known.
+     * @param rb The resources used to localize the root object, or null if the root object was not localized.
+     */
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         mapView.addMapInitializedListener(this);
@@ -143,6 +183,10 @@ public class HomeRiderController implements Initializable, MapComponentInitializ
         });
     }
 
+    /**
+     * This method initializes the Google Map on the GUI. It sets the map's center location, zoom level, and map type.
+     * It also creates a new instance of the GeocodingService and DirectionsService. The directionsPane variable is also initialized.
+     */
     @Override
     public void mapInitialized() {
         MapOptions options = new MapOptions();
