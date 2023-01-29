@@ -120,7 +120,11 @@ Any change will result in this bottom bar popping up
  
  You can change your choice in your profile if you wish to later on.
 
+ ## Final Registration :
  
+ ![image](https://user-images.githubusercontent.com/88286462/215360546-274a502b-d457-4504-ad0e-d6ab9f939962.png)
+
+ Here where you finalize your registration, if you exit this screen you have to start all over again.
  
  
  
