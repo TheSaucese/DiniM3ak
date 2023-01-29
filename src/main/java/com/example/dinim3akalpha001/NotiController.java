@@ -78,7 +78,12 @@ public class NotiController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        imgrider.setImage(new Image(getuJob()=="Driver"?"com/Images/dinim3akalpha001/noti.png":"com/Images/dinim3akalpha001/notirider.png"));
+        if(getuJob()=="Driver") {
+            imgrider.setImage(new Image("com/Images/dinim3akalpha001/noti.png"));
+        }
+        else if(getuJob()=="Rider") {
+            imgrider.setImage(new Image("com/Images/dinim3akalpha001/notirider.png"));
+        }
         Document user = db.getCollection("users").find(eq("email",getuEmail())).first();
         IterateNoti((ArrayList) user.get("notification"));
     }
