@@ -195,6 +195,7 @@ public class CarController implements Initializable {
         InputNumber.setText(user.getString("carnumber"));
         InputName.setText(user.getString("carname"));
         try {
+            if (db.getCollection("fs.files").find(eq("_id",user.getObjectId("carImage"))).first()!=null)
             saveToFileSystem(db.getCollection("fs.files").find(eq("_id",user.getObjectId("carImage"))).first().getString("filename"));
         } catch (IOException e) {
             throw new RuntimeException(e);
