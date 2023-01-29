@@ -4,13 +4,17 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.result.InsertOneResult;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Tooltip;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import org.bson.Document;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 import static com.example.dinim3akalpha001.DiniController.showTooltip;
 import static com.example.dinim3akalpha001.MongoController.db;
@@ -19,8 +23,10 @@ import static com.example.dinim3akalpha001.SignupController2.*;
  * RidesandrequestsController is a class that handles the functionality for adding a ride or request a ride.
  */
 
-public class RidesandrequestsController {
+public class RidesandrequestsController implements Initializable {
         // Add ride
+        @FXML
+        private Text AddRide,AddRideText;
         @FXML
         private TextField from_input;
         @FXML
@@ -106,6 +112,17 @@ public class RidesandrequestsController {
                 description_input.setText("");
                 from1_input.setText("");
                 to1_input.setText("");
+
+        }
+
+        /**
+         * @param url
+         * @param resourceBundle
+         */
+        @Override
+        public void initialize(URL url, ResourceBundle resourceBundle) {
+                AddRide.setText(getuJob()=="Driver"?"Add Ride":"Request a Ride");
+                AddRideText.setText(getuJob()=="Driver"?"you can add a trip so that it appears in the list of available trips for passengers.":"you can request a ride so that it appears in the list of available requests for drivers.");
 
         }
 }
