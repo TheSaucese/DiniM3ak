@@ -267,7 +267,7 @@
     -fx-shape: none;
 }
 
-#MainText,#MainTextName,#MainTextCard {
+#MainText,#MainTextName,#MainTextCard,#AddRide {
     -fx-font-family: "Lato Semibold";
 }
 
@@ -357,7 +357,7 @@
     -fx-font-family: "Lato Bold";
 }
 
-#time,#money,#destinationname,#clientname,#reg,#viewmore,#call,#notify {
+#time,#money,#destinationname,#clientname,#reg,#viewmore,#call,#notify,#AddRideText {
     -fx-font-family: "Lato";
 }
 
