@@ -53,7 +53,12 @@ public class NotiController implements Initializable {
     }
     @FXML
     private void handleProfile() throws IOException {
-        new DiniController().handleScenes("ProfileDriver.fxml",Vehicle);
+        if (getuJob().equals("Driver")) {
+            new DiniController().handleScenes("ProfileDriver.fxml",Vehicle);
+        }
+        else {
+            new DiniController().handleScenes("ProfileRider.fxml",Vehicle);
+        }
     }
     @FXML
     private void handleMenu() throws IOException {
@@ -65,7 +70,9 @@ public class NotiController implements Initializable {
     }
     private void IterateNoti(ArrayList<String> notification) {
         for (String i : notification) {
-            vboxnoti.getChildren().add(new NotiView(db.getCollection("users").find(eq("_id",i)).first().getString("fullname"),i,vboxnoti));
+            if (db.getCollection("users").find(eq("_id",i)).first()!=null) {
+                vboxnoti.getChildren().add(new NotiView(db.getCollection("users").find(eq("_id", i)).first().getString("fullname"), i, vboxnoti));
+            }
         }
     }
 
