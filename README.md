@@ -13,13 +13,13 @@ If the login is successful, the user will be taken to a home page corresponding 
 ![alt text](https://github.com/TheSaucese/DiniM3ak/blob/master/README-DiniM3ak/Home_Rider.png)
 ![alt text](https://github.com/TheSaucese/DiniM3ak/blob/master/README-DiniM3ak/Show_More.png)
 ![alt text](https://github.com/TheSaucese/DiniM3ak/blob/master/README-DiniM3ak/Notes.png)
+## Request a Ride
+![alt text](https://github.com/TheSaucese/DiniM3ak/blob/master/README-DiniM3ak/Request_Ride.png)
+Riders can request a ride to be shown in the Driver side , they have to enter the ride info and clicking in the __apply__ button.
 ## Profile
 ![alt text](https://github.com/TheSaucese/DiniM3ak/blob/master/README-DiniM3ak/Profile_Driver.png)
 ![alt text](https://github.com/TheSaucese/DiniM3ak/blob/master/README-DiniM3ak/Switch_To_Rider.png)
 By clicking on the "Profile" button, the user can access their profile details, such as their name, email, and job, he has also the ability to switch to the "Driver" mode.
-## Request a Ride
-![alt text](https://github.com/TheSaucese/DiniM3ak/blob/master/README-DiniM3ak/Request_Ride.png)
-Riders can request a ride to be shown in the Driver side , they have to enter the ride info and clicking in the __apply__ button.
 ## Notification 
 ![alt text](https://github.com/TheSaucese/DiniM3ak/blob/master/README-DiniM3ak/Notification%20.png)
 One of the key features of the app is the ability for riders and drivers to receive notifications about rides that they have requested. These notifications can include messages about sent rides, as well as the ability to accept or decline a ride.
