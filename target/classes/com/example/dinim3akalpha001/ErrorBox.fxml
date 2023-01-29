@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="ChangesSaved" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="375.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#a3c7d6" height="60.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="375.0" />
+      <Text fill="WHITE" layoutX="33.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 18;" text="Changes Saved..." />
+      <Button fx:id="Undo" layoutX="209.0" layoutY="6.0" mnemonicParsing="false" onAction="#Undo" style="-fx-background-color: transparent; -fx-text-fill: #3f3b6c; -fx-font-size: 18;" text="UNDO" />
+      <Button fx:id="CloseUndo" layoutX="341.0" layoutY="12.0" maxHeight="19.0" maxWidth="19.0" minHeight="19.0" minWidth="19.0" mnemonicParsing="false" onAction="#CloseUndo" prefHeight="19.0" prefWidth="19.0" />
+   </children>
+</Pane>

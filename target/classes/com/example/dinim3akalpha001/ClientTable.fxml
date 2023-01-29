@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="Pane" prefHeight="87.0" prefWidth="276.0" style="-fx-background-color: #3F3B6C;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text fx:id="Location" fill="WHITE" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20;" text="&lt;Location here&gt;" />
+      <Text fx:id="clientname" fill="WHITE" layoutX="71.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Client : &lt;client here&gt;" />
+      <Text fx:id="destinationname" fill="WHITE" layoutX="71.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Destination : &lt;dest here&gt;" />
+      <ImageView fitHeight="12.7" fitWidth="12.7" layoutX="3.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Images/dinim3akalpha001/dollar.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="12.7" fitWidth="12.7" layoutX="1.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Images/dinim3akalpha001/time.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="1.0" layoutY="82.0" stroke="#4b4b4b" strokeType="INSIDE" width="269.0" />
+      <Text fx:id="time" fill="WHITE" layoutX="25.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12:30" />
+      <Text fx:id="money" fill="WHITE" layoutX="25.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="300 Dh" />
+      <Button layoutX="230.0" layoutY="28.0" maxHeight="32.0" maxWidth="32.0" minHeight="32.0" minWidth="32.0" mnemonicParsing="false" opacity="0.0" prefHeight="32.0" prefWidth="32.0" style="-fx-background-image: url(../../Images/dinim3akalpha001/ArrowWhite.png);" />
+      <Button layoutX="220.0" layoutY="22.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Notify" textFill="WHITE" />
+      <Button layoutX="220.0" layoutY="48.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="49.0" style="-fx-background-color: transparent;" text="Call" textAlignment="CENTER" textFill="WHITE" />
+   </children>
+</AnchorPane>

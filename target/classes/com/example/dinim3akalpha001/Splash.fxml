@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootPane" prefHeight="812.0" prefWidth="375.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dinim3akalpha001.SplashController">
+   <children>
+      <ImageView fitHeight="812.0" fitWidth="375.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Images/dinim3akalpha001/BackgroundNormal.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="347.0" fitWidth="358.0" layoutX="10.0" layoutY="219.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Images/dinim3akalpha001/Icon.png" />
+         </image>
+      </ImageView>
+      <ProgressBar fx:id="bar" layoutX="88.0" layoutY="538.0" prefHeight="33.0" prefWidth="200.0" progress="0.0" style="-fx-accent: #3F3B6C; -fx-border-insets: 0; -fx-border-width: 0;" />
+      <Text fx:id="Initializing" fill="#ffffff99" layoutX="88.0" layoutY="596.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Initializing..." textAlignment="CENTER" wrappingWidth="200.0" />
+      <Text fx:id="fourteenregular" fill="#ffffff99" layoutX="86.0" layoutY="755.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright © 2022-2023 2XPierce">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

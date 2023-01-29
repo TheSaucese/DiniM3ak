@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.layout.Pane?>
+<Pane fx:id="Pane" prefHeight="87.0" prefWidth="276.0" style="-fx-background-color: #3F3B6C;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text fx:id="Location" fill="WHITE" layoutX="63.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20;" text="Ahmed Taha" />
+      <Text fx:id="clientname" fill="WHITE" layoutX="63.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Has sent you a ride request" wrappingWidth="132.26953125" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="1.0" layoutY="82.0" stroke="#4b4b4b" strokeType="INSIDE" width="269.0" />
+      <Button fx:id="acceptreq" layoutX="204.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="61.0" style="-fx-background-color: White; -fx-background-radius: 6px; -fx-border-width: 2px;" text="Accept" textFill="#3f3b6c" />
+      <Button fx:id="declinereq" layoutX="205.0" layoutY="46.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="61.0" style="-fx-border-radius: 6px; -fx-border-color: White; -fx-border-width: 2px; -fx-background-color: transparent;" text="Decline" textAlignment="CENTER" textFill="WHITE" />
+      <ImageView fx:id="profile_img" fitHeight="62.0" fitWidth="63.0" layoutX="1.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Images/dinim3akalpha001/Avatar.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

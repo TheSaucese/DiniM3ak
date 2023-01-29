@@ -1,0 +1,397 @@
+@font-face {
+    font-family: 'Lato';
+    src: url('Lato-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Lato Black';
+    src: url('Lato-Black.ttf');
+}
+
+@font-face {
+    font-family: 'Lato Semibold';
+    src: url('Lato-Semibold.ttf');
+}
+
+@font-face {
+    font-family: 'Lato Italic';
+    src: url('Lato-Italic.ttf');
+}
+
+@font-face {
+    font-family: 'Lato Light';
+    src: url('Lato-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Lato Bold';
+    src: url('Lato-Bold.ttf');
+}
+
+.root {
+    -fx-font-family: "Lato";
+}
+
+.button
+{
+    -fx-background-color: transparent;
+    -fx-highlight-fill: null;
+    -fx-highlight-text-fill: null;
+}
+
+.input{
+    -fx-highlight-fill: null;
+    -fx-highlight-text-fill: null;
+}
+
+.hyperlink {
+    -fx-border-color: transparent;
+    -fx-padding: 4 0 4 0;
+}
+
+.tab-pane {
+    -fx-tab-max-height: 0 ;
+}
+.tab-pane .tab-header-area {
+    visibility: hidden ;
+}
+
+#sixteensemibold {
+    -fx-font-family: "Lato Semibold";
+    -fx-font-size: 16;
+}
+
+#sixteenregular {
+    -fx-font-family: "Lato";
+    -fx-font-size: 16;
+}
+
+#fourteenregular {
+    -fx-font-family: "Lato";
+    -fx-font-size: 14;
+}
+
+#twentyfourregular {
+    -fx-font-family: "Lato";
+    -fx-font-size: 24;
+}
+
+/* Undo Message */
+#UNDO,#Save,#Cancel {
+    -fx-font-family: "Lato Bold";
+    -fx-font-size: 18;
+}
+
+#CloseUndo {
+    -fx-background-image: url("../../Images/dinim3akalpha001/CloseUndo.png");
+    -fx-background-position: center;
+    -fx-background-repeat: stretch;
+    -fx-shape: none;
+}
+
+/* Splash Screen */
+
+#Initializing {
+    -fx-font-family: "Lato";
+    -fx-font-size: 16;
+}
+/* Welcome Screen */
+#Welcometext {
+    -fx-font-size: 14;
+}
+
+#WelcomeTitle,#twentyfoursemibold {
+    -fx-font-family: "Lato Semibold";
+    -fx-font-size: 24;
+}
+
+#Signup,#Login,#Confirm,#SendCode,#Driving,#Riding,#email_title,#pass_title,#Credit,#Cash,#twentyblack {
+    -fx-font-family: "Lato Black";
+    -fx-font-size: 20;
+}
+
+#pass_thing {
+    -fx-font-family: "Lato Italic";
+    -fx-font-size: 14;
+}
+
+#ShowPass>.box {
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-background-color: transparent;
+    -fx-pref-height: 24;
+    -fx-pref-width: 28;
+}
+
+#ShowPass:selected>.box>.mark {
+    -fx-background-color: transparent;
+    -fx-background-image: url("../../Images/dinim3akalpha001/Eye.png");
+}
+#ShowPass>.box>.mark {
+    -fx-background-image: url("../../Images/dinim3akalpha001/EyeClosed.png");
+    -fx-background-position: center;
+    -fx-background-repeat: stretch;
+    -fx-shape: none;
+}
+
+#FB {
+    -fx-background-image: url("../../Images/dinim3akalpha001/FB.png");
+    -fx-background-position: center;
+    -fx-background-repeat: stretch;
+    -fx-shape: none;
+    -fx-background-radius : 10;
+}
+
+#Google {
+    -fx-background-image: url("../../Images/dinim3akalpha001/Google.png");
+    -fx-background-position: center;
+    -fx-background-repeat: stretch;
+    -fx-shape: none;
+    -fx-background-radius : 10;
+}
+
+#Apple {
+    -fx-background-image: url("../../Images/dinim3akalpha001/Apple.png");
+    -fx-background-position: center;
+    -fx-background-repeat: stretch;
+    -fx-shape: none;
+    -fx-background-radius : 10;
+}
+
+#hyper1 {
+    -fx-font-family: "Lato Light";
+    -fx-font-size: 12;
+}
+
+#hyper2 {
+    -fx-font-family: "Lato Bold";
+    -fx-font-size: 12;
+}
+
+/* Verification */
+
+#VerTitle {
+    -fx-font-family: "Lato Semibold";
+    -fx-font-size: 24;
+}
+
+#VerText {
+    -fx-font-size: 14;
+}
+
+/* Driver Profile */
+#YourProfile {
+    -fx-font-size: 20;
+    -fx-font-family: "Lato";
+}
+
+#Username {
+    -fx-font-size: 20;
+    -fx-font-family: "Lato Semibold";
+}
+
+#Stars {
+    -fx-font-size: 16;
+    -fx-font-family: "Lato";
+}
+
+#Vehicle {
+    -fx-font-size: 12;
+    -fx-font-family: "Lato Black";
+    -fx-background-color: #3F3B6C;
+    -fx-background-radius: 10;
+}
+
+#Payment {
+    -fx-font-size: 12;
+    -fx-font-family: "Lato Black";
+    -fx-background-color: #FFFFFF;
+    -fx-border-radius: 10;
+}
+
+
+
+#ViewMore {
+    -fx-font-family: "Lato";
+    -fx-font-size: 12;
+}
+
+#LatestClient {
+    -fx-font-family: "Lato";
+    -fx-font-size: 16;
+    -fx-text-alignment: left;
+}
+
+#Information {
+    -fx-font-family: "Lato Semibold";
+    -fx-font-size: 16;
+    -fx-graphic: url("../../Images/dinim3akalpha001/info.png");
+}
+
+#Notification {
+    -fx-font-family: "Lato Semibold";
+    -fx-font-size: 16;
+    -fx-graphic: url("../../Images/dinim3akalpha001/bell.png");
+}
+
+#Settings {
+    -fx-background-image: url("../../Images/dinim3akalpha001/Settings.png");
+    -fx-background-position: center;
+    -fx-background-repeat: stretch;
+    -fx-shape: none;
+    -fx-background-radius : 10;
+}
+
+#Arrow {
+    -fx-background-image: url("../../Images/dinim3akalpha001/Arrow.png");
+    -fx-background-position: center;
+    -fx-background-repeat: stretch;
+    -fx-shape: none;
+}
+
+/* Payment in Profile */
+
+#Input,#InputName,#InputNumber,#InputCardName,#InputCardNumber,#InputDate,#InputCVV {
+    -fx-border-radius :  10;
+    -fx-background-color :  rgba(217,217,217,1);
+    -fx-background-radius : 15;
+    -fx-font-family: "Lato Semibold";
+    -fx-font-size: 18;
+    -fx-text-fill: #3F3B6C;
+}
+
+#GoBack {
+    -fx-background-image: url("../../Images/dinim3akalpha001/Goback.png");
+    -fx-background-position: center;
+    -fx-background-repeat: stretch;
+    -fx-shape: none;
+}
+
+#MainText,#MainTextName,#MainTextCard {
+    -fx-font-family: "Lato Semibold";
+}
+
+#Apply {
+    -fx-background-color :  #FFFFFF;
+    -fx-font-family: "Lato Semibold";
+    -fx-font-size: 20;
+    -fx-text-fill: #3F3B6C;
+}
+
+/* Payment Screen at Destination */
+
+#Apple2 {
+    -fx-background-image: url("../../Images/dinim3akalpha001/Apple2.png");
+    -fx-background-position: center;
+    -fx-background-repeat: stretch;
+    -fx-shape: none;
+    -fx-background-radius : 10;
+}
+
+#PayPal {
+    -fx-background-image: url("../../Images/dinim3akalpha001/PayPal.png");
+    -fx-background-position: center;
+    -fx-background-repeat: stretch;
+    -fx-shape: none;
+    -fx-background-radius : 10;
+}
+
+#AddCard,#Apply_Driver,#Apply {
+    -fx-background-color :  #FFFFFF;
+    -fx-background-radius :  10;
+    -fx-font-family: "Lato Semibold";
+    -fx-font-size: 16;
+}
+
+#Pay {
+    -fx-background-color :  #FFFFFF;
+    -fx-background-radius :  10;
+    -fx-font-family: "Lato Black";
+    -fx-font-size: 20;
+}
+
+#Saved {
+    -fx-font-family: "Lato Black";
+}
+
+/* Vehicle */
+
+#Car {
+    -fx-background-image: url("../../Images/dinim3akalpha001/Car.png");
+    -fx-background-position: center;
+    -fx-background-repeat: stretch;
+    -fx-shape: none;
+    -fx-background-radius : 10;
+}
+#from_input,#to_input,#to1_input,#from1_input,#amount_input,#at_input,#description_input,#from_input_passenger,#to_input_passenger,#vehicule_input,#at_input_passenger{
+    -fx-font-family: "Lato Semibold";
+    -fx-font-size: 16;
+    -fx-border-radius :  10;
+    -fx-border-width : 1;
+    -fx-border-color :  #624F82;
+    -fx-background-radius : 10;
+}
+#description_input,#description_input_passenger{
+    -fx-font-family: "Lato Semibold";
+    -fx-font-size: 12;
+    -fx-border-radius :  10;
+    -fx-border-width : 1;
+    -fx-border-color :  #624F82;
+    -fx-background-radius : 10;
+}
+
+#Apply_Driver,#Apply_passenger {
+    -fx-background-color :  #FFFFFF;
+    -fx-font-family: "Lato Semibold";
+    -fx-font-size: 20;
+    -fx-text-fill: #3f3b6c;
+}
+
+/* Home  */
+
+#PostaRide {
+    -fx-font-family: "Lato Black";
+}
+
+#Location {
+    -fx-font-family: "Lato Bold";
+}
+
+#time,#money,#destinationname,#clientname,#reg,#viewmore,#call,#notify {
+    -fx-font-family: "Lato";
+}
+
+.text-area {
+    -fx-background-color: rgba(53,89,119,0.4);
+    -fx-font-family: "Lato";
+}
+
+.text-area .scroll-pane {
+    -fx-background-color: transparent;
+    -fx-font-family: "Lato";
+}
+
+.text-area .scroll-pane .viewport{
+    -fx-background-color: transparent;
+    -fx-font-family: "Lato";
+}
+
+
+.text-area .scroll-pane .content{
+    -fx-background-color: transparent;
+    -fx-font-family: "Lato";
+}
+
+#CloseNotes{
+    -fx-background-image: url("../../Images/dinim3akalpha001/close.png");
+}
+
+#ClientNoti,#NotiText,#acceptreq,#declinereq {
+    -fx-font-family: "Lato";
+}
+
+
+
+
+
+
